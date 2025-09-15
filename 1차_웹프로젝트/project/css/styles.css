@@ -129,7 +129,7 @@
 .header .topright {
     display: inline-block;
     float: right;
-    margin-top: 30px;
+    margin-top: 33px;
 }
 
 .header .topright li {
@@ -139,6 +139,10 @@
     margin: 0 7px;
 }
 
+.header .topright li a img {
+    width: 20px;
+    height: 20px;
+}
 
 .main {
     width: 100%;
@@ -316,10 +320,11 @@
         width: 100%;
         height: 100%;
         fill: #565656;
+        background-color: var(--color-white);
     }
     
-    img.swiper-button-next { width:75px; height:75px; margin-right: calc(100% - 50% - 970px); } /* 오른쪽버튼 */
-    img.swiper-button-prev { width:75px; height:75px; margin-left: calc(100% - 50% - 970px); } /* 왼쪽버튼 */
+    img.swiper-button-next { width:75px; height:75px; margin-right: calc(100% - 50% - 970px); background-color: var(--color-white); border-radius: 50%; } /* 오른쪽버튼 */
+    img.swiper-button-prev { width:75px; height:75px; margin-left: calc(100% - 50% - 970px); background-color: var(--color-white); border-radius: 50%;} /* 왼쪽버튼 */
 
 
 
