@@ -413,7 +413,7 @@
     .thismonth .itemarea ul li .info li:first-child{
         margin-top: 20px;
     }
-
+    
     /* 상품명 */
     .thismonth .itemarea ul li .info li.name a {
         font-size: 18px;
@@ -422,7 +422,7 @@
         line-height: 1.7;
         font-family: var(--font-pretendard);
     }
-
+    
     /* 간략설명 */
     .thismonth .itemarea ul li .info li.exp a {
         font-size: 15px;
@@ -446,7 +446,7 @@
         font-family: var(--font-pretendard);
         text-decoration: line-through;
     }
-
+    
     /* 판매가 */
     .thismonth .itemarea ul li .info li:nth-child(4) {
         float: left;
@@ -467,7 +467,7 @@
         display: inline;
         width: 100px;
         margin-left: 20px;
-
+        
     }
     .thismonth .itemarea ul li .info li.rate a {
         font-size: 20px;
@@ -475,5 +475,131 @@
         font-weight: 600;
         font-family: var(--font-pretendard);
     }
+    
+    
+    
+    
+    
+    /****************** 유튜브 ******************/
+    .main_youtube {
+        display: block;
+        width: 100% !important;
+        margin: 130px auto 0 !important;
+        padding: 0;
+        clear: both;
+        font-family: 'Pretendard','Roboto','Noto Sans KR','malgun gothic';
+    }
 
+    .main_youtube .inside {
+        width: 1350px !important;
+        margin: 0 auto;
+        padding: 0;
+        background: #e8f1f3;
+  }
 
+    .main_youtube .main_youtube_banner {
+        overflow-x: auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+        /* background: url('../imgs/bg_youtube.png') center no-repeat; */
+        background-color: #d8d8d8;
+        padding: 0 3%;
+        height: 600px;
+    }
+
+    .main_youtube .main_youtube_banner .wrap_banner_txt {
+        position: absolute;
+        left: 5%;
+        bottom: 17%;
+        z-index: 2;
+    }
+
+    .main_youtube .main_youtube_banner .main_youtube_banner_txt_box {
+        padding: 0 0 0 9%;
+        margin-top: -50px;
+        width: 63%;
+        height: auto;
+        word-break: keep-all;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .main_youtube .txt_01 {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 50px;
+        color: var(--color-black-2);
+        letter-spacing: -0.01em;
+    }
+
+    .main_youtube.ez-align-left .main_youtube_banner .main_youtube_banner_txt_box {
+        align-items: flex-start;
+    }
+
+    .main_youtube.ez-align-left .main_youtube_banner .main_youtube_banner_txt_box .main_youtube_banner_txt {
+    text-align: left;
+    }
+
+    .main_youtube.ez-align-center .main_youtube_banner .main_youtube_banner_txt_box {
+    align-items: center;
+    }
+
+    .main_youtube.ez-align-center .main_youtube_banner .main_youtube_banner_txt_box .main_youtube_banner_txt {
+    align-items: center;
+    text-align: center;
+    }
+
+    .main_youtube.ez-align-right .main_youtube_banner .main_youtube_banner_txt_box {
+    align-items: flex-end;
+    }
+
+    .main_youtube.ez-align-right .main_youtube_banner .main_youtube_banner_txt_box .main_youtube_banner_txt {
+    text-align: right;
+    }
+
+    .main_youtube .main_youtube_banner .main_youtube_banner_txt_box .main_long_banner_link {
+    margin-top: 30px;
+    }
+
+    .main_youtube .main_youtube_banner .main_youtube_banner_txt_box .main_long_banner_link a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    background: var(--color-main-1);
+    color: var(--color-white);
+    padding: 13px 35px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    }
+
+    .main_youtube .main_youtube_banner .main_youtube_banner_txt_box .main_long_banner_link {
+    margin-top: 60px;
+    }
+
+    .main_youtube .main_youtube_banner .main_youtube_banner_txt_box .main_long_banner_link a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    background: #000;
+    padding: 13px 15px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    }
+
+    .main_youtube .main_youtube_banner .main_youtube_banner_txt_box .main_long_banner_link a:hover {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    }
