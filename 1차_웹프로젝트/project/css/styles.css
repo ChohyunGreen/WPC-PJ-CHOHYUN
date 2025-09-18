@@ -727,3 +727,70 @@
     @keyframes progressBarAnimation { from { width: 0%; } to { width: 100%; } }
     .progress-bar.animate { /* JS에서 클래스 토글 */ }
     
+
+
+
+    /****************** 초보엄빠 ******************/
+
+
+    .careinfo {
+        margin: 100px 0 0;
+    }
+
+
+    /* 탭슬라이드 영역 */
+
+    .tab-container {
+        display: flex;
+        max-width: 900px;
+        margin: 0 auto;
+        border: 1px solid #ddd;
+    }
+
+    .tab-list {
+        display: flex;
+        flex-direction: column;
+        width: 200px; /* 탭 영역 너비 */
+        background-color: #f4f4f4;
+    }
+
+    .tab-btn {
+        padding: 15px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: left;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .tab-btn.active {
+        background-color: #fff; /* 활성화된 탭 배경색 */
+        color: #333;
+        font-weight: bold;
+    }
+
+    .tab-content-wrapper {
+        flex-grow: 1;
+        position: relative;
+        overflow: hidden; /* 슬라이딩 효과를 위해 필요 */
+    }
+
+    .tab-content {
+        position: absolute;
+        top: 0;
+        left: 100%; /* 초기 상태에서 모든 콘텐츠를 오른쪽으로 이동 */
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background-color: #fff;
+        transition: left 0.5s ease-in-out; /* 슬라이드 애니메이션 */
+    }
+
+    .tab-content.active {
+        left: 0;
+    }
+
+
+
+    

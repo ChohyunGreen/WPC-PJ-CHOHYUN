@@ -1,4 +1,4 @@
-// 상단카테고리 (마우스오버시 하위메뉴 노출)
+// ● 상단카테고리 (마우스오버시 하위메뉴 노출)
 $(document).ready(function() {
     $('.cate > li').hover(function() {
         $(this).find('ul.sub_dep_1').stop(true, true).slideDown(200);
@@ -15,7 +15,8 @@ $(document).ready(function() {
 
 
 
-// 메인슬라이드
+
+// ● 메인슬라이드
     document.addEventListener('DOMContentLoaded', function() {
         var swiper = new Swiper(".glaubeSwifer", {
             speed: 1100,
@@ -349,3 +350,135 @@ window.onload = () => {
     updateControls();
     startAutoPlay();
 };
+
+
+
+
+
+
+// ● 초보엄빠
+document.addEventListener('DOMContentLoaded', () => {
+
+    /* ========================= 설정 ========================= */
+    const settings = {
+        autoplay: true,
+        autoplayInterval: 3000, // 3초
+        transitionSpeed: 500, // 0.5초
+        swipeThreshold: 50 // 터치/드래그 민감도 (px)
+    };
+
+    /* ======================================================= */
+
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    const tabContainer = document.querySelector('.tab-container');
+    let currentIndex = 0;
+    let autoPlayTimer;
+    let isDragging = false;
+    let startPos = 0;
+    let currentTranslate = 0;
+
+    // 탭 활성화 함수
+    function activateTab(index) {
+        tabButtons.forEach((btn, i) => {
+            btn.classList.toggle('active', i === index);
+        });
+        tabContents.forEach((content, i) => {
+            content.classList.toggle('active', i === index);
+        });
+        currentIndex = index;
+    }
+
+    // 탭 버튼 클릭 이벤트
+    tabButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            activateTab(index);
+            resetAutoplay();
+        });
+    });
+
+    // 자동 재생 로직
+    function startAutoplay() {
+        if (!settings.autoplay) return;
+        autoPlayTimer = setInterval(() => {
+            currentIndex = (currentIndex + 1) % tabButtons.length;
+            activateTab(currentIndex);
+        }, settings.autoplayInterval);
+    }
+
+    function resetAutoplay() {
+        clearInterval(autoPlayTimer);
+        startAutoplay();
+    }
+
+    // 드래그 & 터치 컨트롤
+    function getPositionX(event) {
+        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    }
+
+    tabContainer.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startPos = getPositionX(e);
+        tabContainer.style.cursor = 'grabbing';
+    });
+    
+    tabContainer.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startPos = getPositionX(e);
+    });
+
+    tabContainer.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        tabContainer.style.cursor = 'grab';
+        
+        const moveDistance = currentTranslate;
+        if (Math.abs(moveDistance) > settings.swipeThreshold) {
+            if (moveDistance > 0) { // 오른쪽으로 스와이프 (이전 탭)
+                currentIndex = Math.max(0, currentIndex - 1);
+            } else { // 왼쪽으로 스와이프 (다음 탭)
+                currentIndex = Math.min(tabButtons.length - 1, currentIndex + 1);
+            }
+            activateTab(currentIndex);
+        }
+        
+        // 드래그 종료 후 초기 위치로 복귀
+        tabContents.forEach(content => content.style.transform = '');
+        currentTranslate = 0;
+        resetAutoplay();
+    });
+
+    tabContainer.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const moveDistance = currentTranslate;
+        if (Math.abs(moveDistance) > settings.swipeThreshold) {
+            if (moveDistance > 0) {
+                currentIndex = Math.max(0, currentIndex - 1);
+            } else {
+                currentIndex = Math.min(tabButtons.length - 1, currentIndex + 1);
+            }
+            activateTab(currentIndex);
+        }
+        
+        tabContents.forEach(content => content.style.transform = '');
+        currentTranslate = 0;
+        resetAutoplay();
+    });
+
+    tabContainer.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const currentPos = getPositionX(e);
+        currentTranslate = currentPos - startPos;
+        tabContents.forEach(content => {
+            if (content.classList.contains('active')) {
+                content.style.transform = `translateX(${currentTranslate}px)`;
+            }
+        });
+    });
+
+    // 초기화
+    activateTab(0);
+    startAutoplay();
+});
