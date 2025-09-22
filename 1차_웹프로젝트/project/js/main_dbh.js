@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 
 
-// ● 메인슬라이드
+// ●●●●●●●●●●●● 메인슬라이드
     document.addEventListener('DOMContentLoaded', function() {
         var swiper = new Swiper(".glaubeSwifer", {
             speed: 1100,
@@ -109,8 +109,8 @@ $(document).ready(function() {
     const pagination = document.getElementById('pagination');
 
     const slideWidth = 820;
-    const slideMargin = 15; // ★★★ CSS의 좌우 마진값과 동일하게 설정 ★★★
-    // ★★★ 슬라이드 너비와 좌우 마진을 합한 실제 차지 너비 계산 ★★★
+    const slideMargin = 15; // ★ CSS의 좌우 마진값과 동일하게 설정 ★
+    // ★ 슬라이드 너비와 좌우 마진을 합한 실제 차지 너비 계산 ★
     const effectiveSlideWidth = slideWidth + slideMargin * 2;
     const originalTotalSlides = originalSlides.length;
 
@@ -170,7 +170,7 @@ $(document).ready(function() {
 
 
     
-// ★★★ 슬라이드 크기 업데이트 함수 추가 ★★★
+// ★ 슬라이드 크기 업데이트 함수 추가 ★
 function updateSlideSizes() {
     slides.forEach((slide, index) => {
         if (index === currentIndex) {
@@ -195,7 +195,7 @@ function updateControls() {
     if (!isPaused && !isDragging) startProgressBar();
     pausePlayBtn.innerHTML = isPaused ? '►' : '❚❚';
     
-    // ★★★ 컨트롤 업데이트 시 슬라이드 크기 업데이트 호출 ★★★
+    // ★ 컨트롤 업데이트 시 슬라이드 크기 업데이트 호출 ★
     updateSlideSizes();
 }
 
@@ -217,7 +217,7 @@ function goToSlide(index, animate = true) {
     currentTranslate = calculateTranslateX(currentIndex);
     updateSliderPosition(animate);
     
-    // ★★★ 슬라이드 이동 시작 시 크기 업데이트 ★★★
+    // ★ 슬라이드 이동 시작 시 크기 업데이트 ★
     updateSlideSizes();
 }
 
@@ -356,129 +356,155 @@ window.onload = () => {
 
 
 
-// ● 초보엄빠
+// ●●●●●●●●●●●● 초보엄빠
 document.addEventListener('DOMContentLoaded', () => {
+    const tabItems = document.querySelectorAll('.tab-akb-item');
+    const contentItems = document.querySelectorAll('.content-item');
+    const leftTabs = document.querySelector('.left-tabs');
+    const rightContent = document.querySelector('.right-content');
+    const sliderContainer = document.querySelector('.slider-container');
 
-    /* ========================= 설정 ========================= */
-    const settings = {
-        autoplay: true,
-        autoplayInterval: 3000, // 3초
-        transitionSpeed: 500, // 0.5초
-        swipeThreshold: 50 // 터치/드래그 민감도 (px)
+    // --- 설정 변수 (script에서 쉽게 조정) ---
+    const config = {
+        autoplay: true,        // 자동 재생 여부
+        autoplayInterval: 3000, // 자동 재생 간격 (밀리초)
+        transitionSpeed: 500,  // 탭 및 콘텐츠 전환 속도 (밀리초, CSS transition과 일치)
+        initialLoadDelay: 500, // 초기 로딩 후 첫 콘텐츠 표시 지연 (밀리초)
+        loopTabs: true         // 마지막 탭에서 다시 첫 탭으로 돌아갈지 여부
     };
+    // ------------------------------------------
 
-    /* ======================================================= */
-
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-    const tabContainer = document.querySelector('.tab-container');
-    let currentIndex = 0;
-    let autoPlayTimer;
+    let currentTabIndex = 0;
+    let autoplayTimer;
     let isDragging = false;
     let startPos = 0;
     let currentTranslate = 0;
+    let prevTranslate = 0;
 
     // 탭 활성화 함수
-    function activateTab(index) {
-        tabButtons.forEach((btn, i) => {
-            btn.classList.toggle('active', i === index);
-        });
-        tabContents.forEach((content, i) => {
-            content.classList.toggle('active', i === index);
-        });
-        currentIndex = index;
-    }
+    const activateTab = (index) => {
+        // 모든 탭과 콘텐츠의 'active' 클래스 제거
+        tabItems.forEach(item => item.classList.remove('active'));
+        contentItems.forEach(item => item.classList.remove('active'));
 
-    // 탭 버튼 클릭 이벤트
-    tabButtons.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
-            activateTab(index);
-            resetAutoplay();
-        });
-    });
+        // 선택된 탭과 콘텐츠에 'active' 클래스 추가
+        tabItems[index].classList.add('active');
+        contentItems[index].classList.add('active');
 
-    // 자동 재생 로직
-    function startAutoplay() {
-        if (!settings.autoplay) return;
-        autoPlayTimer = setInterval(() => {
-            currentIndex = (currentIndex + 1) % tabButtons.length;
-            activateTab(currentIndex);
-        }, settings.autoplayInterval);
-    }
+        currentTabIndex = index; // 현재 인덱스 업데이트
 
-    function resetAutoplay() {
-        clearInterval(autoPlayTimer);
+        // 자동 재생 타이머 재설정 (수동 클릭 시)
+        resetAutoplayTimer();
+    };
+
+    // 자동 재생 시작
+    const startAutoplay = () => {
+        if (!config.autoplay) return;
+
+        autoplayTimer = setInterval(() => {
+            currentTabIndex = (currentTabIndex + 1) % tabItems.length;
+            if (!config.loopTabs && currentTabIndex === 0) { // 루프가 아니면 마지막 탭에서 정지
+                currentTabIndex = tabItems.length - 1;
+                stopAutoplay();
+                return;
+            }
+            activateTab(currentTabIndex);
+        }, config.autoplayInterval);
+    };
+
+    // 자동 재생 정지
+    const stopAutoplay = () => {
+        clearInterval(autoplayTimer);
+    };
+
+    // 자동 재생 타이머 재설정
+    const resetAutoplayTimer = () => {
+        stopAutoplay();
         startAutoplay();
-    }
+    };
 
-    // 드래그 & 터치 컨트롤
-    function getPositionX(event) {
-        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-    }
-
-    tabContainer.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startPos = getPositionX(e);
-        tabContainer.style.cursor = 'grabbing';
-    });
-    
-    tabContainer.addEventListener('touchstart', (e) => {
-        isDragging = true;
-        startPos = getPositionX(e);
-    });
-
-    tabContainer.addEventListener('mouseup', () => {
-        if (!isDragging) return;
-        isDragging = false;
-        tabContainer.style.cursor = 'grab';
-        
-        const moveDistance = currentTranslate;
-        if (Math.abs(moveDistance) > settings.swipeThreshold) {
-            if (moveDistance > 0) { // 오른쪽으로 스와이프 (이전 탭)
-                currentIndex = Math.max(0, currentIndex - 1);
-            } else { // 왼쪽으로 스와이프 (다음 탭)
-                currentIndex = Math.min(tabButtons.length - 1, currentIndex + 1);
-            }
-            activateTab(currentIndex);
-        }
-        
-        // 드래그 종료 후 초기 위치로 복귀
-        tabContents.forEach(content => content.style.transform = '');
-        currentTranslate = 0;
-        resetAutoplay();
-    });
-
-    tabContainer.addEventListener('touchend', (e) => {
-        if (!isDragging) return;
-        isDragging = false;
-        
-        const moveDistance = currentTranslate;
-        if (Math.abs(moveDistance) > settings.swipeThreshold) {
-            if (moveDistance > 0) {
-                currentIndex = Math.max(0, currentIndex - 1);
-            } else {
-                currentIndex = Math.min(tabButtons.length - 1, currentIndex + 1);
-            }
-            activateTab(currentIndex);
-        }
-        
-        tabContents.forEach(content => content.style.transform = '');
-        currentTranslate = 0;
-        resetAutoplay();
-    });
-
-    tabContainer.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const currentPos = getPositionX(e);
-        currentTranslate = currentPos - startPos;
-        tabContents.forEach(content => {
-            if (content.classList.contains('active')) {
-                content.style.transform = `translateX(${currentTranslate}px)`;
-            }
+    // 각 탭 아이템에 클릭 이벤트 리스너 추가
+    tabItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            activateTab(index);
         });
     });
 
-    // 초기화
-    activateTab(0);
-    startAutoplay();
+    // --- 드래그 및 터치 컨트롤 ---
+
+    // 드래그 시작
+    const dragStart = (e) => {
+        isDragging = true;
+        sliderContainer.classList.add('dragging');
+        stopAutoplay(); // 드래그 중에는 자동 재생 정지
+
+        if (e.type.includes('mouse')) {
+            startPos = e.clientX;
+        } else if (e.type.includes('touch')) {
+            startPos = e.touches[0].clientX;
+        }
+        prevTranslate = currentTranslate; // 이전 위치 저장
+    };
+
+    // 드래그 중
+    const drag = (e) => {
+        if (!isDragging) return;
+
+        let currentPosition;
+        if (e.type.includes('mouse')) {
+            currentPosition = e.clientX;
+        } else if (e.type.includes('touch')) {
+            currentPosition = e.touches[0].clientX;
+        }
+
+        const diff = currentPosition - startPos;
+        currentTranslate = prevTranslate + diff;
+
+        // 시각적 피드백 (optional: 실제 요소 이동은 아니지만, 드래그 느낌을 줄 수 있음)
+        // leftTabs.style.transform = `translateX(${currentTranslate}px)`;
+        // rightContent.style.transform = `translateX(${currentTranslate * 0.5}px)`; // 오른쪽은 더 적게 움직이게
+    };
+
+    // 드래그 끝
+    const dragEnd = (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        sliderContainer.classList.remove('dragging');
+        startAutoplay(); // 드래그 끝나면 자동 재생 다시 시작
+
+        const movedBy = currentTranslate - prevTranslate;
+
+        // 일정 거리 이상 드래그 시 탭 전환
+        if (Math.abs(movedBy) > 50) { // 50px 이상 드래그 시 전환
+            if (movedBy < 0) { // 왼쪽으로 드래그 (다음 탭)
+                currentTabIndex = (currentTabIndex + 1) % tabItems.length;
+            } else { // 오른쪽으로 드래그 (이전 탭)
+                currentTabIndex = (currentTabIndex - 1 + tabItems.length) % tabItems.length;
+            }
+            activateTab(currentTabIndex);
+        }
+
+        currentTranslate = 0; // 초기화
+        prevTranslate = 0;
+        // leftTabs.style.transform = `translateX(0px)`; // 위치 초기화
+        // rightContent.style.transform = `translateX(0px)`;
+    };
+
+    // 이벤트 리스너 등록 (마우스)
+    sliderContainer.addEventListener('mousedown', dragStart);
+    sliderContainer.addEventListener('mousemove', drag);
+    sliderContainer.addEventListener('mouseup', dragEnd);
+    sliderContainer.addEventListener('mouseleave', dragEnd); // 컨테이너 밖으로 마우스 나가면 드래그 종료
+
+    // 이벤트 리스너 등록 (터치)
+    sliderContainer.addEventListener('touchstart', dragStart);
+    sliderContainer.addEventListener('touchmove', drag);
+    sliderContainer.addEventListener('touchend', dragEnd);
+
+
+    // 초기 로딩 후 첫 탭 활성화 및 자동 재생 시작
+    setTimeout(() => {
+        activateTab(0); // 0번째 탭 활성화
+        startAutoplay();
+    }, config.initialLoadDelay);
 });
