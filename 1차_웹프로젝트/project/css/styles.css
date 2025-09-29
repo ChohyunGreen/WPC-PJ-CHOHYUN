@@ -70,6 +70,102 @@
 
 
 
+/****************** 전체메뉴(펼침메뉴) ******************/
+.dropdown {
+    display: inline;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin:0;
+    padding: 0;
+}
+.dropdown-button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.dropdown-button img {
+    width: 20px;
+    height: 20px;
+}
+.dropdown-button:hover {
+}
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown-menu a {
+    color: var(--color-white);
+    /* padding: 20px; */
+    text-decoration: none;
+    display: block;
+    font-size: 22px;
+    text-align: center;
+}
+.dropdown-menu a:hover {
+}
+.dropdown.active .dropdown-menu {
+    display: flex;
+}
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.close-button img {
+    width: 20px;
+    height: 20px;
+    right: 100%;
+    color: var(--color-white);
+}
+/* 전체메뉴(펼침메뉴) 내용 */
+.allcate {
+    width:1650px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+.allcate .inside:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+.allcate .inside {
+    display: inline-block;
+    float: left;
+    padding: 0;
+    margin:0;
+    width:200px;
+}
+.allcate .inside span {
+    clear: both;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    color: #121212;
+    font-size: 18px;
+}
+
+
+
+
+
 
 /****************** 카테고리(상단) ******************/
 .header ul.cate {
@@ -95,7 +191,6 @@
 /* 초기 상태는 숨김 처리 
  필요에 따라 위치 조정 */
 .header ul.cate .sub_dep_1 {
-    z-index: 100;
     padding: 5px 0;
     display: none;
     position: absolute;
@@ -113,7 +208,7 @@
     padding: 1px 0;
     float:none;
     background: var(--color-white);
-    z-index: 300;
+    /* z-index: 300; */
 }
 .header ul.cate .sub_dep_1 li a {
     color: #343434;
@@ -125,6 +220,7 @@
     text-align: center;
 }
 .header ul.cate .sub_dep_2 {
+    z-index: 500;
     position: absolute;
     top: 5px;
     right: -80px;
@@ -351,8 +447,8 @@
         background-color: var(--color-white);
     }
     
-    img.swiper-button-next { width:75px; height:75px; margin-right: calc(100% - 50% - 970px); background-color: var(--color-white); border-radius: 50%; } /* 오른쪽버튼 */
-    img.swiper-button-prev { width:75px; height:75px; margin-left: calc(100% - 50% - 970px); background-color: var(--color-white); border-radius: 50%;} /* 왼쪽버튼 */
+    img.swiper-button-next { width:55px; height:45px; margin-right: calc(100% - 50% - 970px); background-color: var(--color-white); border-radius: 50%; } /* 오른쪽버튼 */
+    img.swiper-button-prev { width:55px; height:45px; margin-left: calc(100% - 50% - 970px); background-color: var(--color-white); border-radius: 50%;} /* 왼쪽버튼 */
 
 
 
@@ -374,14 +470,13 @@
         height: 200px;
         float: left;
         text-align: center;
-        margin: 0 13px;
+        margin: 0 11px;
         border-radius: 30px;
     }
     .superprice .iconarea li:first-child{
         margin-left: 0;
     }
     .superprice .iconarea li:last-child{
-        float:right;
         margin-right: 0;
         margin-bottom: 100px;
     }
