@@ -1,0 +1,953 @@
+
+    
+
+
+/****************** 메인슬라이드 ******************/
+    .swiper { 
+        width: 100%; 
+        height: 810px; 
+        position: relative; 
+    }
+    .swiper-slide { 
+        text-align: center; 
+        font-size: 18px; 
+        background:none; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width:100%; 
+        margin: 0 auto; 
+    }
+    .swiper-slide img { 
+        display: block; 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+
+    
+
+    .bg_mainimg01 { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 910px;
+        background: #fbe6e5;
+        z-index: -1;
+    }
+
+
+    /* 메인슬라이드 텍스트영역 */
+    .swiper .text_area_1 { 
+        position:absolute;
+        text-align:left;
+        top:130px;
+        left:130px;
+        font-size:32px;
+        font-weight:700;
+        letter-spacing:-1px;
+        line-height:1.4;
+        color:var(--color-black-2);
+        font-family:var(--font-pretendard);
+    }
+    .swiper .text_area_2 { 
+        position:absolute;
+        text-align:left;
+        top:240px;
+        left:130px;
+        font-size:18px;
+        font-weight:400;
+        color:var(--color-guide);
+        font-family:var(--font-pretendard);
+    }
+    .swiper .box_square { 
+        position:absolute;
+        text-align:left;
+        top:300px;
+        left:130px;
+        /* color:var(--color-black-2); */
+        background:var(--color-black-2);
+        padding:15px 60px;
+    }
+    .swiper .box_square a { 
+        color:var(--color-white); 
+        font-size:17px;
+        font-weight:700;
+        font-family:var(--font-pretendard);
+    }
+
+        
+    .swiper-button-next, .swiper-button-prev { 
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .swiper:hover .swiper-button-next,
+    .swiper:hover .swiper-button-prev {
+        opacity: 1;
+    }
+
+    .swiper i { 
+        font-size: 35px; 
+        color: #777; 
+    }
+    
+    .swiper .pagi_wrap { 
+        width: 230px; 
+        margin: 0 auto; 
+        background:none; 
+        height: auto; 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom:7px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 11;
+    }
+    
+    .swiper .swiper-pagination { 
+        padding: 5px 20px; 
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .swiper .swiper-pagination span {  margin:0 8px !important; }    
+
+    .swiper-pagination-bullet { 
+        width: 8px;
+        height: 8px;
+        transition: all 0.3s;
+        background: #565656;
+    }
+    
+    .swiper-pagination-bullet-active {
+        width: 10px;
+        height: 10px;
+        background: #000;
+    }
+
+    .progress-line {
+        position: absolute;
+        bottom: 5px;
+        left: 20px;
+        width: 200px;
+        height: 1px;
+        background: #ddd;
+    }
+
+    .progress-fill {
+        width: 0;
+        height: 100%;
+        background: #000;
+        transition: width 7s linear;
+    }
+
+    .swiper-paused .progress-fill {
+        transition: none;
+    }
+
+    .play-pause-btn {
+        position: absolute;
+        bottom:4px;
+        left: 240px; /* progress-line 오른쪽 끝 */
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+
+    .play-pause-btn svg { 
+        width: 100%;
+        height: 100%;
+        fill: #565656;
+        background-color: var(--color-white);
+    }
+    
+    img.swiper-button-next { width:75px; height:75px; margin-right: calc(100% - 50% - 970px); background-color: var(--color-white); border-radius: 50%; } /* 오른쪽버튼 */
+    img.swiper-button-prev { width:75px; height:75px; margin-left: calc(100% - 50% - 970px); background-color: var(--color-white); border-radius: 50%;} /* 왼쪽버튼 */
+
+
+
+
+
+
+
+
+    /****************** 막강한 회원전용혜택 ******************/
+    .superprice {
+        width: 1350px;
+        margin: 100px auto 0;
+        position: relative;
+        text-align: center;
+    }
+    .superprice .iconarea li {
+        border: 1px solid #999;
+        width: 200px;
+        height: 200px;
+        float: left;
+        text-align: center;
+        margin: 0 13.5px;
+        border-radius: 30px;
+    }
+    .superprice .iconarea li:first-child{
+        margin-left: 0;
+    }
+    .superprice .iconarea li:last-child{
+        margin-right: 0 !important;
+        float: right;
+        margin-bottom: 100px;
+    }
+    .superprice .iconarea li img {
+        margin-top: calc(46% - 50px);
+        width: 70px;
+        height: 70px;
+    }
+
+    .superprice .iconarea li .exp {
+        clear: both;
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 22px;
+        color: #343434;
+    }
+
+
+
+
+
+
+
+
+    /****************** 이달의 베스트상품 ******************/
+    .thismonth {
+        clear: both;
+        width: 1350px;
+        margin: 100px auto 0;
+        position: relative;
+        text-align: center;
+    }
+    .thismonth .itemarea ul li{
+        width: 400px;
+        height: 550px;
+        float: left;
+        margin: 0 37px;
+        position: relative;
+        text-align: left;
+    }
+    .thismonth .itemarea ul li img {
+        width: 400px;
+        height: 400px;
+    }
+    .thismonth .itemarea ul li:first-child{
+        margin-left: 0;
+    }
+    .thismonth .itemarea ul li:last-child{
+        float:right;
+        margin-right: 0;
+        margin-bottom: 100px;
+    }
+    .thismonth .itemarea ul li .info li {
+        display: inline-block;
+        height: auto;
+        margin:0;
+    }
+    .thismonth .itemarea ul li .info li a{
+        letter-spacing: -0.5px;
+    }
+    
+    .thismonth .itemarea ul li .info li:first-child{
+        margin-top: 20px;
+    }
+    
+    /* 상품명 */
+    .thismonth .itemarea ul li .info li.name a {
+        font-size: 18px;
+        color: #343434;
+        font-weight: 600;
+        line-height: 1.7;
+        font-family: var(--font-pretendard);
+    }
+    
+    /* 간략설명 */
+    .thismonth .itemarea ul li .info li.exp a {
+        font-size: 15px;
+        color: #757575;
+        font-weight: 400;
+        line-height: 2.7;
+        font-family: var(--font-pretendard);
+    }
+    
+    /* 소비자가 */
+    .thismonth .itemarea ul li .info li:nth-child(3) {
+        float: left;
+        display: inline;
+        width: 100px;
+        line-height: 1.7;
+    }
+    .thismonth .itemarea ul li .info li.cs_price a {
+        font-size: 16px;
+        color: #757575;
+        font-weight: 400;
+        font-family: var(--font-pretendard);
+        text-decoration: line-through;
+    }
+    
+    /* 판매가 */
+    .thismonth .itemarea ul li .info li:nth-child(4) {
+        float: left;
+        display: inline;
+        width: 100px;
+
+    }
+    .thismonth .itemarea ul li .info li.dis_price a {
+        font-size: 20px;
+        color: #343434;
+        font-weight: 600;
+        font-family: var(--font-pretendard);
+    }
+    
+    /* 할인율 */
+    .thismonth .itemarea ul li .info li:nth-child(5) {
+        float: left;
+        display: inline;
+        width: 100px;
+        margin-left: 20px;
+        
+    }
+    .thismonth .itemarea ul li .info li.rate a {
+        font-size: 20px;
+        color: #ea5550;
+        font-weight: 600;
+        font-family: var(--font-pretendard);
+    }
+
+
+
+
+
+
+
+
+    /****************** 유튜브 ******************/
+ 
+    .main_youtube {
+        width: 100%;
+        height: 450px;
+        background-color: #eee;
+        position: relative;
+        display: block;
+        margin-top: 130px;
+        padding: 130px 0 50px;
+        clear: both;
+        font-family: var(--font-pretendard);
+    }
+
+    .main_youtube .inside {
+        width: 1350px;
+        margin:0 auto;
+    }
+
+    .main_youtube .video {
+        float: left;
+    }
+
+    .main_youtube .video iframe {
+    }   
+
+    .main_youtube .textarea {
+        float: left;
+        margin-left: 100px;
+    }
+
+    .main_youtube .textarea h2 {
+        font-size: 46px;
+        color: var(--color-black-2);
+        font-weight: bold;
+        line-height: 1.7;
+        margin:50px 0 0;
+    }
+
+    .effect {
+        font-weight: 900;
+        margin: 0;
+        background: linear-gradient(88.89deg, #353535 0.48%, #b8b8b8 42.46%, #454545 84.45%);
+        background-size: auto;
+        background-clip: border-box;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: block;
+        letter-spacing: -0.02em;
+        font-size: 120px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+    .main_youtube .textarea p {
+        font-size: 22px;
+        color: var(--color-black-2);
+        font-weight: 400;
+    }
+
+    .main_youtube .textarea button {
+        background: var(--color-black);
+        border-radius: 30px;
+        width: 200px;
+        height: 50px;
+        margin-top: 50px;
+    }
+    .main_youtube .textarea button a {
+        font-size: 18px;
+        color: var(--color-white);
+        font-weight: 500;
+        line-height: 1.7;
+    }
+
+
+
+
+
+
+
+
+    /****************** 새로운상품 ******************/
+    .newitem {
+        clear: both;
+        width: 1350px;
+        margin: 120px auto 0;
+        position: relative;
+        text-align: center;
+    }
+    .newitem .itemarea ul li{
+        width: 320px;
+        height: 550px;
+        float: left;
+        margin: 0 10px;
+        position: relative;
+        text-align: left;
+    }
+    .newitem .itemarea ul li img {
+        width: 320px;
+        height: 320px;
+    }
+    .newitem .itemarea ul li:first-child{
+        margin-left: 0;
+    }
+    .newitem .itemarea ul li:last-child{
+        float:right;
+        margin-right: 0;
+    }
+    .newitem .itemarea ul li .info li {
+        display: inline-block;
+        height: auto;
+        margin:0;
+    }
+    .newitem .itemarea ul li .info li a{
+        letter-spacing: -0.5px;
+    }
+    
+    .newitem .itemarea ul li .info li:first-child{
+        margin-top: 20px;
+    }
+    
+    /* 상품명 */
+    .newitem .itemarea ul li .info li.name a {
+        font-size: 18px;
+        color: #343434;
+        font-weight: 600;
+        line-height: 1.7;
+        font-family: var(--font-pretendard);
+    }
+    
+    /* 간략설명 */
+    .newitem .itemarea ul li .info li.exp a {
+        font-size: 15px;
+        color: #757575;
+        font-weight: 400;
+        line-height: 2.7;
+        font-family: var(--font-pretendard);
+    }
+    
+    /* 소비자가 */
+    .newitem .itemarea ul li .info li:nth-child(3) {
+        float: left;
+        display: inline;
+        width: 100px;
+        line-height: 1.7;
+    }
+    .newitem .itemarea ul li .info li.cs_price a {
+        font-size: 16px;
+        color: #757575;
+        font-weight: 400;
+        font-family: var(--font-pretendard);
+        text-decoration: line-through;
+    }
+    
+    /* 판매가 */
+    .newitem .itemarea ul li .info li:nth-child(4) {
+        float: left;
+        display: inline;
+        width: 100px;
+
+    }
+    .newitem .itemarea ul li .info li.dis_price a {
+        font-size: 20px;
+        color: #343434;
+        font-weight: 600;
+        font-family: var(--font-pretendard);
+    }
+    
+    /* 할인율 */
+    .newitem .itemarea ul li .info li:nth-child(5) {
+        float: left;
+        display: inline;
+        width: 100px;
+        margin-left: 20px;
+        
+    }
+    .newitem .itemarea ul li .info li.rate a {
+        font-size: 20px;
+        color: #ea5550;
+        font-weight: 600;
+        font-family: var(--font-pretendard);
+    }
+
+
+
+
+
+
+
+
+    /* 슬라이드(이벤트) */
+    .slider-akb-wrapper { width: 100%; position: relative; overflow: hidden; margin:50px auto 0 ; overflow-x: hidden; }
+    .slider-akb-container { position: relative; width: 100%; height: 430px; cursor: grab; background-color: none; }
+    .slider-akb-container:active { cursor: grabbing; }
+    .slides { display: flex; height: 100%; position: absolute; top: 0; left: 0; /* JS에서 transform으로 위치 조정 */ }
+    .slide {
+        width: 820px; 
+        height: 350px; 
+        flex-shrink: 0;
+         background-color: #fff;
+        overflow: hidden; 
+        position: relative; 
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        color: #333; 
+        font-size: 20px; 
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        border-radius: 10px;
+        /* user-select: none; 추가하여 텍스트 드래그 방지 */
+        user-select: none;
+        -webkit-user-drag: none; /* 이미지 드래그 방지 */
+
+        /* 슬라이드 간 간격이 필요하면 margin 추가 */
+        margin: 0 15px; /* <- 필요시 활성화하고 JS 너비 계산 수정 */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 슬라이드 구분 시각 효과 */
+        border-radius: 10px; /* 개별 슬라이드 둥글게 */
+
+    }
+    .slide img { max-width: 100%; max-height: 100%; display: block; border-radius: 10px; pointer-events: none; margin-top: 65px; /* 이미지 자체 이벤트 방지 */ }
+    .slide video { max-width: 100%; max-height: 100%; border-radius: 10px;}
+    .slide iframe { width: 100%; height: 100%; border: none; border-radius: 10px;}
+    .slide-content-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 1; border-radius: 10px; }
+    .slide-content { position: relative; z-index: 2; color: white; padding: 20px; }
+    .slide-content h1 { font-size: 32px; margin-bottom: 10px; }
+    .slide-content p { font-size: 16px; margin-bottom: 15px; }
+    .slide-content button { padding: 10px 20px; font-size: 16px; background-color: #ff6200; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+    .slide-content button:hover { background-color: #e55a00; }
+    .arrow { 
+        position: absolute; 
+        top: 50%; 
+        transform: translateY(-50%); 
+        width: 60px; 
+        height: 60px; 
+        background-color: rgba(255, 255, 255, 1.0); 
+        border-radius: 50%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-size: 30px; 
+        color: #333; 
+        cursor: pointer; 
+        z-index: 10; 
+        opacity: 0; 
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+     }
+    .prev { left: calc(50% - 500px - 30px); }
+    .next { right: calc(50% - 500px - 30px); }
+    .slider-akb-container:hover .arrow { opacity: 1; }
+    .arrow:hover { background-color: rgba(255, 255, 255, 1); }
+
+    .slider-akb-controls { display: flex; align-items: center; justify-content: center; padding: 0; width: 100%; position: relative; z-index: 5; pointer-events: none; }
+    .progress-bar-container, .pause-play-btn, .pagination { pointer-events: auto; }
+    .progress-bar-container { width: 60%; max-width: 400px; height:2px; background-color: rgba(221, 221, 221, 0.7); border-radius: 3px; overflow: hidden; margin: 0 10px; }
+    .progress-bar { width: 0%; height: 100%; background-color:#111; border-radius: 3px; }
+    
+    /* .pause-play-btn { background: none; border: none; cursor: pointer; font-size: 20px; padding: 5px; line-height: 1; color: #eee; text-shadow: 0 1px 2px rgba(0,0,0,0.5); } */
+    .pause-play-btn { background: none; border: none; cursor: pointer; font-size: 20px; padding: 5px; line-height: 1; color:#111; }
+    
+    /* .pagination { font-size: 14px; color:#eee; margin-left: 10px; min-width: 40px; text-align: right; text-shadow: 0 1px 2px rgba(0,0,0,0.5); } */
+    .pagination { font-size: 14px; color:#111; margin-left: 10px; min-width: 40px; text-align: right;} 
+
+    @keyframes progressBarAnimation { from { width: 0%; } to { width: 100%; } }
+    .progress-bar.animate { /* JS에서 클래스 토글 */ }
+
+
+
+
+
+
+
+
+    /****************** 초보엄빠 ******************/
+
+    .careinfo {
+        margin: 120px 0 0;
+    }
+
+    .cafeinfo-in {
+        width: 1650px;
+        clear: both;
+    }
+
+    .slider-container {
+        margin: 0 auto;
+        display: flex;
+        width: 90%;
+        max-width: 1650px;
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        overflow: hidden; /* 드래그 오버스크롤 방지 */
+        border: 0 solid #eee;
+    }
+
+    .left-tabs {
+        flex: 0 0 540px; /* 고정 너비 */
+        background-color: #fff;
+        border-right: 0 solid #eee;
+        padding: 20px 0;
+        user-select: none; /* 드래그 시 텍스트 선택 방지 */
+        cursor: grab; /* 드래그 가능 커서 */
+        overflow-y: auto; /* 탭이 많아질 경우 스크롤 */
+        width: 540px;
+    }
+
+    .tab-akb-item {
+        padding: 15px 0;
+        border-bottom: 0 solid #eee;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        min-height: 80px; /* 탭 최소 높이 */
+        display: flex;
+        align-items: center;
+    }
+
+    .tab-akb-item:last-child {
+        border-bottom: none;
+    }
+
+    .tab-akb-item .tab-akb-content-inactive {
+        display: block;
+    }
+
+    .tab-akb-item .tab-akb-content-active {
+        display: none;
+    }
+
+    .tab-akb-item.active {
+        background-color: none;
+    }
+
+    .tab-akb-item.active .tab-akb-content-inactive {
+        display: none;
+    }
+
+    .tab-akb-item.active .tab-akb-content-active {
+        display: block;
+    }
+
+    .tab-akb-item:not(.active):hover {
+        background-color: none;
+    }
+
+    .right-content {
+        flex: 1; /* 남은 공간 모두 차지 */
+        padding: 20px;
+        overflow: hidden; /* 콘텐츠 오버플로우 숨김 */
+        position: relative;
+        user-select: none; /* 드래그 시 텍스트 선택 방지 */
+        cursor: grab; /* 드래그 가능 커서 */
+    }
+
+    .content-item {
+        display: none;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        height: 100%;
+    }
+
+    .content-item.active {
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .right-content img,
+    .right-content video,
+    .right-content iframe {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 15px;
+        border-radius: 4px;
+    }
+
+    /* 모바일 및 터치 디바이스에 대한 드래그 효과 */
+    .slider-container.dragging .left-tabs,
+    .slider-container.dragging .right-content {
+        cursor: grabbing;
+    }
+
+
+
+
+
+
+
+
+    /****************** 제품리뷰 ******************/
+    :root {
+        --slide-width: 300px; /* 각 li 요소의 너비 */
+        --slide-gap: 35px;    /* li 요소 사이의 간격 */
+        --slide-animation-duration: 0.6s; /* 슬라이드 애니메이션 속도. JS config.slideDuration과 일치해야 자연스러움 */
+    }
+
+    .review {
+        margin: 100px 0 0;
+    }
+
+    .review .info {
+        text-align: left;
+    }
+
+    .review .detail-area img.thumb {
+        margin-bottom: 15px;
+    }
+
+    /* 후기제목 */
+    .review .info .name a{
+        font-size: 18px;
+        color: #343434;
+        font-weight: 600;
+        line-height: 1.7;
+        font-family: var(--font-pretendard);
+        }
+
+    /* 후기내용 */        
+    .review .info .exp a{
+        font-size: 14px;
+        color: #757575;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: -1px;
+        font-family: var(--font-pretendard);
+    }
+
+    /* 평점 */
+    .review .point {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #343434;
+        font-weight: 400;
+        line-height: 1.7;
+        font-family: var(--font-pretendard);
+    }
+    .review .point img { 
+        width:15px;
+        height: 15px;
+        float:left;
+    }
+    
+    .slider-container-zzz {
+        /* 한 화면에 3개의 아이템이 보이도록 설정. 필요에 따라 변경 */
+        /* 예: (var(--slide-width) * 1 + var(--slide-gap) * 0) => 1개 아이템
+                (var(--slide-width) * 2 + var(--slide-gap) * 1) => 2개 아이템 */
+        /* width: calc(var(--slide-width) * 3 + var(--slide-gap) * 2);  */
+        width: 1650px;
+        max-width: 100vw; /* 화면 너비를 너무 초과하지 않도록 */
+        position: relative;
+        overflow: hidden; /* 슬라이더 컨테이너 밖으로 나가는 내용은 숨김 */
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        padding: 0; /* 내부 여백 */
+        user-select: none; /* 드래그 시 텍스트 선택 방지 */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* IE/Edge */
+    }
+
+    .slider-wrapper {
+        display: flex;
+        /* JS에서 설정된 slideDuration과 CSS transition duration 일치 */
+        transition: transform var(--slide-animation-duration) ease-in-out;
+        touch-action: pan-y; /* 세로 스크롤은 OS에 맡기고, 가로 스크롤은 슬라이더가 처리 */
+        will-change: transform; /* 애니메이션 성능 최적화 힌트 */
+    }
+
+    .slider-item {
+        padding: 0 0 25px;
+        flex: 0 0 var(--slide-width); /* 각 li는 고정된 너비를 가짐 */
+        margin-right: var(--slide-gap); /* li 사이 간격 */
+        height: 100%; /* li의 높이 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        color: #333;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        /* 마우스오버 효과 (선택 사항) */
+        /* transform: scale(1);
+        transition: transform 0.3s ease; */
+    }
+    /* .slider-item:hover {
+        transform: scale(1.03);
+    } */
+
+
+    .slider-item h3 {
+        margin-bottom: 10px;
+        color: #007bff;
+    }
+    .slider-item p {
+        font-size: 0.9em;
+        color: #555;
+        padding: 0 15px;
+    }
+    .slider-item img {
+        object-fit: contain;
+        width: 300px;
+        height: 300px;
+    }
+
+    /* ----- 네비게이션 버튼 ----- */
+    .slider-nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 1.0);
+        color: var(--color-black);
+        border: none;
+        padding: 10px 15px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* 기본적으로 숨김 */
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .slider-nav-button:hover {
+        background-color: rgba(255, 255, 255, 1.0);
+    }
+
+    .slider-nav-button.left {
+        left: 10px;
+    }
+
+    .slider-nav-button.right {
+        right: 10px;
+    }
+
+    /* 슬라이더 컨테이너에 마우스 오버 시 버튼 표시 */
+    .slider-container-zzz:hover .slider-nav-button {
+        opacity: 1;
+    }
+
+    /* ----- 프로그레스 바 ----- */
+    .progress-bar-container-zzz {
+        display: none;
+        width: 80%; /* 프로그레스 바의 너비 (컨테이너 대비) */
+        height: 6px;
+        background-color: #e0e0e0;
+        border-radius: 3px;
+        margin: 20px auto 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 0%; /* 초기 너비 */
+        background-color: var(--color-black-2);
+        border-radius: 3px;
+        transition: width var(--slide-animation-duration) ease-in-out;
+    }
+
+    /* 미디어 쿼리 (모바일 반응형) */
+    @media (max-width: 768px) {
+        :root {
+            --slide-width: 250px;
+            --slide-gap: 15px;
+        }
+        .slider-container-zzz {
+            /* 모바일에서는 1개 아이템만 보이도록 설정 */
+            width: calc(var(--slide-width) * 1 + var(--slide-gap) * 0);
+            padding: 15px 0;
+        }
+        .slider-nav-button {
+            padding: 8px 12px;
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            opacity: 1; /* 모바일에서는 항상 버튼 표시 */
+        }
+        .slider-container-zzz:hover .slider-nav-button {
+            opacity: 1; /* 마우스 오버 없이도 항상 보이도록 */
+        }
+        /* 드래그 커서 변경은 모바일에서는 적용 안 함 */
+        .slider-wrapper.grabbing {
+            cursor: grab; /* PC에서 드래그 중인 커서 */
+        }
+    }
+

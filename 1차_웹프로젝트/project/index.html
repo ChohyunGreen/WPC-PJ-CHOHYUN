@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project - Double Heart</title>
 
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/common.css">
 
     <!-- 웹폰트 : Noto Sans KR -->
@@ -57,13 +57,13 @@
             <a href="">브랜드스토리</a>
             <ul class="sub_dep_1">
                 <li>
-                    <a href="">브랜드스토리</a>
+                    <a href="company.html">브랜드스토리</a>
                     <ul class="sub_dep_2">
-                        <li><a href="">브랜드스토리1-1</a></li>
-                        <li><a href="">브랜드스토리1-2</a></li>
-                        <li><a href="">브랜드스토리1-3</a></li>
-                        <li><a href="">브랜드스토리1-4</a></li>
-                        <li><a href="">브랜드스토리1-5</a></li>  
+                        <li><a href="company.html">브랜드스토리1-1</a></li>
+                        <li><a href="company.html">브랜드스토리1-2</a></li>
+                        <li><a href="company.html">브랜드스토리1-3</a></li>
+                        <li><a href="company.html">브랜드스토리1-4</a></li>
+                        <li><a href="company.html">브랜드스토리1-5</a></li>  
                     </ul>
                 </li>
                 <li><a href="">회사소개</li>
@@ -194,46 +194,80 @@
         <li><a href=""><img src="./imgs/log-in.svg" alt=""></a></li>
         <li><a href=""><img src="./imgs/user.svg" alt=""></a></li>
         <li><a href=""><img src="./imgs/shopping-cart.svg" alt=""></a></li>
-        <li><a href=""><img src="./imgs/search.svg" alt=""></a></li>
+
+
+
+        <!-- 검색창(모달팝업) -->
+        <li class="modal_btn">
+            <button type="button"><img src="./imgs/search.svg" alt=""></button>
+        </li>
+        <div class="modal">
+            <div class="modal_popup">
+                <button type="button" class="close_btn"><img src="./imgs/x.svg" alt=""></button>
+                    <form action="/search">
+                        <input type="search" name="query" placeholder="검색어를 입력하세요">
+                        <button type="submit" class="search_btn"><img src="./imgs/search.svg" alt=""></button>
+                    </form>                
+            </div>
+        </div>
+
+
+
         <!-- 전체메뉴보기 -->
         <li class="dropdown">
             <button class="dropdown-button"><img src="./imgs/menu.svg" alt=""></button>
             <!-- 전체메뉴 내용 -->
             <div class="dropdown-menu">
-                <button class="close-button"><img src="./imgs/x.svg" alt=""></button>
+                <button class="close-button"><img src="./imgs/x_white.svg" alt=""></button>
 
                 <div class="allcate">
                     <div class="inside">
-                        <span><a href="">브랜드스토리</a></span>
-                        <span><a href="">회사소개</span>
-                        <span><a href="">연혁</span>
-                        <span><a href="">비전.목표</span>
-                        <span><a href="">찾아오시는 길</span>
+                        <span class="first"><a href="company.html">브랜드스토리</a></span>
+                        <span><a href="company.html">회사소개</a></span>
+                        <span><a href="company.html">연혁</a></span>
+                        <span><a href="company.html">비전.목표</a></span>
+                        <span><a href="company.html">찾아오시는 길</a></span>
                     </div>
 
                     <div class="inside">
-                        <span><a href="">브랜드스토리</a></span>
-                        <span><a href="">회사소개</span>
-                        <span><a href="">연혁</span>
-                        <span><a href="">비전.목표</span>
-                        <span><a href="">찾아오시는 길</span>
+                        <span class="first"><a href="">제품안내</a></span>
+                        <span><a href="">젖병.분유병</a></span>
+                        <span><a href="">수유용품</a></span>
+                        <span><a href="">이유식용품</a></span>
+                        <span><a href="">목욕.위생용품</a></span>
+                        <span><a href="">목욕.위생용품</a></span>
+                        <span><a href="">스킨케어</a></span>
                     </div>
 
                     <div class="inside">
-                        <span><a href="">브랜드스토리</a></span>
-                        <span><a href="">회사소개</span>
-                        <span><a href="">연혁</span>
-                        <span><a href="">비전.목표</span>
-                        <span><a href="">찾아오시는 길</span>
+                        <span class="first"><a href="">육아정보</a></span>
+                        <span><a href="">초보엄빠탈출</a></span>
+                        <span><a href="">재능놀이탐구</a></span>
+                        <span><a href="">연령대별 맞춤케어</a></span>
+                        <span><a href="">베이비페어</a></span>
                     </div>
 
                     <div class="inside">
-                        <span><a href="">브랜드스토리</a></span>
-                        <span><a href="">회사소개</span>
-                        <span><a href="">연혁</span>
-                        <span><a href="">비전.목표</span>
-                        <span><a href="">찾아오시는 길</span>
+                        <span class="first"><a href="">매거진</a></span>
+                        <span><a href="">놀이탐구</a></span>
+                        <span><a href="">교육정보</a></span>
+                        <span><a href="">알뜰육아정보</a></span>
                     </div>
+
+                    <div class="inside">
+                        <span class="first"><a href="">이벤트</a></span>
+                        <span><a href="">이달의 이벤트</a></span>
+                        <span><a href="">지난이벤트</a></span>
+                        <span><a href="">당첨자발표</a></span>
+                    </div>
+
+                    <div class="inside">
+                        <span class="first"><a href="">공지사항</a></span>
+                        <span><a href="">1:1문의</a></span>
+                        <span><a href="">제휴문의</a></span>
+                        <span><a href="">상품후기</a></span>
+                    </div>
+
                 </div>
             </div>
         </li>
@@ -903,7 +937,141 @@
 
 
 
-<footer class="footer"></footer>
+
+
+<!-- start : 인스타그램 -->
+ <section class="insta">
+    <h2 class="tit">
+        <span>instagram</span>
+    </h2>
+    <div class="thumb">
+        <ul>
+            <li class="icon1">
+                <a href=""><img src="./imgs/img_insta_01.jpg" alt="인스타-1"></a>
+            </li>
+            <li class="icon2">
+                <a href=""><img src="./imgs/img_insta_02.jpg" alt="인스타-2"></a>
+            </li>
+            <li class="icon3">
+                <a href=""><img src="./imgs/img_insta_03.jpg" alt="인스타-3"></a>
+            </li>
+            <li class="icon4">
+                <a href=""><img src="./imgs/img_insta_04.jpg" alt="인스타-4"></a>
+            </li>
+            <li class="icon5">
+                <a href=""><img src="./imgs/img_insta_05.jpg" alt="인스타-5"></a>
+            </li>
+            <li class="icon6">
+                <a href=""><img src="./imgs/img_insta_06.jpg" alt="인스타-6"></a>
+            </li>
+            <li class="icon7">
+                <a href=""><img src="./imgs/img_insta_07.jpg" alt="인스타-7"></a>
+            </li>
+            <li class="icon8">
+                <a href=""><img src="./imgs/img_insta_08.jpg" alt="인스타-8"></a>
+            </li>
+        </ul>
+    </div>
+
+ </section>
+<!-- end : 인스타그램 -->
+
+
+
+
+
+
+
+
+<!-- start : 하단(푸터) -->
+<footer id="footer" class="footer">
+<div class="footer__top">
+	<div class="footer__top-inner">
+
+
+        <!-- 고객센터 -->
+        <div class="footer__cs">
+            <h3 class="footer__title">고객센터</h3>
+            <a class="footer__cs-tel" href="tel:1500-0000">1500-0000</a>
+            <span class="footer__cs-time">
+                평일 오전 10:00 ~ 오후 6:00<br>
+                점심 오후 12:00 ~ 오후 1:00
+            </span>
+        </div>
+
+
+
+        <!-- 계좌안내 -->
+        <div class="footer__acc">
+            <h3 class="footer__title">계좌안내</h3>
+            <a class="footer__acc-tel" href="tel:1500-0000">123-45678-90123</a>
+            <span class="footer__cs-time">
+                행복은행<br>
+                (주)더블하트
+            </span>
+
+            <div class="sns">
+                <a href="" target="_blank">
+                    <img src="./imgs/instagram.svg" alt="인스타그램" loading="lazy">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./imgs/x.svg" alt="엑스" loading="lazy">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./imgs/youtube.svg" alt="유튜브" loading="lazy">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./imgs/facebook.svg" alt="페이스북" loading="lazy">
+                </a>
+            </div>
+        </div>
+
+
+        
+        <!-- 회사정보 -->
+        <div class="footer__company">
+            
+            <div class="footer__logo">
+                <a href="/"><img src="./imgs/dbh_logo01.png" alt="로고"></a>
+            </div>
+            
+            <!-- 사업자정보 -->
+            <div class="footer__info-wrap">
+                <div class="footer__info">
+                    <span>상호: 더블하트</span>
+                    <span>대표: 김더블</span>
+                    <span class="footer__info-tel">대표전화: 1500-0000</span>
+                    <span class="footer__info-fax ">팩스: 02-1500-0001</span>
+                </div>
+
+                <div class="footer__info">
+                    <span class="footer__info-adress">주소: 072235 서울특별시 서초구 서초1가 22-2 1F (주)더블하트</span>
+                </div>
+
+                <div class="footer__info">
+                    <span class="footer__info-adress">매장 주소: 서울특별시 강남구 대치1동 1F 더블하트</span>
+                </div>
+
+                <div class="footer__info">
+                    <span class="license_num">사업자등록번호: 1233-45-67889 
+                        <a href="#none" onclick="window.open('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=12334567889', 'bizCommPop', 'width=750, height=950;');return false;">[사업자정보확인]</a></span>
+                    <span>통신판매업 신고번호: 서울 강남 제 000 호</span>
+                </div>
+
+                <div class="footer__info">
+                    <span>개인정보 보호책임자: <a href="mailto:cpo@dh.co.kr">김하트</a></span>
+                    <span>E-mail: <a href="mailto:dh@naver.com">dh@naver.com</a></span>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+	</div>
+</footer> 
+<!-- end : 하단(푸터) -->
+
 
 
 <script src="js/main_dbh.js"></script>

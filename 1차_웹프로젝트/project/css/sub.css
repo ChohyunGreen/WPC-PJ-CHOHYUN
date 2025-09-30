@@ -1,0 +1,54 @@
+
+/****************** 브랜드스토리 ******************/
+.brand {
+    width: 1650px;
+    margin:0 auto;
+}
+
+
+/* 타이핑 애니메이션 */
+.brand .typing-container {
+    position: relative;
+    max-width: 58%;
+    color: var(--color-black-2);
+    margin: 100px auto 0;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 1.55;
+}
+
+#cursor {
+  border-left: 2px solid salmon; /* 커서 스타일 */
+  animation: blink 0.7s infinite;
+  display: inline-block;
+  margin-left: 2px;
+  height: 35px; /* 폰트 크기와 동일하게 설정 */
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+.brand .exp {
+    max-width: 85%;
+    color: var(--color-gray);
+    font-size: 22px;
+    line-height: 1.65;
+    font-weight: 500;
+    text-align: center;
+    margin:0 auto 100px;
+}   
