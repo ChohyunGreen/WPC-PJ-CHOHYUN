@@ -41,6 +41,44 @@
 
 <body>
 
+<!-- start : 팝업(메인화면) -->    
+<div class="today-wrap">
+	<div class="today-popup" data-name="popup1" style="display: block;">	  
+	  <span class="close"></span>
+	  <a href=""><img src="./imgs/popup_main_750_531.jpg" alt="메인팝업-1"></a>
+	  <div class="popup-footer">
+		<label><input type="checkbox" class="doNotShowToday"> 오늘 하루 열지 않기</label>
+		<span class="close">닫기</span>		
+	  </div>
+	</div>
+
+	<div class="today-popup" data-name="popup2" style="display: block;">	  
+	  <span class="close"></span>
+	  <a href=""><img src="./imgs/popup_main_750_531_2.jpg" alt="메인팝업-2"></a>
+	  <div class="popup-footer">
+		<label><input type="checkbox" class="doNotShowToday"> 오늘 하루 열지 않기</label>
+		<span class="close">닫기</span>		
+	  </div>
+	</div>
+
+<!-- 	<div class="today-popup" data-name="popup2" style="display: block;">	  
+	  <span class="close"></span>
+	  <a href=""><img src="./imgs/popup_main_400_500_2.png" alt="메인팝업-1"></a>
+	  <div class="popup-footer">
+		<label><input type="checkbox" class="doNotShowToday"> 오늘 하루 열지 않기</label>
+		<span class="close">닫기</span>		
+	  </div>
+	</div> -->
+</div>
+<!-- end : 팝업(메인화면) -->
+
+
+
+
+
+
+
+
 <!-- start : wrap -->    
 <div id="wrap">
    
@@ -49,27 +87,27 @@
 
 <header class="header">
     <h1 class="logo">
-        <a href=""><img src="./imgs/dbh_logo01.png" alt="logo"></a>
+        <a href="index.html"><img src="./imgs/dbh_logo01.png" alt="logo"></a>
     </h1>
 
     <ul class="cate">
         <li>
-            <a href="">브랜드스토리</a>
+            <a href="company.html" class="mouse_hover">브랜드스토리</a>
             <ul class="sub_dep_1">
                 <li>
-                    <a href="company.html">브랜드스토리</a>
+                    <a href="company.html" class="mouse_hover">브랜드스토리</a>
                     <ul class="sub_dep_2">
-                        <li><a href="company.html">브랜드스토리1-1</a></li>
-                        <li><a href="company.html">브랜드스토리1-2</a></li>
-                        <li><a href="company.html">브랜드스토리1-3</a></li>
-                        <li><a href="company.html">브랜드스토리1-4</a></li>
-                        <li><a href="company.html">브랜드스토리1-5</a></li>  
+                        <li><a href="company.html" class="mouse_hover">브랜드스토리1-1</a></li>
+                        <li><a href="company.html" class="mouse_hover">브랜드스토리1-2</a></li>
+                        <li><a href="company.html" class="mouse_hover">브랜드스토리1-3</a></li>
+                        <li><a href="company.html" class="mouse_hover">브랜드스토리1-4</a></li>
+                        <li><a href="company.html" class="mouse_hover">브랜드스토리1-5</a></li>  
                     </ul>
                 </li>
-                <li><a href="">회사소개</li>
-                <li><a href="">연혁</li>
-                <li><a href="">비전.목표</li>
-                <li><a href="">찾아오시는 길</li>
+                <li><a href="company.html" class="mouse_hover">회사소개</li>
+                <li><a href="company.html" class="mouse_hover">연혁</li>
+                <li><a href="company.html" class="mouse_hover">비전.목표</li>
+                <li><a href="company.html" class="mouse_hover">찾아오시는 길</li>
             </ul>        
         </li>
 
@@ -198,7 +236,7 @@
 
 
         <!-- 검색창(모달팝업) -->
-        <li class="modal_btn">
+        <li class="modal_btn mouse_hover">
             <button type="button"><img src="./imgs/search.svg" alt=""></button>
         </li>
         <div class="modal">
@@ -214,7 +252,7 @@
 
 
         <!-- 전체메뉴보기 -->
-        <li class="dropdown">
+        <li class="dropdown mouse_hover">
             <button class="dropdown-button"><img src="./imgs/menu.svg" alt=""></button>
             <!-- 전체메뉴 내용 -->
             <div class="dropdown-menu">
@@ -1074,6 +1112,21 @@
 
 
 
+
+
+
+
+<!-- start : 퀵메뉴(하단) -->
+<div class="quick up">
+    <div class="quick__btn"><a href=""><img src="./imgs/floating_kakao.png" alt="카카오"></a></div>
+	<div class="quick__btn"><a href=""><img src="./imgs/floating_naver.png" alt="네이버"></a></div>
+	<div class="quick__btn top"><img src="./imgs/floating_up.png" alt="위로"></div>
+    <div class="quick__btn bottom"><img src="./imgs/floating_down.png" alt="아래로"></div>
+</div>
+<!-- end : 퀵메뉴 -->
+
+
+<script src="js/common_dbh.js"></script>
 <script src="js/main_dbh.js"></script>
 </body>
 </html>

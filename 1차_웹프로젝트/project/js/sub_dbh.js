@@ -1,4 +1,5 @@
-// 글자타이핑 (브랜드스토리)
+
+// ●●●●●●●●●●●● 글자타이핑 (브랜드스토리)
     const text = "세상의 모든 아기들 .. 그 모습 그대로 빛나도록 밝은모습으로 자라날 수 있도록 소중한 꿈을 지켜줍니다."; // 타이핑할 문구
     let index = 0;
     let speed = 100; // 기본 타이핑 속도 (밀리초 단위)
@@ -39,3 +40,30 @@
 
     typeWriter();
 
+
+
+
+
+
+
+
+// ●●●●●●●●●●●● 중앙슬라이드 (브랜드스토리)
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      speed: 1300,
+      clickable: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });

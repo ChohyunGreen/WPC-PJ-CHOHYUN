@@ -8,16 +8,22 @@
 
 /* 타이핑 애니메이션 */
 .brand .typing-container {
-    position: relative;
-    max-width: 58%;
-    color: var(--color-black-2);
-    margin: 100px auto 0;
-    font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 50px;
-    line-height: 1.55;
+  height: 130px;
+  position: relative;
+  max-width: 58%;
+  color: var(--color-black-2);
+  margin: 100px auto 0;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 1.4;
 }
+.brand .swiper {
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+
 
 #cursor {
   border-left: 2px solid salmon; /* 커서 스타일 */
@@ -40,15 +46,63 @@
   }
 }
 
+/* 좌,우 버튼(화살표) */
+.brand .swiper-button-next, 
+.brand .swiper-button-prev {
+  color:var(--color-black-2)
+}
+/* 좌,우 버튼(화살표) */
+.brand .swiper-pagination-bullet {
+  background-color:var(--color-gray);
+}
+.brand .swiper-pagination-bullet-active {
+  background-color: var(--color-black-2);
+}
 
 
-
-.brand .exp {
+/* 설명 영역 - 애니메이션 적용 */
+.brand .exp,
+.brand .exp_2 {
     max-width: 85%;
     color: var(--color-gray);
-    font-size: 22px;
-    line-height: 1.65;
-    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.75;
+    font-weight: 400;
     text-align: center;
     margin:0 auto 100px;
+    opacity: 0; /* 초기 상태: 투명 */
+    transform: translateY(20px); /* 초기 위치: 아래쪽으로 20px 이동 */
+    animation: fadeInUp 3s ease-in-out forwards; /* 애니메이션 적용 */    
+    animation-delay: 0.5s; /* 애니메이션 다음에 적용 */   
+   }
+   
+.brand .exp:hover,
+.brand .exp_2:hover {
+    color: var(--color-black);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
 }   
+
+.brand .exp_2 {
+  margin-bottom: 70px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* 시작: 투명 */
+    transform: translateY(20px); /* 시작: 아래쪽으로 이동 */
+  }
+  to {
+    opacity: 1; /* 끝: 불투명 */
+    transform: translateY(0); /* 끝: 원래 위치 */
+  }
+}
+
+
+
+
+
+
