@@ -1,42 +1,42 @@
 // ●●●●●●●●●●●● 퀵메뉴(하단)
-	(function(){
-	   var $window=$(window);
-	   var $document=$(document);
-	   var $quick=$('.quick');
-	   var windowHeight=$window.height();
-	   var documentHeight=$document.height();
-	   var scrollTop=0;
-	   var scrollGap=200;
-	   var speed=600;
-	   $window.scroll(function(){
-			winScroll();
-	   });
-	   winScroll();
-	   function winScroll(){
-			scrollTop=$(this).scrollTop();        
-			windowHeight=$window.height();
-			documentHeight=$document.height();
-			console.log(scrollTop,documentHeight,documentHeight - windowHeight - scrollGap)
-			if(windowHeight!=documentHeight){
-				if (scrollTop < scrollGap) {                                         //상단
-					$quick.addClass('down');
-					$quick.removeClass('up');
-				}else if (scrollTop > documentHeight - windowHeight - scrollGap) {   //하단
-					$quick.addClass('up');
-					$quick.removeClass('down');
-				}else{                                                               //그외영역
-					$quick.addClass('up down');   
+(function(){
+    var $window=$(window);
+    var $document=$(document);
+    var $quick=$('.quick');
+    var windowHeight=$window.height();
+    var documentHeight=$document.height();
+    var scrollTop=0;
+    var scrollGap=200;
+    var speed=600;
+    $window.scroll(function(){
+        winScroll();
+    });
+    winScroll();
+    function winScroll(){
+        scrollTop=$(this).scrollTop();        
+        windowHeight=$window.height();
+        documentHeight=$document.height();
+        console.log(scrollTop,documentHeight,documentHeight - windowHeight - scrollGap)
+        if(windowHeight!=documentHeight){
+            if (scrollTop < scrollGap) {                                         //상단
+                $quick.addClass('down');
+                $quick.removeClass('up');
+            }else if (scrollTop > documentHeight - windowHeight - scrollGap) {   //하단
+                $quick.addClass('up');
+                $quick.removeClass('down');
+            }else{                                                               //그외영역
+                $quick.addClass('up down');   
 				}
 			}else{
-				$quick.removeClass('down');
+                $quick.removeClass('down');
 			}
 		}		
-
+        
 		$quick.find('.top').on('click',function(){
-			$('html,body').stop().animate({'scrollTop':0},speed);
+            $('html,body').stop().animate({'scrollTop':0},speed);
 		});
 		$quick.find('.bottom').on('click',function(){
-			$('html,body').stop().animate({'scrollTop':$document.height()-$window.height()},speed);
+            $('html,body').stop().animate({'scrollTop':$document.height()-$window.height()},speed);
 		})
 	})();
 
@@ -46,7 +46,7 @@
 
 
 
-  
+
 // ●●●●●●●●●●●● 검색창(모달팝업)
 const modal = document.querySelector('.modal');
 const modalOpen = document.querySelector('.modal_btn');
@@ -161,6 +161,50 @@ $(document).ready(function() {
         $(this).find('ul.sub_dep_2').stop(true, true).slideUp(200);
     });
 });
+    
+    
+    
+    
+    
+    
+    
+    
+// ●●●●●●●●●●●● 멀티팝업(메인화면)
+    function setCookie( name, value, expiredays ) { 
+	var todayDate = new Date(); 
+	todayDate.setDate( todayDate.getDate() + expiredays );  
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";" 
+}
+function closePop() { 
+	if ( document.pop_form.chkbox.checked ){ 
+		setCookie( "maindiv", "done" , 1 ); 
+	} 
+	document.all['multi_popup'].style.visibility = "hidden";
+}
+
+
+$(function() {
+	$('#main_bn').ulslide({          
+		statusbar: true,
+		width: 410,        // 슬라이드 배너의 가로크기 조절
+		height: 350,        // 슬라이드 배너의 세로크기 조절
+		affect: 'slide',      // fade로 변경시 서서히 사라지고 나타나는 형태로 바뀜
+		axis: 'x',              // y로 변경시 세로슬라이드로 바뀜
+		navigator: '.thumb_box a',
+		duration: 300,        // 배너 바뀌는 속도
+		autoslide: 3000
+	});
+});
+
+cookiedata = document.cookie;    
+if ( cookiedata.indexOf("maindiv=done") < 0 ){      
+	document.all['multi_popup'].style.visibility = "visible";
+} 
+else {
+	document.all['multi_popup'].style.visibility = "hidden"; 
+}
+
+
 
 
 
