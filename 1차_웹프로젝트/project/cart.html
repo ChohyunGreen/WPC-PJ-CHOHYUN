@@ -193,11 +193,7 @@
     <ul class="topright">
         <li><a href="login.html" class="mouse_hover"><img src="./imgs/log-in.svg" alt="로그인" title="로그인"></a></li>
         <li><a href="join.html" class="mouse_hover"><img src="./imgs/user.svg" alt="회원가입" title="회원가입"></a></li>
-<<<<<<< HEAD
-        <li><a href=""><img src="./imgs/shopping-cart.svg" alt="장바구니" title="장바구니"></a></li>
-=======
         <li><a href="cart.html" class="mouse_hover"><img src="./imgs/shopping-cart.svg" alt="장바구니" title="장바구니"></a></li>
->>>>>>> 9f42d0f5149fe373d2abecf3fe04d1edb7e391cb
 
 
 
@@ -291,45 +287,73 @@
 
 
 
-<!-- start : 회원가입 -->
-<section class="join">
+<!-- start : 장바구니 -->
+<section class="cart">
     <h2 class="tit">
-        <span>회원가입</span>
+        <span>장바구니</span>
     </h2>
     
     
     
-    <div class="register-container">
-        <form id="registerForm">
-            <div class="input-group">
-                <label for="regUsername">아이디</label>
-                <input type="text" id="regUsername" name="username" placeholder="사용할 아이디를 입력하세요 (4~16자)" minlength="4" maxlength="16" required>
-<<<<<<< HEAD
-=======
-                <button type="submit" class="confirm">중복확인</button>
->>>>>>> 9f42d0f5149fe373d2abecf3fe04d1edb7e391cb
+    <div class="cart-container">
+
+        <div class="cart-items">
+            <!-- 장바구니에 담긴 개별 상품 아이템들이 여기에 들어갑니다. -->
+            <div class="cart-item">
+                <img src="./imgs/thumb_cart_item_01.jpg" alt="장바구니아이템-1" class="item-image">
+                <div class="item-details">
+                    <h3 class="item-name">✨ 귀염둥이 유아동 백팩</h3>
+                    <p class="item-options">옵션: M 사이즈, 핑크</p>
+                    <p class="item-price">개당 가격: 25,000원</p>
+                </div>
+                <div class="item-quantity-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="item-quantity" value="1" min="1" readonly>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <p class="item-total-price">상품 총계: 25,000원</p>
+                <button class="item-remove">삭제</button>
             </div>
-            <div class="input-group">
-                <label for="regEmail">이메일</label>
-                <input type="email" id="regEmail" name="email" placeholder="이메일 주소를 입력하세요" required>
+
+            <!-- 다른 상품 아이템 예시입니다. 필요에 따라 복사해서 사용하세요! -->
+            <div class="cart-item">
+                <img src="./imgs/thumb_cart_item_02.jpg" alt="장바구니아이템-2" class="item-image">
+                <div class="item-details">
+                    <h3 class="item-name">🐻 폭신폭신 곰돌이 인형</h3>
+                    <p class="item-options">옵션: L 사이즈</p>
+                    <p class="item-price">개당 가격: 30,000원</p>
+                </div>
+                <div class="item-quantity-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="item-quantity" value="2" min="1" readonly>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <p class="item-total-price">상품 총계: 60,000원</p>
+                <button class="item-remove">삭제</button>
             </div>
-            <div class="input-group">
-                <label for="regPassword">비밀번호</label>
-                <input type="password" id="regPassword" name="password" placeholder="비밀번호를 입력하세요 (최소 6자)" minlength="6" required>
+            <!-- /장바구니 아이템 끝 -->
+        </div>
+
+        <div class="cart-summary">
+            <h3>결제 예정 금액</h3>
+            <div class="summary-row">
+                <span>총 상품 금액</span>
+                <span class="summary-value">85,000원</span>
             </div>
-            <div class="input-group">
-                <label for="regConfirmPassword">비밀번호 확인</label>
-                <input type="password" id="regConfirmPassword" name="confirmPassword" placeholder="비밀번호를 다시 입력하세요" minlength="6" required>
+            <div class="summary-row">
+                <span>배송비</span>
+                <span class="summary-value">3,000원</span>
             </div>
-            <button type="submit">회원가입</button>
-        </form>
-        <p id="registerMessage"></p> <!-- 회원가입 메시지를 표시할 곳 -->
-        <div class="links-group">
-            <a href="login.html">이미 계정이 있으신가요? 로그인</a> <!-- 로그인 페이지로 이동 -->
+            <div class="summary-row total">
+                <span>총 결제 금액</span>
+                <span class="summary-value">88,000원</span>
+            </div>
+            <button class="checkout-button">지금 바로 주문하기! 🚀</button>
         </div>
     </div>
+
 </section>
-<!-- end : 회원가입 -->
+<!-- end : 장바구니 -->
 
 
 
