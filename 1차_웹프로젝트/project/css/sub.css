@@ -276,8 +276,6 @@
     outline: none; /* 포커스 시 기본 아웃라인 제거 */
 }
 
-<<<<<<< HEAD
-=======
 .register-container button.confirm {
   width: 150px;
   position: absolute;
@@ -286,7 +284,6 @@
   height: 45px;
   padding: 0;
 }
->>>>>>> 9f42d0f5149fe373d2abecf3fe04d1edb7e391cb
 .register-container button {
     width: 100%;
     padding: 14px;
@@ -357,8 +354,6 @@
 
 
 
-<<<<<<< HEAD
-=======
 /****************** 장바구니 ******************/
 .cart {
     width: 1650px;
@@ -607,4 +602,3 @@
 
 
 
->>>>>>> 9f42d0f5149fe373d2abecf3fe04d1edb7e391cb
