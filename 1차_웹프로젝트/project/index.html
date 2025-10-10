@@ -79,6 +79,50 @@
 
 
 
+<!-- start : 멀티팝업(메인화면) -->
+<div id="multi_popup" style="visibility: visible;">
+<div class="container">
+	<div id="main_bn">
+		<li><a href=""><img src="./imgs/pop_bnr_01.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_02.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_03.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_04.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_05.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_06.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_07.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_08.jpg"></a></li>
+	</div>
+    
+    
+
+	<div class="thumb_box">
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_01.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_02.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_03.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_04.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_05.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_06.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_07.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_08.jpg');"></a>
+	</div>
+</div>
+
+<div class="close">
+	<form name="pop_form">
+		<div id="check"><input type="checkbox" name="chkbox" value="checkbox" style="margin-right:5px;">오늘 하루동안 보지 않기</div>
+		<div id="close" style="margin:auto;"><a href="javascript:closePop();">닫기</a></div>
+	</form>
+</div>
+</div>
+<!-- end : 멀티팝업(메인화면) -->
+
+
+
+
+
+
+
+
 <!-- start : wrap -->    
 <div id="wrap">
    
@@ -92,22 +136,22 @@
 
     <ul class="cate">
         <li>
-            <a href="company.html" class="mouse_hover">브랜드스토리</a>
+            <a href="brand.html" class="mouse_hover">브랜드스토리</a>
             <ul class="sub_dep_1">
                 <li>
-                    <a href="company.html" class="mouse_hover">브랜드스토리</a>
+                    <a href="brand.html" class="mouse_hover">브랜드스토리</a>
                     <ul class="sub_dep_2">
-                        <li><a href="company.html" class="mouse_hover">브랜드스토리1-1</a></li>
-                        <li><a href="company.html" class="mouse_hover">브랜드스토리1-2</a></li>
-                        <li><a href="company.html" class="mouse_hover">브랜드스토리1-3</a></li>
-                        <li><a href="company.html" class="mouse_hover">브랜드스토리1-4</a></li>
-                        <li><a href="company.html" class="mouse_hover">브랜드스토리1-5</a></li>  
+                        <li><a href="brand.html" class="mouse_hover">브랜드스토리1-1</a></li>
+                        <li><a href="brand.html" class="mouse_hover">브랜드스토리1-2</a></li>
+                        <li><a href="brand.html" class="mouse_hover">브랜드스토리1-3</a></li>
+                        <li><a href="brand.html" class="mouse_hover">브랜드스토리1-4</a></li>
+                        <li><a href="brand.html" class="mouse_hover">브랜드스토리1-5</a></li>  
                     </ul>
                 </li>
-                <li><a href="company.html" class="mouse_hover">회사소개</li>
-                <li><a href="company.html" class="mouse_hover">연혁</li>
-                <li><a href="company.html" class="mouse_hover">비전.목표</li>
-                <li><a href="company.html" class="mouse_hover">찾아오시는 길</li>
+                <li><a href="brand.html" class="mouse_hover">회사소개</li>
+                <li><a href="brand.html" class="mouse_hover">연혁</li>
+                <li><a href="brand.html" class="mouse_hover">비전.목표</li>
+                <li><a href="brand.html" class="mouse_hover">찾아오시는 길</li>
             </ul>        
         </li>
 
@@ -229,15 +273,15 @@
 
 
     <ul class="topright">
-        <li><a href=""><img src="./imgs/log-in.svg" alt=""></a></li>
-        <li><a href=""><img src="./imgs/user.svg" alt=""></a></li>
-        <li><a href=""><img src="./imgs/shopping-cart.svg" alt=""></a></li>
+        <li><a href="login.html" class="mouse_hover"><img src="./imgs/log-in.svg" alt="로그인" title="로그인"></a></li>
+        <li><a href="join.html" class="mouse_hover"><img src="./imgs/user.svg" alt="회원가입" title="회원가입"></a></li>
+        <li><a href=""><img src="./imgs/shopping-cart.svg" alt="장바구니" title="장바구니"></a></li>
 
 
 
         <!-- 검색창(모달팝업) -->
         <li class="modal_btn mouse_hover">
-            <button type="button"><img src="./imgs/search.svg" alt=""></button>
+            <button type="button"><img src="./imgs/search.svg" alt="검색" title="검색"></button>
         </li>
         <div class="modal">
             <div class="modal_popup">
@@ -253,18 +297,18 @@
 
         <!-- 전체메뉴보기 -->
         <li class="dropdown mouse_hover">
-            <button class="dropdown-button"><img src="./imgs/menu.svg" alt=""></button>
+            <button class="dropdown-button"><img src="./imgs/menu.svg" alt="전체메뉴" title="전체메뉴"></button>
             <!-- 전체메뉴 내용 -->
             <div class="dropdown-menu">
                 <button class="close-button"><img src="./imgs/x_white.svg" alt=""></button>
 
                 <div class="allcate">
                     <div class="inside">
-                        <span class="first"><a href="company.html">브랜드스토리</a></span>
-                        <span><a href="company.html">회사소개</a></span>
-                        <span><a href="company.html">연혁</a></span>
-                        <span><a href="company.html">비전.목표</a></span>
-                        <span><a href="company.html">찾아오시는 길</a></span>
+                        <span class="first"><a href="brand.html">브랜드스토리</a></span>
+                        <span><a href="brand.html">회사소개</a></span>
+                        <span><a href="brand.html">연혁</a></span>
+                        <span><a href="brand.html">비전.목표</a></span>
+                        <span><a href="brand.html">찾아오시는 길</a></span>
                     </div>
 
                     <div class="inside">
@@ -1126,7 +1170,14 @@
 <!-- end : 퀵메뉴 -->
 
 
+<!-- 스크립트(공통) -->
 <script src="js/common_dbh.js"></script>
+
+<!-- 스크립트 (메인페이지) -->
 <script src="js/main_dbh.js"></script>
+
+<!-- 제이쿼리(멀티팝업-메인화면) -->
+<script type="text/javascript" src="./js/jquery.ulslide.js"></script>
+
 </body>
 </html>

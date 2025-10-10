@@ -63,27 +63,27 @@
 /* 설명 영역 - 애니메이션 적용 */
 .brand .exp,
 .brand .exp_2 {
-    max-width: 85%;
-    color: var(--color-gray);
-    font-size: 20px;
-    line-height: 1.75;
-    font-weight: 400;
-    text-align: center;
-    margin:0 auto 100px;
-    opacity: 0; /* 초기 상태: 투명 */
-    transform: translateY(20px); /* 초기 위치: 아래쪽으로 20px 이동 */
-    animation: fadeInUp 3s ease-in-out forwards; /* 애니메이션 적용 */    
-    animation-delay: 0.5s; /* 애니메이션 다음에 적용 */   
-   }
+  max-width: 85%;
+  color: var(--color-gray);
+  font-size: 20px;
+  line-height: 1.75;
+  font-weight: 400;
+  text-align: center;
+  margin:0 auto 100px;
+  opacity: 0; /* 초기 상태: 투명 */
+  transform: translateY(20px); /* 초기 위치: 아래쪽으로 20px 이동 */
+  animation: fadeInUp 2.3s ease-in-out forwards; /* 애니메이션 적용 */    
+  animation-delay: 1.5s; /* 애니메이션 다음에 적용 */   
+}
    
 .brand .exp:hover,
 .brand .exp_2:hover {
-    color: var(--color-black);
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
+  color: var(--color-black);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
 }   
 
 .brand .exp_2 {
@@ -93,13 +93,253 @@
 @keyframes fadeInUp {
   from {
     opacity: 0; /* 시작: 투명 */
-    transform: translateY(20px); /* 시작: 아래쪽으로 이동 */
+    transform: translateY(120px); /* 시작: 아래쪽으로 이동 */
   }
   to {
     opacity: 1; /* 끝: 불투명 */
     transform: translateY(0); /* 끝: 원래 위치 */
   }
 }
+
+
+
+
+
+
+
+
+/****************** 로그인 ******************/
+.login {
+    width: 1650px;
+    margin:100px auto 0;
+  }
+  
+  .login-container {
+    width: 500px !important;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); */
+    text-align: center;
+    width: 100%;
+    max-width: 500px; /* 로그인 박스의 최대 너비 */
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #555;
+    font-weight: 700;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--color-black-2);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none; /* 포커스 시 기본 아웃라인 제거 */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--color-black-2);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.login-container button:hover {
+    background-color: var(--color-gray);
+    transform: translateY(-1px); /* 살짝 올라가는 효과 */
+}
+
+.login-container button:active {
+    transform: translateY(0); /* 클릭 시 원위치 */
+}
+
+#loginMessage {
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: #dc3545; /* 에러 메시지 기본 색상 (빨강) */
+    font-weight: 600;
+}
+
+#loginMessage.success {
+    color: #28a745; /* 성공 메시지 색상 (초록) */
+}
+
+.links-group {
+    margin-top: 25px;
+    font-size: 0.9em;
+}
+
+.links-group a {
+    color: var(--color-black-2);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.2s ease;
+}
+
+.links-group a:hover {
+    text-decoration: underline;
+    color: var(--color-gray);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    .login-container button {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+/****************** 회원가입 ******************/
+.join {
+    width: 1650px;
+    margin:100px auto 0;
+  }
+  
+.register-container {
+    width: 500px !important;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); */
+    text-align: center;
+    width: 100%;
+    max-width: 500px; /* 로그인 박스의 최대 너비 */
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #555;
+    font-weight: 700;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--color-black-2);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none; /* 포커스 시 기본 아웃라인 제거 */
+}
+
+.register-container button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--color-black-2);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.register-container button:hover {
+    background-color: var(--color-gray);
+    transform: translateY(-1px); /* 살짝 올라가는 효과 */
+}
+
+.register-container button:active {
+    transform: translateY(0); /* 클릭 시 원위치 */
+}
+
+#loginMessage {
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: #dc3545; /* 에러 메시지 기본 색상 (빨강) */
+    font-weight: 600;
+}
+
+#loginMessage.success {
+    color: #28a745; /* 성공 메시지 색상 (초록) */
+}
+
+.links-group {
+    margin-top: 25px;
+    font-size: 0.9em;
+}
+
+.links-group a {
+    color: var(--color-black-2);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.2s ease;
+}
+
+.links-group a:hover {
+    text-decoration: underline;
+    color: var(--color-gray);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 500px) {
+    .register-container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    .register-container button {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
+
+
 
 
 
