@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Double Heart (Mobile)</title>
+
+    <link rel="stylesheet" href="./css/main_m.css">
+    <link rel="stylesheet" href="./css/common_m.css">
+
+    <!-- 웹폰트 : Noto Sans KR -->
+<!--     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+ -->
+    <!-- 웹폰트 : Pretendard -->
+    <!-- <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css" /> -->
+
+    <!-- 메인슬라이드 Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- 폰트어썸 아이콘 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- 메인슬라이드 Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>       
+
+
+    <!-- bxslider 관련 cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="header-top">
+            <!-- 로고(상단) -->
+            <div class="logo">
+                <a href="/">
+                    <img src="./imgs/logo_m.png" alt="로고">
+                </a>
+            </div>
+            <button class="menu-btn" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+
+
+    <!-- 사이드바 네비게이션 -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <a href="/">
+                    <img src="./imgs/logo_m.png" alt="로고">
+                </a>
+            </div>
+            <button class="close-btn" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <!-- <li><a href="#">홈</a></li> -->
+                <li class="has-submenu">
+                    <a href="#">브랜드스토리</a>
+                    <ul class="submenu">
+                        <li><a href="brand.html">브랜드스토리</a></li>
+                        <li><a href="brand.html">회사소개</a></li>
+                        <li><a href="brand.html">연혁</a></li>
+                        <li><a href="brand.html">비전.목표</a></li>
+                        <li><a href="brand.html">찾아오시는 길</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="#">제품안내</a>
+                    <ul class="submenu">
+                        <li><a href="product.html">젖병.분유병</a></li>
+                        <li><a href="product.html">수유용품</a></li>
+                        <li><a href="product.html">쪽쪽이.구강케어</a></li>
+                        <li><a href="product.html">이유식용품</a></li>
+                        <li><a href="product.html">목욕.위생용품</a></li>
+                        <li><a href="product.html">스킨케어</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="babyinfo.html">육아정보</a>
+                    <ul class="submenu">
+                        <li><a href="babyinfo.html">육아정보</a></li>
+                            <li><a href="babyinfo.html">초보엄빠탈출</a></li>
+                            <li><a href="babyinfo.html">재능놀이탐구</a></li>
+                            <li><a href="babyinfo.html">연령대별 맞춤케어</a></li>
+                            <li><a href="babyinfo.html">베이비페어</a></li>
+                        </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="magazine.html">매거진</a>
+                    <ul class="submenu">
+                        <li><a href="magazine.html">매거진</a></li>
+                        <li><a href="magazine.html">놀이탐구</a></li>
+                        <li><a href="magazine.html">교육정보</a></li>
+                        <li><a href="magazine.html">알뜰육아정보</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="event.html">이벤트</a>
+                    <ul class="submenu">
+                        <li><a href="event.html">이달의이벤트</a></li>
+                        <li><a href="event.html">지난이벤트</a></li>
+                        <li><a href="event.html">당첨자발표</a></li>
+                    </ul>
+                </li>                
+
+                <li class="has-submenu">
+                    <a href="notice.html">공지사항</a>
+                    <ul class="submenu">
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="notice.html">1:1문의</a></li>
+                        <li><a href="notice.html">제휴문의</a></li>
+                        <li><a href="notice.html">상품문의</a></li>
+                    </ul>
+                </li>                
+
+            </ul>
+        </nav>
+
+        <div class="iconmenu">
+            <ul>
+                <li><a href="login.html"><img src="./imgs/log-in.svg" alt="로그인" title="로그인"></a></li>
+                <li><a href="join.html"><img src="./imgs/user.svg" alt="회원가입" title="회원가입"></a></li>
+                <li><a href="cart.html"><img src="./imgs/shopping-cart.svg" alt="장바구니" title="장바구니"></a></li>
+                <li><a href="search.html"><img src="./imgs/search.svg" alt="검색" title="검색"></a></li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <!-- 오버레이 -->
+    <div class="overlay" id="overlay"></div>
+
+
+
+
+    
+
+
+
+    <!-- 메인 슬라이드 -->
+    <section class="slider mainimg">
+        <div class="slides" id="slides">
+            <div class="slide">
+                <a href=""><img src="./imgs/mainimg_01.png" alt="메인슬라이드1"></a>
+            </div>
+            <div class="slide">
+                <a href=""><img src="./imgs/mainimg_02.png" alt="메인슬라이드2"></a>
+            </div>
+        </div>
+        <div class="slider-controls" id="sliderDots">
+            <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
+            <!-- <div class="slider-dot"></div> -->
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- start : 막강한 회원전용혜택 -->
+    <h2 class="tit_m">
+        <span>막강한 회원전용혜택</span>
+    </h2>
+    <section class="superprice">
+    <div class="iconarea">
+        <ul>
+            <li class="icon1">
+                <a href=""><img src="./imgs/icon_superprice_01.svg" alt="신규가입혜택"></a>
+                <span class="exp">신규가입혜택</span>
+            </li>
+            <li class="icon2">
+                <a href=""><img src="./imgs/icon_superprice_02.svg" alt="포인트 적립"></a>
+                <span class="exp">포인트 적립</span>
+            </li>
+            <li class="icon3">
+                <a href=""><img src="./imgs/icon_superprice_03.svg" alt="이달의 이벤트"></a>
+                <span class="exp">이달의 이벤트</span>
+            </li>
+            <li class="icon4">
+                <a href=""><img src="./imgs/icon_superprice_04.svg" alt="마감 특가전"></a>
+                <span class="exp">마감 특가전</span>
+            </li>
+            <li class="icon5">
+                <a href=""><img src="./imgs/icon_superprice_05.svg" alt="리뷰 이벤트"></a>
+                <span class="exp">리뷰 이벤트</span>
+            </li>
+            <li class="icon6">
+                <a href=""><img src="./imgs/icon_superprice_06.svg" alt="기획전 상품"></a>
+                <span class="exp">기획전 상품</span>
+            </li>
+        </ul>
+    </div>
+
+    </section>
+    <!-- end : 막강한 회원전용혜택 -->
+
+
+
+
+
+
+
+
+    <!-- 상품 목록 섹션 -->
+    <section class="section">
+        <h2 class="section-title">인기 상품</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-img" style="background-color: #f1c40f;"></div>
+                <div class="card-content">
+                    <h3 class="card-title">상품명 1</h3>
+                    <p class="card-price">25,000원</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-color: #9b59b6;"></div>
+                <div class="card-content">
+                    <h3 class="card-title">상품명 2</h3>
+                    <p class="card-price">32,000원</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-color: #1abc9c;"></div>
+                <div class="card-content">
+                    <h3 class="card-title">상품명 3</h3>
+                    <p class="card-price">18,500원</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-color: #e67e22;"></div>
+                <div class="card-content">
+                    <h3 class="card-title">상품명 4</h3>
+                    <p class="card-price">42,000원</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 신상품 섹션 -->
+    <section class="section">
+        <h2 class="section-title">신상품</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-img" style="background-color: #34495e;"></div>
+                <div class="card-content">
+                    <h3 class="card-title">신상품 1</h3>
+                    <p class="card-price">55,000원</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-color: #d35400;"></div>
+                <div class="card-content">
+                    <h3 class="card-title">신상품 2</h3>
+                    <p class="card-price">37,000원</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-color: #16a085;"></div>
+                <div class="card-content">
+                    <h3 class="card-title">신상품 3</h3>
+                    <p class="card-price">29,800원</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-color: #8e44ad;"></div>
+                <div class="card-content">
+                    <h3 class="card-title">신상품 4</h3>
+                    <p class="card-price">48,500원</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">고객센터</a>
+        </div>
+        <div class="footer-info">
+            <p>상호명: (주)회사명 | 대표: 홍길동</p>
+            <p>사업자등록번호: 123-45-67890</p>
+            <p>주소: 서울특별시 강남구 테헤란로 123</p>
+            <p>전화: 02-1234-5678 | 이메일: info@company.com</p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <!-- PC 웹사이트 접속 링크 -->
+    <div class="pc-version-link">
+        <a href="#" id="pcVersionLink">PC 웹사이트로 보기</a>
+    </div>
+
+   
+
+
+    
+
+
+<!-- 스크립트(공통) -->
+<script src="./js/common_dbh_m.js"></script>
+
+<!-- 스크립트 (메인페이지) -->
+<script src="./js/main_dbh_m.js"></script>
+
+
+</body>
+</html>
