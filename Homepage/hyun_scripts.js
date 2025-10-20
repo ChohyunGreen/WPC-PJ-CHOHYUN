@@ -1,12 +1,3 @@
-/*
-
-TemplateMo 594 nexus flow
-
-https://templatemo.com/tm-594-nexus-flow
-
-*/
-
-// JavaScript Document
 
 // Initialize mobile menu functionality
         function initializeMobileMenu() {
@@ -141,7 +132,7 @@ https://templatemo.com/tm-594-nexus-flow
         // Generate Matrix Rain Effect
         function generateMatrixRain() {
             const matrixRain = document.getElementById('matrixRain');
-            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            const characters = '디자인인재, 조현, 웹디자이너, 웹퍼블리셔, 코딩, 수준높은포트폴리오,';
             const columns = Math.floor(window.innerWidth / 20);
             
             for (let i = 0; i < columns; i++) {
@@ -259,14 +250,14 @@ https://templatemo.com/tm-594-nexus-flow
             const cursorGlow = document.createElement('div');
             cursorGlow.style.cssText = `
                 position: fixed;
-                width: 400px;
-                height: 400px;
+                width: 300px;
+                height: 300px;
                 border-radius: 50%;
-                background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+                background: radial-gradient(circle, rgba(253, 253, 253, 0.1) 0%, transparent 70%);
                 pointer-events: none;
                 z-index: 9999;
                 transform: translate(-50%, -50%);
-                transition: opacity 0.3s ease;
+                transition: opacity 0.9s ease;
                 opacity: 0;
             `;
             document.body.appendChild(cursorGlow);
@@ -311,10 +302,10 @@ https://templatemo.com/tm-594-nexus-flow
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
-                nav.style.background = 'rgba(15, 15, 35, 0.95)';
-                nav.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.2)';
+                nav.style.background = 'rgba(1, 48, 42, 0.95)';
+                // nav.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.2)';
             } else {
-                nav.style.background = 'rgba(15, 15, 35, 0.9)';
+                nav.style.background = 'none';
                 nav.style.boxShadow = 'none';
             }
         });
@@ -396,7 +387,7 @@ https://templatemo.com/tm-594-nexus-flow
 
 
         // Random cyber text effects
-        const cyberTexts = ['웹디자인경력 12년', '채용1순위 인재', '센스만점 인재', '엄청난 디자인실력', '독보적인 웹디자인재능', '비교불가 포트폴리오'];
+        const cyberTexts = ['웹디자인경력 15년', '채용1순위 인재', '센스만점 인재', '엄청난 디자인실력', '독보적인 웹디자인재능', '비교불가 포트폴리오'];
         
         setInterval(() => {
             const randomText = cyberTexts[Math.floor(Math.random() * cyberTexts.length)];
@@ -407,7 +398,7 @@ https://templatemo.com/tm-594-nexus-flow
                 top: ${Math.random() * 100}vh;
                 left: ${Math.random() * 100}vw;
                 color: var(--white);
-                font-size: 3.0rem;
+                font-size: 3.5rem;
                 font-weight: 700;
                 z-index: 1000;
                 opacity: 0.78;
@@ -419,8 +410,8 @@ https://templatemo.com/tm-594-nexus-flow
             
             setTimeout(() => {
                 document.body.removeChild(tempElement);
-            }, 3000);
-        }, 1500);
+            }, 2000);
+        }, 2000);
 
         // Add fadeOut animation
         const style = document.createElement('style');
@@ -462,3 +453,4 @@ https://templatemo.com/tm-594-nexus-flow
                 }, 2000);
             }
         });
+
