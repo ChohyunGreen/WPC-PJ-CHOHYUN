@@ -103,4 +103,150 @@
     margin-top: 22px;
     color: #343434;
 }
+ 
 
+
+
+/* 콘텐츠 섹션 스타일 */
+.main_in {
+    padding: 20px 15px;
+}
+
+
+
+
+/* 상품 공통 */
+.main_in ul,
+.main_in li,
+.main_in a
+ {
+    list-style: none;
+    border:none;
+    text-decoration: none;
+}
+
+.goods_list_wrap {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.goods_product_list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 15px;
+}
+
+.goods_product_list > li {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.goods_prd_item2_box {
+    padding: 0;
+}
+
+.goods_prd_img {
+    padding: 0 0 12px;
+}
+
+.goods_prd_img .img {
+    position: relative;
+    padding-bottom: calc(100% - 2px);
+    border: 1px solid var(--border-color03);
+    box-sizing: border-box;
+}
+
+.goods_prd_img .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* 상품명 */
+.goods_prd_content .goods_info_list li.prd_name {
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-black);
+    letter-spacing: -0.05em;
+    padding: 0;
+    border: none;
+    list-style: none;
+}
+.goods_info_list li.short_des {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--normal-lightgray);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 4px;
+    padding: 0;
+}
+
+.goods_info_list li.price {
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+}
+
+.goods_info_list li.price .c_price {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--black-color03);
+    letter-spacing: -0.03em;
+}
+
+.goods_info_list li.price .c_price em {
+    font-size: 14px;
+    font-family: var(--font-type02);
+    font-weight: 600;
+}
+
+.goods_info_list li.price .item_dc {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--point-color05);
+    font-family: var(--font-type02);
+}
+
+.goods_info_list li.fixed_price {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--black-color09);
+    letter-spacing: -0.03em;
+    margin-top: 4px;
+    padding: 0;
+    font-family: var(--font-type02);
+}
+
+.goods_info_list li.fixed_price em {
+    size: 12px;
+}
+
+.goods_product_list > li.goods_prd_item1 {
+    width: 100%;
+    border: 0;
+    padding: 0;
+}
+
+.goods_product_list > li.goods_prd_item2 {
+    width: calc(100% / 2 - 7.5px);
+}
+
+.goods_product_list:has(.goods_prd_item) {
+    gap: 0;
+}
+
+.goods_product_list > li.goods_prd_item .goods_prd_img {
+    padding-bottom: 0;
+}
