@@ -1054,7 +1054,7 @@
         .btn-secondary {
             background: var(--primary-cyan);
             color: var(--black);
-            padding: 0.5rem 2.2rem;
+            padding: 0.3rem 2.0rem;
             border: 2px solid var(--primary-cyan);
             text-decoration: none;
             font-weight: 700;
