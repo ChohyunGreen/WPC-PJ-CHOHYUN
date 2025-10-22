@@ -76,8 +76,8 @@
 }
 .superprice .iconarea li {
     border: 1px solid #999;
-    width: 160px;
-    height: 160px;
+    width: 135px;
+    height: 135px;
     float: left;
     text-align: center;
     margin: 0 13.5px;
@@ -89,18 +89,18 @@
 .superprice .iconarea li:last-child{
 }
 .superprice .iconarea li img {
-    margin-top: calc(46% - 50px);
-    width: 70px;
-    height: 70px;
+    margin-top: calc(65% - 60px);
+    width: 50px;
+    height: 50px;
 }
 
 .superprice .iconarea li .exp {
     clear: both;
     display: block;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
-    margin-top: 22px;
+    margin-top: 10px;
     color: #343434;
 }
  
@@ -195,41 +195,42 @@
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    gap: 5px;
+    gap: 3px;
     align-items: center;
 }
 
 .goods_info_list li.price .c_price {
     font-size: 12px;
     font-weight: 500;
-    color: var(--black-color03);
     letter-spacing: -0.03em;
 }
 
 .goods_info_list li.price .c_price em {
-    font-size: 14px;
-    font-family: var(--font-type02);
+    font-style: normal;
+    font-size: 18px;
     font-weight: 600;
+    color: var(--color-black);
 }
 
 .goods_info_list li.price .item_dc {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
-    color: var(--point-color05);
+    color: red;
     font-family: var(--font-type02);
 }
 
 .goods_info_list li.fixed_price {
-    font-size: 12px;
-    font-weight: 400;
-    color: var(--black-color09);
+    margin-top: -5px;
     letter-spacing: -0.03em;
-    margin-top: 4px;
     padding: 0;
-    font-family: var(--font-type02);
 }
 
 .goods_info_list li.fixed_price em {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--normal-lightgray);
+    font-style: normal;
+    text-decoration: line-through;
     size: 12px;
 }
 
@@ -250,3 +251,94 @@
 .goods_product_list > li.goods_prd_item .goods_prd_img {
     padding-bottom: 0;
 }
+
+
+
+
+
+
+
+
+/****************** 유튜브 ******************/
+.main_youtube {
+    max-width: 100% !important;
+    margin: 70px auto 30px;
+    padding: 0;
+    clear: both;
+}
+
+.main_youtube .text_area {
+    width: 100%;
+    position: absolute;
+    margin: 40px auto;
+    z-index: 100;
+    text-align: center;
+    max-width: 100%;
+}
+
+.main_youtube .main_youtube_banner {
+    overflow-x: auto;
+    display: block;
+    text-align: center;
+    position: relative;
+    background: #eee;
+    max-width: 100%;
+    background-position: top;
+    background-size: cover;
+    background-origin: border-box;
+}
+.main_youtube .text_area button {
+    background: var(--color-black);
+    border-radius: 30px;
+    width: 150px;
+    height: 37px;
+    margin-top: 10px;
+}
+.main_youtube .text_area button a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+
+
+.main_youtube .text_area h2.effect {
+    background: linear-gradient(88.89deg, #353535 0.48%, #b8b8b8 42.46%, #454545 84.45%);
+    background-size: auto;
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    font-size: 2.2rem;
+}
+
+@keyframes textclip {
+to {
+    background-position: 200% center;
+}
+}
+
+
+.main_youtube .main_youtube_banner iframe {
+    width: 100%;
+}
+
+.main_youtube .main_youtube_banner .videoframe {
+    margin: 46% auto 20px;
+}
+
+
+
+
+
+
+
+
+/* 슬라이드(이벤트) */
