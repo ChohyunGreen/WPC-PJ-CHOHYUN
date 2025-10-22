@@ -75,7 +75,7 @@
     width: 1350px;
 }
 .superprice .iconarea li {
-    border: 1px solid #999;
+    border: 1px solid #d7d7d7;
     width: 135px;
     height: 135px;
     float: left;
@@ -270,7 +270,7 @@
 .main_youtube .text_area {
     width: 100%;
     position: absolute;
-    margin: 40px auto;
+    margin: 40px auto 0;
     z-index: 100;
     text-align: center;
     max-width: 100%;
@@ -278,7 +278,7 @@
 
 .main_youtube .main_youtube_banner {
     overflow-x: auto;
-    display: block;
+    /* display: block; */
     text-align: center;
     position: relative;
     background: #eee;
@@ -298,7 +298,9 @@
     text-decoration: none;
     color: var(--color-white);
 }
-
+.main_youtube iframe {
+    margin: -50px 0 0;
+}
 
 
 .main_youtube .text_area h2.effect {
@@ -342,3 +344,6 @@ to {
 
 
 /* 슬라이드(이벤트) */
+.event img {
+    max-width: 100%;
+}
