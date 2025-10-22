@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>08 CSS 스타일</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="common.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+            .grid-pattern {
+                background-image: 
+                    linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+                background-size: 20px 20px;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                opacity: 0.3;
+            }
+            .analysis-card {
+                border-left: 4px solid;
+                transition: transform 0.3s ease;
+            }
+            .analysis-card:hover {
+                transform: translateX(5px);
+            }
+            .journey-step {
+                position: relative;
+                padding-bottom: 10px;
+            }
+            .journey-step:not(:last-child):after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 18px;
+                height: 10px;
+                width: 2px;
+                background-color: #e5e7eb;
+            }
+        
+    html {
+        overflow: hidden;
+    }</style>
+    </head>
+    
+    
+    
+    <body>
+        <div class="slide bg-white">
+        <!-- Decorative pattern -->
+        <div class="grid-pattern"></div>
+        <!-- Header -->
+        <div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+        <h1 class="font-bold text-gray-800">8. CSS 스타일</h1>
+        </div>
+        
+        
+        
+        <!-- Main content -->
+        <div class="absolute inset-0 pt-20 pb-10 px-10">
+        <div class="grid grid-cols-1 gap-8">
+        
+    
+            
+    
+        <div class="flex flex-col">
+            <div class="mb-6">
+
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-code text-2xl mr-3"></i>
+                    <h2 class="text-xl font-bold text-gray-700">주요 속성</h2>
+                </div>
+            
+                <div class="pl-10">
+                    <p class="text-gray-600 mb-4"> Grid Layout을 활용한 컨텐츠 나열</p>
+                    <p class="text-gray-600 mb-4"> Transition & Animation</p>
+                    <p class="text-gray-600 mb-4"> Transform 효과</p>
+                    <p class="text-gray-600 mb-4"> swiper슬라이드와 제이쿼리를 활용한 동적요소 표현</p>
+                    <p class="text-gray-600 mb-4"> CSS 코드의 유지보수성과 재사용성을 높이기 위해 BEM(Block, Element, Modifier) 방법론을 적용하고, SASS(SCSS) 전처리기를 활용하여 스타일을 구조화</p>
+                </div>
+            </div>
+        
+    </div>
+    
+
+    <!-- css예시  -->
+    <div class="space-y-4" style="background-color: #e8e8e8;">
+        <div class="p-6 rounded-lg font-mono text-sm overflow-x-auto">
+            <div class="mb-2 text-gray-400">/* CSS3 스타일링 */</div>
+            <div>:root {</div>
+                <div class="ml-4">--blackcolor: #000;</div>
+                <div class="ml-4">--pointcolor: #9333EA;</div>
+                <div class="ml-4">--width: 1200px;</div><div>}</div>
+                <div class="mt-2">.wrap {</div>
+                <div class="ml-4">max-width: var(--max-width);</div>
+            <div class="ml-4">margin: 0 auto;</div>
+            <div class="ml-4">padding: 0 20px;</div><div>}</div><div class="mt-2">.product-card {</div><div class="ml-4">transition: transform 0.3s;</div><div>}</div>
+        </div>
+    </div>    
+
+</div>
+</div>
+
+        
+      <!-- Footer -->
+    <div class="absolute bottom-0 bg-gray-100 py-2 px-10 flex justify-between items-center text-center">
+    
+        <!-- Slide number -->
+        <div class="slide-number">
+            <span class="arrow_area"><a href="page_8.html#hshowview_thumbBox_7">Prev</a></span>
+            <span>10/15</span>
+            <span class="arrow_area"><a href="page_10.html#hshowview_thumbBox_9">Next</a></span>
+        </div>
+        
+        
+        </div>
+        </div>
+        
+        
+    </body></html>

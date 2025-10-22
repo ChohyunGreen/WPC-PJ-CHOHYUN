@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>04 UI/UX 디자인</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="common.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.3;
+        }
+        .color-swatch {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide bg-white" style=" overflow: hidden;">
+<!-- Decorative pattern -->
+<div class="grid-pattern"></div>
+<!-- Header -->
+<div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+<h1 class="text-2xl font-bold text-gray-800">04 UI/UX 디자인</h1>
+</div>
+<!-- Slide number -->
+<div class="slide-number">5/13</div>
+<!-- Main content -->
+<div class="absolute inset-0 pt-20 pb-10 px-10">
+<div class="grid grid-cols-2 gap-8 h-full">
+<!-- Left column: Design System -->
+<div class="flex flex-col">
+<div class="mb-4">
+<div class="flex items-center mb-3">
+<i class="fas fa-palette text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">디자인 시스템</h2>
+</div>
+<p class="text-gray-600 mb-3 pl-10">브랜드 아이덴티티를 반영한 일관된 디자인 시스템을 구축하여 모든 페이지와 컴포넌트에 통일성을 부여했습니다.</p>
+</div>
+<div class="bg-gray-50 p-5 rounded-lg mb-4">
+<h3 class="font-semibold text-gray-700 mb-3">색상 팔레트</h3>
+<div class="grid grid-cols-5 gap-2 mb-4">
+<div class="flex items-center">
+<span class="color-swatch" style="background-color: #4CAF50;"></span>
+<span class="text-xs text-gray-600">Primary</span>
+</div>
+<div class="flex items-center">
+<span class="color-swatch" style="background-color: #FFC107;"></span>
+<span class="text-xs text-gray-600">Secondary</span>
+</div>
+<div class="flex items-center">
+<span class="color-swatch" style="background-color: #2196F3;"></span>
+<span class="text-xs text-gray-600">Accent</span>
+</div>
+<div class="flex items-center">
+<span class="color-swatch" style="background-color: #F5F5F5;"></span>
+<span class="text-xs text-gray-600">Neutral</span>
+</div>
+<div class="flex items-center">
+<span class="color-swatch" style="background-color: #333333;"></span>
+<span class="text-xs text-gray-600">Text</span>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 p-5 rounded-lg mb-4">
+<h3 class="font-semibold text-gray-700 mb-3">타이포그래피 규칙</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-center">
+<div class="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-2">
+<span class="text-white font-bold">H1</span>
+</div>
+<span class="text-xs text-gray-600">Noto Sans KR, 36px, Bold</span>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-2">
+<span class="text-white font-bold">H2</span>
+</div>
+<span class="text-xs text-gray-600">Noto Sans KR, 28px, SemiBold</span>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-2">
+<span class="text-white font-bold">H3</span>
+</div>
+<span class="text-xs text-gray-600">Noto Sans KR, 22px, Medium</span>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-2">
+<span class="text-white font-bold">Body</span>
+</div>
+<span class="text-xs text-gray-600">Noto Sans KR, 16px, Regular</span>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 p-5 rounded-lg">
+<h3 class="font-semibold text-gray-700 mb-3">컴포넌트 요소</h3>
+<div class="grid grid-cols-3 gap-3">
+<div class="flex flex-col items-center">
+<i class="fas fa-icons text-2xl text-teal-500 mb-1"></i>
+<p class="text-xs text-gray-600 text-center">통일된 아이콘 세트</p>
+</div>
+<div class="flex flex-col items-center">
+<i class="fas fa-square text-2xl text-teal-500 mb-1"></i>
+<p class="text-xs text-gray-600 text-center">버튼 스타일 가이드</p>
+</div>
+<div class="flex flex-col items-center">
+<i class="fas fa-border-style text-2xl text-teal-500 mb-1"></i>
+<p class="text-xs text-gray-600 text-center">폼 요소 디자인</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right column: Major Screen Design -->
+<div class="flex flex-col">
+<div class="mb-4">
+<div class="flex items-center mb-3">
+<i class="fas fa-desktop text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">주요 화면 디자인</h2>
+</div>
+<p class="text-gray-600 mb-3 pl-10">메인 페이지, 상품 목록, 상품 상세, 장바구니 등 핵심 페이지의 최종 UI 디자인 시안은 사용자의 구매 여정을 최적화하고 비즈니스 목표 달성에 기여하도록 설계되었습니다.</p>
+</div>
+<div class="flex-1 flex flex-col">
+<!-- Main page example with image -->
+<div class="flex-1 flex">
+<div class="w-1/2 pr-4">
+<h3 class="font-semibold text-gray-700 mb-2">메인 페이지</h3>
+<ul class="text-sm text-gray-600 space-y-1">
+<li class="flex items-center">
+<i class="fas fa-check text-teal-500 mr-2"></i>
+                                        시각적으로 매력적인 제품 배너
+                                    </li>
+<li class="flex items-center">
+<i class="fas fa-check text-teal-500 mr-2"></i>
+                                        최신 상품, 베스트셀러, 프로모션 정보
+                                    </li>
+<li class="flex items-center">
+<i class="fas fa-check text-teal-500 mr-2"></i>
+                                        주요 카테고리로의 쉬은 접근성
+                                    </li>
+</ul>
+</div>
+<div class="w-1/2">
+<img alt="e-commerce interface example" class="rounded-lg h-40 object-cover shadow-sm" src="https://picture-search.skywork.ai/aippt/image/sheet/d8d8727cf91db867a60611afe84d1f2f.jpg" data-sk-source-container="img" data-sk-source-url="https://ko.wix.com/blog/post/what-is-ux-design" data-sk-source-id="1980461277884239874"/>
+</div>
+</div>
+<!-- Other screens example -->
+<div class="mt-4 grid grid-cols-2 gap-4">
+<div class="bg-gray-50 p-3 rounded-lg">
+<h3 class="font-semibold text-gray-700 mb-1">상품 목록 페이지</h3>
+<div class="flex items-center text-xs text-gray-600">
+<i class="fas fa-filter text-teal-500 mr-1"></i>
+<span>필터/정렬</span>
+</div>
+<div class="flex items-center text-xs text-gray-600 mt-1">
+<i class="fas fa-th text-teal-500 mr-1"></i>
+<span>상품 카드 목록</span>
+</div>
+<div class="flex items-center text-xs text-gray-600 mt-1">
+<i class="fas fa-arrow-right text-teal-500 mr-1"></i>
+<span>페이지네이션</span>
+</div>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg">
+<h3 class="font-semibold text-gray-700 mb-1">상품 상세 페이지</h3>
+<div class="flex items-center text-xs text-gray-600">
+<i class="fas fa-image text-teal-500 mr-1"></i>
+<span>상품 이미지 갤러리</span>
+</div>
+<div class="flex items-center text-xs text-gray-600 mt-1">
+<i class="fas fa-info-circle text-teal-500 mr-1"></i>
+<span>상품 정보, 옵션 선택</span>
+</div>
+<div class="flex items-center text-xs text-gray-600 mt-1">
+<i class="fas fa-comments text-teal-500 mr-1"></i>
+<span>리뷰 섹션, 관련 상품</span>
+</div>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg">
+<h3 class="font-semibold text-gray-700 mb-1">장바구니 페이지</h3>
+<div class="flex items-center text-xs text-gray-600">
+<i class="fas fa-shopping-cart text-teal-500 mr-1"></i>
+<span>선택 상품 목록</span>
+</div>
+<div class="flex items-center text-xs text-gray-600 mt-1">
+<i class="fas fa-calculator text-teal-500 mr-1"></i>
+<span>총 결제 금액</span>
+</div>
+<div class="flex items-center text-xs text-gray-600 mt-1">
+<i class="fas fa-check-circle text-teal-500 mr-1"></i>
+<span>주문/쇼핑 계속 버튼</span>
+</div>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg">
+<h3 class="font-semibold text-gray-700 mb-1">결제 페이지</h3>
+<div class="flex items-center text-xs text-gray-600">
+<i class="fas fa-user text-teal-500 mr-1"></i>
+<span>주문자/배송지 정보</span>
+</div>
+<div class="flex items-center text-xs text-gray-600 mt-1">
+<i class="fas fa-credit-card text-teal-500 mr-1"></i>
+<span>결제 수단 선택</span>
+</div>
+<div class="flex items-center text-xs text-gray-600 mt-1">
+<i class="fas fa-money-bill-wave text-teal-500 mr-1"></i>
+<span>최종 결제 금액 확인</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 left-0 right-0 bg-gray-100 py-2 px-10 flex justify-between items-center">
+<div>
+<p class="text-sm text-gray-500">인터넷 쇼핑몰 웹사이트 포트폴리오</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">2025-10-21</p>
+</div>
+</div>
+</div>
+
+</body></html>

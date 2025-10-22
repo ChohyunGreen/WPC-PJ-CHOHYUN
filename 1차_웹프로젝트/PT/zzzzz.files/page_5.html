@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="ko"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>04 제작가이드</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="common.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+            .grid-pattern {
+                background-image: 
+                    linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+                background-size: 20px 20px;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                opacity: 0.3;
+            }
+            .analysis-card {
+                border-left: 4px solid;
+                transition: transform 0.3s ease;
+            }
+            .analysis-card:hover {
+                transform: translateX(5px);
+            }
+            .journey-step {
+                position: relative;
+                padding-bottom: 10px;
+            }
+            .journey-step:not(:last-child):after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 18px;
+                height: 10px;
+                width: 2px;
+                background-color: #e5e7eb;
+            }
+        
+    html {
+        overflow: hidden;
+    }</style>
+    </head>
+    
+    
+    
+    <body>
+        <div class="slide bg-white">
+        <!-- Decorative pattern -->
+        <div class="grid-pattern"></div>
+        <!-- Header -->
+        <div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+        <h1 class="font-bold text-gray-800">4. 제작가이드</h1>
+        </div>
+        
+        
+        
+        <!-- Main content -->
+        <div class="absolute inset-0 pt-20 pb-10 px-10">
+        <div class="grid grid-cols-1 gap-8">
+        
+    
+            
+    
+        <div class="flex flex-col">
+    
+    
+        <div class="mb-6">
+
+        <div class="flex items-center mb-3">
+            <i class="fas fa-sitemap text-2xl mr-3"></i>
+            <h2 class="text-xl font-bold text-gray-700">메인구조도</h2>
+        </div>
+    
+       <!-- start : 메인구조도 -->
+        <div class="history_box">
+            <img src="main_element.png" alt="메인구조도">
+        </div>
+        <!-- end : 메인구조도 -->
+        
+        
+        
+        
+        
+        <!-- start : 컬러시스템 -->
+        <div class="flex items-center mb-3" style="margin-top: 50px;">
+            <i class="fas fa-route text-2xl mr-3"></i>
+            <h2 class="text-xl font-bold text-gray-700">컬러시스템</h2>
+        </div>
+        
+        <div class="history_box">
+            <img src="color_guide.png" alt="컬러시스템">
+         </div>
+        <!-- end : 컬러시스템 -->
+
+
+
+        <!-- start : 기타참조내용 -->
+        <div class="flex items-center mb-3" style="margin-top: 50px;">
+            <i class="fas fa-route text-2xl mr-3"></i>
+            <h2 class="text-xl font-bold text-gray-700">기타참조내용</h2>
+        </div>
+        
+        <div class="history_box">
+<!--               <dl>
+                <dt>레퍼런스 사이트</dt>
+                <dd>
+                  <ul>
+                    <li>(레이아웃,색상)&nbsp;&nbsp;<span><a href="https://bokji.or.kr/" target="_blank">서울시각장애인복지관 : https://bokji.or.kr/ </a></span></li>
+                    <li>(컨텐츠,기타내용)&nbsp;&nbsp;<span><a href="https://soyjoymall.co.kr/" target="_blank">소이조이몰 : https://soyjoymall.co.kr/ </a></span></li>
+                    <li>(컨텐츠,기타내용)&nbsp;&nbsp;<span><a href="https://company.namyangi.com/ko/main" target="_blank">남양유업 : https://company.namyangi.com/ko/main </a></span></li>
+                    <li>(컨텐츠,기타내용)&nbsp;&nbsp;<span><a href="https://miraenchoco.com/brand" target="_blank">미래엔 디지털초코 : https://miraenchoco.com/brand </a></span></li>
+                  </ul>
+                </dd>
+              </dl>
+ -->
+              <dl>
+                <dt>타이포 계층구조</dt>
+                <dd>
+                  <ul>
+                    <li>배너영역 타이틀 (div) &nbsp;&nbsp;<span>#1b1b1b / 40px / 'Noto Sans KR','Pretendard','Roboto'</span></li>
+                    <li>배너영역 텍스트 (span,p 태그중에서 각 영역에 맞게 설정) &nbsp;&nbsp;<span>#777777 / 16px ~ 18px / 'Noto Sans KR','Pretendard','Roboto'</span></li> <br>
+                    <li>타이틀 (H1) &nbsp;&nbsp;<span>#202020 / 35px / 'Noto Sans KR','Pretendard','Roboto'</span></li>
+                    <li>상품정보영역, 섬네일텍스트 (span,p 태그중에서 각 영역에 맞게 설정) &nbsp;&nbsp;<span>#777777 / 16px ~ 18px / 'Noto Sans KR','Pretendard','Roboto'</span></li>
+                  </ul>
+                </dd>
+              </dl>
+         </div>
+        <!-- end : 기타참조내용 -->
+
+
+
+        </div>
+        
+        
+
+    </div>
+    
+    
+    
+    
+    
+        
+    
+    
+    
+        </div>
+        </div>
+        
+        
+        <!-- Footer -->
+    <div class="absolute bottom-0 bg-gray-100 py-2 px-10 flex justify-between items-center text-center">
+    
+        <!-- Slide number -->
+        <div class="slide-number">
+            <span class="arrow_area"><a href="page_4.html#hshowview_thumbBox_3">Prev</a></span>
+            <span>6/15</span>
+            <span class="arrow_area"><a href="page_6.html#hshowview_thumbBox_5">Next</a></span>
+        </div>
+        
+        
+        </div>
+        </div>
+        
+        
+    </body></html>

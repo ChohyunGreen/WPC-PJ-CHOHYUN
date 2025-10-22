@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>10 JavaScript 구현</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="common.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.3;
+        }
+        .code-block {
+            font-family: 'Consolas', 'Monaco', monospace;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            padding: 15px;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.5;
+            border-left: 4px solid #FF6600;
+            overflow-y: auto;
+            max-height: 200px;
+        }
+        .feature-item {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        .feature-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            background-color: #FF6600;
+            border-radius: 50%;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide bg-white" style=" overflow: hidden;">
+<!-- Decorative pattern -->
+<div class="grid-pattern"></div>
+<!-- Header -->
+<div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+<h1 class="text-2xl font-bold text-gray-800">10 JavaScript 구현</h1>
+</div>
+<!-- Slide number -->
+<div class="slide-number">11/13</div>
+<!-- Main content -->
+<div class="absolute inset-0 pt-20 pb-10 px-10">
+<div class="grid grid-cols-2 gap-8 h-full">
+<!-- Left column: DOM manipulation and event handling -->
+<div class="flex flex-col">
+<div class="mb-4">
+<div class="flex items-center mb-3">
+<i class="fas fa-code text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">DOM 조작 및 이벤트 처리</h2>
+</div>
+<div class="pl-10">
+<p class="text-gray-600 mb-4">순수 JavaScript를 활용하여 웹 페이지의 동적인 요소를 구현하고 사용자 인터랙션을 처리했습니다.</p>
+<div class="feature-item">
+<p class="text-gray-700"><span class="font-semibold">DOMContentLoaded 이벤트:</span> 문서 로드 후 스크립트 실행</p>
+</div>
+<div class="feature-item">
+<p class="text-gray-700"><span class="font-semibold">이벤트 리스너:</span> 탭 버튼 클릭 시 해당 탭 콘텐츠 활성화</p>
+</div>
+<div class="feature-item">
+<p class="text-gray-700"><span class="font-semibold">이벤트 위임:</span> 효율적인 이벤트 처리</p>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<h3 class="text-lg font-semibold text-gray-700 mb-2 pl-10">탭 메뉴 구현 예시</h3>
+<div class="code-block pl-10">
+<pre>document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+    const tabs = document.querySelectorAll(&#39;.tab-button&#39;);
+    const tabContents = document.querySelectorAll(&#39;.tab-content&#39;);
+
+    tabs.forEach(tab =&gt; {
+        tab.addEventListener(&#39;click&#39;, () =&gt; {
+            // 모든 탭 버튼에서 &#39;active&#39; 클래스 제거
+            tabs.forEach(item =&gt; item.classList.remove(&#39;active&#39;));
+            // 클릭된 탭 버튼에 &#39;active&#39; 클래스 추가
+            tab.classList.add(&#39;active&#39;);
+
+            const targetId = tab.dataset.target; // data-target 속성 값 가져오기
+
+            // 모든 탭 콘텐츠 숨기기
+            tabContents.forEach(content =&gt; content.style.display = &#39;none&#39;);
+            // 클릭된 탭에 해당하는 콘텐츠 보이기
+            document.getElementById(targetId).style.display = &#39;block&#39;;
+        });
+    });
+
+    // 초기 로드 시 첫 번째 탭 활성화
+    if (tabs.length &gt; 0) {
+        tabs[0].click();
+    }
+});</pre>
+</div>
+</div>
+<div class="mt-4 pl-10">
+<p class="text-gray-600 text-sm italic">페이지 새로고침 없이도 콘텐츠를 전환하여 사용자 경험을 개선했습니다.</p>
+</div>
+</div>
+<!-- Right column: Asynchronous communication with Fetch API -->
+<div class="flex flex-col">
+<div class="mb-4">
+<div class="flex items-center mb-3">
+<i class="fas fa-exchange-alt text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">비동기 통신(AJAX)</h2>
+</div>
+<div class="pl-10">
+<p class="text-gray-600 mb-4">fetch API를 사용하여 서버와 비동기적으로 데이터를 주고받는 기능을 구현했습니다.</p>
+<div class="feature-item">
+<p class="text-gray-700"><span class="font-semibold">비동기 데이터 요청:</span> 서버에서 추가 데이터 가져오기</p>
+</div>
+<div class="feature-item">
+<p class="text-gray-700"><span class="font-semibold">동적 콘텐츠 업데이트:</span> 페이지 새로고침 없이 DOM 업데이트</p>
+</div>
+<div class="feature-item">
+<p class="text-gray-700"><span class="font-semibold">오류 처리:</span> 네트워크 문제 및 서버 응답 검사</p>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<h3 class="text-lg font-semibold text-gray-700 mb-2 pl-10">&#34;상품 더보기&#34; 기능 구현 예시</h3>
+<div class="code-block pl-10">
+<pre>document.getElementById(&#39;load-more-button&#39;).addEventListener(&#39;click&#39;, async () =&gt; {
+    const currentPage = parseInt(document.getElementById(&#39;product-list&#39;).dataset.page);
+    const nextPage = currentPage + 1;
+
+    try {
+        const response = await fetch(`/api/products?page=${nextPage}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const newProducts = await response.json();
+
+        const productList = document.getElementById(&#39;product-list&#39;);
+        newProducts.forEach(product =&gt; {
+            const productItem = document.createElement(&#39;div&#39;);
+            productItem.classList.add(&#39;product-item&#39;);
+            productItem.innerHTML = `
+                &lt;img src=&#34;${product.image}&#34; alt=&#34;${product.name}&#34;/&gt;
+                &lt;h3&gt;${product.name}&lt;/h3&gt;
+                &lt;p&gt;${product.price}원&lt;/p&gt;
+            `;
+            productList.appendChild(productItem);
+        });
+
+        // 페이지 번호 업데이트
+        document.getElementById(&#39;product-list&#39;).dataset.page = nextPage;
+    } catch (error) {
+        console.log(&#39;Fetch error:&#39;, error);
+    }
+});</pre>
+</div>
+</div>
+<div class="mt-4 pl-10">
+<p class="text-gray-600 text-sm italic">사용자는 페이지를 새로고침할 필요 없이 더 많은 상품을 탐색할 수 있어 로딩 시간을 단축하고 원활한 사용자 경험을 제공했습니다.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 left-0 right-0 bg-gray-100 py-2 px-10 flex justify-between items-center">
+<div>
+<p class="text-sm text-gray-500">인터넷 쇼핑몰 웹사이트 포트폴리오</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">2025-10-21</p>
+</div>
+</div>
+</div>
+
+</body></html>

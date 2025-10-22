@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><head></head><body><div style="position:relative;left:0mm;top:0mm;width:338.67mm;height:190.50mm;margin:0px auto;margin-top:5%;background-image:url('hshowSlide_0011/background.png');background-repeat:no-repeat;"><div style="position:absolute;left:-0.53mm;top:-0.53mm;width:100%;height:100%;background-image:url('hshowSlide_0011/Shape_0001.png');background-repeat:no-repeat;"></div><div style="position:absolute;left:-0.53mm;top:-0.53mm;width:100%;height:100%;background-image:url('hshowSlide_0011/Shape_0002.png');background-repeat:no-repeat;"></div><div style="position:absolute;left:-0.53mm;top:-0.53mm;width:100%;height:100%;background-image:url('hshowSlide_0011/Shape_0003.png');background-repeat:no-repeat;"></div><div style="position:absolute;left:10.05mm;top:20.64mm;width:100%;height:100%;background-image:url('hshowSlide_0011/Shape_0004.png');background-repeat:no-repeat;"></div><div style="position:absolute;left:10.05mm;top:94.19mm;width:100%;height:100%;background-image:url('hshowSlide_0011/Shape_0005.png');background-repeat:no-repeat;"></div><div style="position:absolute;left:173.04mm;top:20.64mm;width:100%;height:100%;background-image:url('hshowSlide_0011/Shape_0006.png');background-repeat:no-repeat;"></div><div style="position:absolute;left:173.04mm;top:94.19mm;width:100%;height:100%;background-image:url('hshowSlide_0011/Shape_0007.png');background-repeat:no-repeat;"></div><div style="position:absolute;left:-0.53mm;top:180.45mm;width:100%;height:100%;background-image:url('hshowSlide_0011/Shape_0008.png');background-repeat:no-repeat;"></div><div style="position:absolute;left:10.58mm;top:4.23mm;width:100%;height:100%;"><img id="image9" src="hshowSlide_0011/Shape_0009.png" alt="10 JavaScript 구현"></img></div><div style="position:absolute;left:323.32mm;top:5.29mm;width:100%;height:100%;"><img id="image10" src="hshowSlide_0011/Shape_0010.png" alt="11/13"></img></div><div style="position:absolute;left:21.70mm;top:21.70mm;width:100%;height:100%;"><img id="image11" src="hshowSlide_0011/Shape_0011.png" alt="DOM 조작 및 이벤트 처리"></img></div><div style="position:absolute;left:21.17mm;top:32.81mm;width:100%;height:100%;"><img id="image12" src="hshowSlide_0011/Shape_0012.png" alt="순수 JavaScript를 활용하여 웹 페이지의 동적인 요소를 구현하고 사용자 인터랙션을 처리했습니다."></img></div><div style="position:absolute;left:27.78mm;top:49.74mm;width:100%;height:100%;"><img id="image13" src="hshowSlide_0011/Shape_0013.png" alt="DOMContentLoaded 이벤트: 문서 로드 후 스크립트 실행"></img></div><div style="position:absolute;left:27.78mm;top:58.74mm;width:100%;height:100%;"><img id="image14" src="hshowSlide_0011/Shape_0014.png" alt="이벤트 리스너: 탭 버튼 클릭 시 해당 탭 콘텐츠 활성화"></img></div><div style="position:absolute;left:27.78mm;top:67.73mm;width:100%;height:100%;"><img id="image15" src="hshowSlide_0011/Shape_0015.png" alt="이벤트 위임: 효율적인 이벤트 처리"></img></div><div style="position:absolute;left:21.17mm;top:85.20mm;width:100%;height:100%;"><img id="image16" src="hshowSlide_0011/Shape_0016.png" alt="탭 메뉴 구현 예시"></img></div><div style="position:absolute;left:21.17mm;top:99.22mm;width:100%;height:100%;"><img id="image17" src="hshowSlide_0011/Shape_0017.png" alt="document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // 모든 탭 버튼에서 'active' 클래스 제거
+            tabs.forEach(item => item.classList.remove('active'));
+            // 클릭된 탭 버튼에 'active' 클래스 추가
+            tab.classList.add('active');
+
+            const targetId = tab.dataset.target; // data-target 속성 값 가져오기
+
+            // 모든 탭 콘텐츠 숨기기
+            tabContents.forEach(content => content.style.display = 'none');
+            // 클릭된 탭에 해당하는 콘텐츠 보이기
+            document.getElementById(targetId).style.display = 'block';
+        });
+    });
+
+    // 초기 로드 시 첫 번째 탭 활성화
+    if (tabs.length > 0) {
+        tabs[0].click();
+    }
+});"></img></div><div style="position:absolute;left:21.17mm;top:151.87mm;width:100%;height:100%;"><img id="image18" src="hshowSlide_0011/Shape_0018.png" alt="페이지 새로고침 없이도 콘텐츠를 전환하여 사용자 경험을 개선했습니다."></img></div><div style="position:absolute;left:183.09mm;top:21.70mm;width:100%;height:100%;"><img id="image19" src="hshowSlide_0011/Shape_0019.png" alt="비동기 통신(AJAX)"></img></div><div style="position:absolute;left:184.15mm;top:32.81mm;width:100%;height:100%;"><img id="image20" src="hshowSlide_0011/Shape_0020.png" alt="fetch API를 사용하여 서버와 비동기적으로 데이터를 주고받는 기능을 구현했습니다."></img></div><div style="position:absolute;left:190.76mm;top:49.74mm;width:100%;height:100%;"><img id="image21" src="hshowSlide_0011/Shape_0021.png" alt="비동기 데이터 요청: 서버에서 추가 데이터 가져오기"></img></div><div style="position:absolute;left:190.76mm;top:58.74mm;width:100%;height:100%;"><img id="image22" src="hshowSlide_0011/Shape_0022.png" alt="동적 콘텐츠 업데이트: 페이지 새로고침 없이 DOM 업데이트"></img></div><div style="position:absolute;left:190.50mm;top:67.73mm;width:100%;height:100%;"><img id="image23" src="hshowSlide_0011/Shape_0023.png" alt="오류 처리: 네트워크 문제 및 서버 응답 검사"></img></div><div style="position:absolute;left:184.15mm;top:85.20mm;width:100%;height:100%;"><img id="image24" src="hshowSlide_0011/Shape_0024.png" alt=""상품 더보기" 기능 구현 예시"></img></div><div style="position:absolute;left:184.15mm;top:99.22mm;width:100%;height:100%;"><img id="image25" src="hshowSlide_0011/Shape_0025.png" alt="document.getElementById('load-more-button').addEventListener('click', async () => {
+    const currentPage = parseInt(document.getElementById('product-list').dataset.page);
+    const nextPage = currentPage + 1;
+
+    try {
+        const response = await fetch(`/api/products?page=${nextPage}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const newProducts = await response.json();
+
+        const productList = document.getElementById('product-list');
+        newProducts.forEach(product => {
+            const productItem = document.createElement('div');
+            productItem.classList.add('product-item');
+            productItem.innerHTML = `
+                <img src="${product.image}" alt="${product.name}"/>
+                <h3>${product.name}</h3>
+                <p>${product.price}원</p>
+            `;
+            productList.appendChild(productItem);
+        });
+
+        // 페이지 번호 업데이트
+        document.getElementById('product-list').dataset.page = nextPage;
+    } catch (error) {
+        console.log('Fetch error:', error);
+    }
+});"></img></div><div style="position:absolute;left:184.15mm;top:151.87mm;width:100%;height:100%;"><img id="image26" src="hshowSlide_0011/Shape_0026.png" alt="사용자는 페이지를 새로고침할 필요 없이 더 많은 상품을 탐색할 수 있어 로딩 시간을 단축하고 원활한 사용자 경험을 제공했습니다."></img></div><div style="position:absolute;left:10.58mm;top:183.09mm;width:100%;height:100%;"><img id="image27" src="hshowSlide_0011/Shape_0027.png" alt="인터넷 쇼핑몰 웹사이트 포트폴리오"></img></div><div style="position:absolute;left:308.50mm;top:183.09mm;width:100%;height:100%;"><img id="image28" src="hshowSlide_0011/Shape_0028.png" alt="2025-10-21"></img></div></div></body></html>

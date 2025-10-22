@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>07 HTML 마크업</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="common.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.3;
+        }
+        .benefit-item {
+            position: relative;
+            padding-left: 25px;
+        }
+        .benefit-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            background-color: #FF6600;
+            border-radius: 50%;
+        }
+        .code-block {
+            font-family: 'Courier New', monospace;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            padding: 10px;
+            color: #333;
+            line-height: 1.4;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+        .tag {
+            color: #e03c31;
+            font-weight: bold;
+        }
+        .attr {
+            color: #6b7280;
+        }
+        .string {
+            color: #059669;
+        }
+        .comment {
+            color: #7c7c7c;
+            font-style: italic;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide bg-white" style=" overflow: hidden;">
+<!-- Decorative pattern -->
+<div class="grid-pattern"></div>
+<!-- Header -->
+<div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+<h1 class="text-2xl font-bold text-gray-800">07 HTML 마크업</h1>
+</div>
+<!-- Slide number -->
+<div class="slide-number">8/13</div>
+<!-- Main content -->
+<div class="absolute inset-0 pt-20 pb-10 px-10">
+<div class="grid grid-cols-2 gap-8 h-full">
+<!-- Left column: Explanation -->
+<div class="flex flex-col">
+<div class="mb-6">
+<div class="flex items-center mb-3">
+<i class="fas fa-code text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">시맨틱 HTML 마크업</h2>
+</div>
+<div class="pl-10">
+<p class="text-gray-600 mb-4">인터넷 쇼핑몰 웹사이트는 정보의 구조화와 검색 엔진 최적화(SEO), 그리고 웹 접근성 향상을 위해 시맨틱 HTML 마크업을 적극적으로 활용했습니다.</p>
+<div class="mb-4">
+<h3 class="font-semibold text-gray-700 mb-2">주요 시맨틱 태그 활용</h3>
+<div class="grid grid-cols-2 gap-2">
+<div class="flex items-center">
+<i class="fas fa-bookmark text-orange-500 mr-2"></i>
+<span class="text-gray-600">&lt;header&gt;</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-compass text-orange-500 mr-2"></i>
+<span class="text-gray-600">&lt;nav&gt;</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-home text-orange-500 mr-2"></i>
+<span class="text-gray-600">&lt;main&gt;</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-newspaper text-orange-500 mr-2"></i>
+<span class="text-gray-600">&lt;article&gt;</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-shoe-prints text-orange-500 mr-2"></i>
+<span class="text-gray-600">&lt;footer&gt;</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center mb-3">
+<i class="fas fa-star text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">주요 이점</h2>
+</div>
+<div class="pl-10">
+<div class="benefit-item mb-3">
+<h3 class="font-semibold text-gray-700">검색 엔진 최적화(SEO)</h3>
+<p class="text-gray-600 text-sm">검색 엔진이 웹 페이지의 내용을 더 정확하게 이해하고 색인화하는 데 도움을 줍니다.</p>
+</div>
+<div class="benefit-item mb-3">
+<h3 class="font-semibold text-gray-700">웹 접근성 향상</h3>
+<p class="text-gray-600 text-sm">스크린 리더와 같은 보조 기술을 사용하는 사용자들에게도 페이지 구조를 명확하게 전달하여 웹 접근성을 높였습니다.</p>
+</div>
+<div class="benefit-item">
+<h3 class="font-semibold text-gray-700">콘텐츠 의미 명확화</h3>
+<p class="text-gray-600 text-sm">각 콘텐츠의 의미를 명확히 전달하여 사용자 경험을 개선하고, 쇼핑몰의 정보 구조를 더 잘 이해할 수 있게 도와줍니다.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right column: Example -->
+<div>
+<div class="flex items-center mb-3">
+<i class="fas fa-lightbulb text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">상품 목록 페이지의 시맨틱 구조</h2>
+</div>
+<div class="code-block">
+<pre>
+
+
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>상품 목록 - [쇼핑몰 이름]</title>
+
+
+    &lt;header&gt;
+        &lt;h1&gt;[쇼핑몰 이름]&lt;/h1&gt;
+        &lt;nav aria-label=&#34;메인 메뉴&#34;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&#34;/category/new&#34;&gt;신상품&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#34;/category/best&#34;&gt;베스트&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#34;/category/sale&#34;&gt;세일&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;div class=&#34;search-bar&#34;&gt;
+            &lt;input type=&#34;search&#34; placeholder=&#34;상품 검색&#34;/&gt;
+            &lt;button type=&#34;submit&#34;&gt;검색&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section aria-labelledby=&#34;product-list-heading&#34;&gt;
+            &lt;h2 id=&#34;product-list-heading&#34;&gt;모든 상품&lt;/h2&gt;
+            &lt;div class=&#34;product-grid&#34;&gt;
+                &lt;article class=&#34;product-item&#34;&gt;
+                    &lt;a href=&#34;/product/123&#34;&gt;
+                        &lt;img src=&#34;product-image-1.jpg&#34; alt=&#34;상품명 1&#34;/&gt;
+                        &lt;h3&gt;상품명 1&lt;/h3&gt;
+                        &lt;p class=&#34;price&#34;&gt;15,000원&lt;/p&gt;
+                    &lt;/a&gt;
+                &lt;/article&gt;
+                &lt;article class=&#34;product-item&#34;&gt;
+                    &lt;a href=&#34;/product/124&#34;&gt;
+                        &lt;img src=&#34;product-image-2.jpg&#34; alt=&#34;상품명 2&#34;/&gt;
+                        &lt;h3&gt;상품명 2&lt;/h3&gt;
+                        &lt;p class=&#34;price&#34;&gt;25,000원&lt;/p&gt;
+                    &lt;/a&gt;
+                &lt;/article&gt;
+                <!-- 추가 상품 아이템 -->
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;nav aria-label=&#34;푸터 메뉴&#34;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&#34;/about&#34;&gt;회사 소개&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#34;/terms&#34;&gt;이용약관&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#34;/privacy&#34;&gt;개인정보처리방침&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;p&gt;© 2025 [쇼핑몰 이름]&lt;/p&gt;
+    &lt;/footer&gt;</pre>
+</div>
+<div class="mt-4 bg-gray-50 p-3 rounded-lg">
+<div class="flex items-center">
+<i class="fas fa-info-circle text-blue-500 mr-2"></i>
+<p class="text-sm text-gray-600">시맨틱 마크업은 검색 엔진이 페이지 내용을 이해하고, 스크린 리더가 내용을 읽어주는데 도움이 됩니다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 left-0 right-0 bg-gray-100 py-2 px-10 flex justify-between items-center">
+<div>
+<p class="text-sm text-gray-500">인터넷 쇼핑몰 웹사이트 포트폴리오</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">2025-10-21</p>
+</div>
+</div>
+</div>
+
+</body></html>

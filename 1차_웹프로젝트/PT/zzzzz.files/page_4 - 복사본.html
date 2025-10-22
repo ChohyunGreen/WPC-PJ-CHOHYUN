@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>03 설계 단계</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="common.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.3;
+        }
+        .sitemap-node {
+            border-radius: 4px;
+            padding: 8px 12px;
+            margin: 5px;
+            display: inline-block;
+            font-size: 14px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .sitemap-node:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .flow-step {
+            border-radius: 8px;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 14px;
+            position: relative;
+        }
+        .flow-step::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid currentColor;
+        }
+        .flow-step:last-child::after {
+            display: none;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide bg-white" style=" overflow: hidden;">
+<!-- Decorative pattern -->
+<div class="grid-pattern"></div>
+<!-- Header -->
+<div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+<h1 class="text-2xl font-bold text-gray-800">03 설계 단계</h1>
+</div>
+<!-- Slide number -->
+<div class="slide-number">4/13</div>
+<!-- Main content -->
+<div class="absolute inset-0 pt-20 pb-10 px-10">
+<div class="grid grid-cols-2 gap-8 h-full">
+<!-- Left column: Information Architecture -->
+<div class="flex flex-col">
+<div class="flex items-center mb-4">
+<i class="fas fa-sitemap text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">정보 구조 설계 (IA)</h2>
+</div>
+<div class="mb-4">
+<p class="text-gray-600">웹사이트의 정보 구조 설계는 사용자가 정보를 쉽게 찾고 이해할 수 있도록 콘텐츠를 조직하고 분류하는 과정입니다. 본 프로젝트에서는 사용자 중심의 접근 방식을 통해 직관적인 사이트맵을 구축했습니다.</p>
+</div>
+<!-- Sitemap visualization -->
+<div class="bg-gray-50 rounded-lg p-4 flex-grow">
+<div class="text-center mb-3">
+<span class="font-semibold text-gray-700">사이트맵 다이어그램 예시</span>
+</div>
+<div class="flex flex-wrap justify-center">
+<div class="sitemap-node bg-orange-500 text-white">
+<i class="fas fa-home mr-1"></i> 홈
+                            </div>
+<div class="sitemap-node bg-teal-500 text-white">
+<i class="fas fa-boxes mr-1"></i> 상품
+                            </div>
+<div class="sitemap-node bg-blue-500 text-white">
+<i class="fas fa-chart-line mr-1"></i> 베스트
+                            </div>
+<div class="sitemap-node bg-purple-500 text-white">
+<i class="fas fa-tags mr-1"></i> 신상품
+                            </div>
+<div class="sitemap-node bg-pink-500 text-white">
+<i class="fas fa-calendar-alt mr-1"></i> 이벤트
+                            </div>
+<div class="sitemap-node bg-green-500 text-white">
+<i class="fas fa-headset mr-1"></i> 고객센터
+                            </div>
+<div class="sitemap-node bg-indigo-500 text-white">
+<i class="fas fa-user mr-1"></i> 마이페이지
+                            </div>
+<div class="sitemap-node bg-red-500 text-white">
+<i class="fas fa-shopping-cart mr-1"></i> 장바구니
+                            </div>
+</div>
+<div class="mt-4 text-sm text-gray-600">
+<p>• &#39;상품&#39; 메뉴는 다양한 카테고리와 서브 카테고리로 세분화</p>
+<p>• &#39;마이페이지&#39;는 주문 내역, 위시리스트 등 개인화된 정보를 한곳에 모음</p>
+</div>
+</div>
+</div>
+<!-- Right column: User Flow -->
+<div class="flex flex-col">
+<div class="flex items-center mb-4">
+<i class="fas fa-route text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">사용자 흐름도 (User Flow)</h2>
+</div>
+<div class="mb-4">
+<p class="text-gray-600">사용자 흐름도는 사용자가 웹사이트 내에서 특정 목표를 달성하기 위해 거치는 일련의 단계를 시각적으로 표현한 것입니다. 본 프로젝트에서는 핵심 기능인 회원가입, 상품 탐색, 구매 결제 과정을 중심으로 사용자 흐름도를 설계했습니다.</p>
+</div>
+<!-- User Flow visualization -->
+<div class="bg-gray-50 rounded-lg p-4 flex-grow">
+<div class="flex justify-between">
+<!-- Registration Flow -->
+<div class="w-1/2 pr-2">
+<div class="text-center mb-2">
+<span class="font-semibold text-gray-700">1. 회원가입 사용자 흐름</span>
+</div>
+<div class="flow-step bg-orange-100 text-orange-700">
+<span class="font-semibold">시작:</span> 웹사이트 접속
+                                </div>
+<div class="flow-step bg-orange-100 text-orange-700">
+<span class="font-semibold">단계 1:</span> &#39;회원가입&#39; 버튼 클릭
+                                </div>
+<div class="flow-step bg-orange-100 text-orange-700">
+<span class="font-semibold">단계 2:</span> 약관 동의
+                                </div>
+<div class="flow-step bg-orange-100 text-orange-700">
+<span class="font-semibold">단계 3:</span> 회원 정보 입력
+                                </div>
+<div class="flow-step bg-orange-100 text-orange-700">
+<span class="font-semibold">단계 4:</span> 이메일/휴대폰 인증
+                                </div>
+<div class="flow-step bg-orange-100 text-orange-700">
+<span class="font-semibold">단계 5:</span> &#39;가입 완료&#39; 버튼 클릭
+                                </div>
+<div class="flow-step bg-green-100 text-green-700">
+<span class="font-semibold">종료:</span> 회원가입 완료
+                                </div>
+</div>
+<!-- Product Flow -->
+<div class="w-1/2 pl-2">
+<div class="text-center mb-2">
+<span class="font-semibold text-gray-700">2. 상품 탐색 및 구매 결제</span>
+</div>
+<div class="flow-step bg-teal-100 text-teal-700">
+<span class="font-semibold">단계 1:</span> 상품 검색 또는 카테고리 선택
+                                </div>
+<div class="flow-step bg-teal-100 text-teal-700">
+<span class="font-semibold">단계 2:</span> 상품 목록에서 원하는 상품 클릭
+                                </div>
+<div class="flow-step bg-teal-100 text-teal-700">
+<span class="font-semibold">단계 3:</span> 상품 상세 페이지에서 옵션 선택
+                                </div>
+<div class="flow-step bg-teal-100 text-teal-700">
+<span class="font-semibold">단계 4:</span> 수량 조절 및 &#39;장바구니&#39; 버튼 클릭
+                                </div>
+<div class="flow-step bg-teal-100 text-teal-700">
+<span class="font-semibold">단계 5:</span> 장바구니 페이지에서 결제 정보 입력
+                                </div>
+<div class="flow-step bg-teal-100 text-teal-700">
+<span class="font-semibold">단계 6:</span> 결제 수단 선택 및 최종 확인
+                                </div>
+<div class="flow-step bg-green-100 text-green-700">
+<span class="font-semibold">단계 7:</span> 결제 완료 및 주문 확인
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 left-0 right-0 bg-gray-100 py-2 px-10 flex justify-between items-center">
+<div>
+<p class="text-sm text-gray-500">인터넷 쇼핑몰 웹사이트 포트폴리오</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">2025-10-21</p>
+</div>
+</div>
+</div>
+
+</body></html>

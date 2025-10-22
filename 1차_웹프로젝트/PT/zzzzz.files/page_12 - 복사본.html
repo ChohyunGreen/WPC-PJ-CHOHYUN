@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>11 jQuery 활용</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="common.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.3;
+        }
+        .code-comparison {
+            font-family: monospace;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        .code-js {
+            color: #f44336;
+        }
+        .code-jquery {
+            color: #2196f3;
+            font-weight: bold;
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide bg-white" style=" overflow: hidden;">
+<!-- Decorative pattern -->
+<div class="grid-pattern"></div>
+<!-- Header -->
+<div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+<h1 class="text-2xl font-bold text-gray-800">11 jQuery 활용</h1>
+</div>
+<!-- Slide number -->
+<div class="slide-number">12/13</div>
+<!-- Main content -->
+<div class="absolute inset-0 pt-20 pb-10 px-10">
+<div class="grid grid-cols-2 gap-8 h-full">
+<!-- Left column: Plugins and Code Simplification -->
+<div class="flex flex-col space-y-6">
+<!-- SmartCart Plugin -->
+<div class="bg-gray-50 p-5 rounded-lg feature-card">
+<div class="flex items-center mb-3">
+<div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center mr-4">
+<i class="fas fa-shopping-cart text-white text-xl"></i>
+</div>
+<h2 class="text-xl font-bold text-gray-700">쇼핑 카트 플러그인 (SmartCart)</h2>
+</div>
+<ul class="pl-16 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-check text-teal-500 mt-1 mr-2"></i>
+<p class="text-gray-600">동적이고 인터랙티브한 쇼핑 카트를 쉽게 통합할 수 있도록 돕는 jQuery 플러그인</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-teal-500 mt-1 mr-2"></i>
+<p class="text-gray-600">상품 추가/삭제, 수량 조절, 총액 계산 등 기본적인 쇼핑 카트 기능 구현</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-teal-500 mt-1 mr-2"></i>
+<p class="text-gray-600">플러그인 선택 기준: 쉬운 통합 및 커스터마이징, 반응형 지원, 기능의 유연성</p>
+</li>
+</ul>
+</div>
+<!-- Image Slider Plugin -->
+<div class="bg-gray-50 p-5 rounded-lg feature-card">
+<div class="flex items-center mb-3">
+<div class="w-12 h-12 rounded-full bg-teal-500 flex items-center justify-center mr-4">
+<i class="fas fa-images text-white text-xl"></i>
+</div>
+<h2 class="text-xl font-bold text-gray-700">이미지 슬라이더 플러그인</h2>
+</div>
+<ul class="pl-16 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-check text-teal-500 mt-1 mr-2"></i>
+<p class="text-gray-600">제품 상세 페이지에서 여러 각도에서 촬영된 제품 이미지를 효과적으로 보여줌</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-teal-500 mt-1 mr-2"></i>
+<p class="text-gray-600">사용자가 제품의 다양한 모습을 쉽게 탐색할 수 있음</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-teal-500 mt-1 mr-2"></i>
+<p class="text-gray-600">시각적인 만족도를 높여 구매 결정에 긍정적인 영향을 줌</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right column: Code Simplification and Animation -->
+<div class="flex flex-col space-y-6">
+<!-- Code Simplification -->
+<div class="bg-gray-50 p-5 rounded-lg feature-card">
+<div class="flex items-center mb-3">
+<div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mr-4">
+<i class="fas fa-code text-white text-xl"></i>
+</div>
+<h2 class="text-xl font-bold text-gray-700">코드 간소화</h2>
+</div>
+<p class="text-gray-600 mb-3">jQuery는 DOM 조작 및 이벤트 핸들링 코드를 간결하게 작성할 수 있도록 돕습니다.</p>
+<div class="code-comparison mb-3">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">순수 JavaScript</span>
+<span class="text-sm text-gray-500">jQuery</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-white p-2 rounded border border-gray-200">
+<p class="text-xs code-js">document.getElementById(&#39;myElement&#39;)</p>
+</div>
+<div class="bg-white p-2 rounded border border-gray-200">
+<p class="text-xs code-jquery">$(&#39;$myElement&#39;)</p>
+</div>
+<div class="bg-white p-2 rounded border border-gray-200">
+<p class="text-xs code-js">element.classList.add(&#39;active&#39;)</p>
+</div>
+<div class="bg-white p-2 rounded border border-gray-200">
+<p class="text-xs code-jquery">$(&#39;$myElement&#39;).addClass(&#39;active&#39;)</p>
+</div>
+<div class="bg-white p-2 rounded border border-gray-200">
+<p class="text-xs code-js">element.addEventListener(&#39;click&#39;, handler)</p>
+</div>
+<div class="bg-white p-2 rounded border border-gray-200">
+<p class="text-xs code-jquery">$(&#39;$myElement&#39;).on(&#39;click&#39;, handler)</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Animation Effects -->
+<div class="bg-gray-50 p-5 rounded-lg feature-card">
+<div class="flex items-center mb-3">
+<div class="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center mr-4">
+<i class="fas fa-film text-white text-xl"></i>
+</div>
+<h2 class="text-xl font-bold text-gray-700">애니메이션 효과</h2>
+</div>
+<p class="text-gray-600 mb-3">jQuery의 animate(), fadeIn() 등의 메서드를 활용하여 사용자 인터페이스에 부드러운 전환 효과와 애니메이션을 적용했습니다.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-3 rounded border border-gray-200">
+<div class="flex items-center mb-2">
+<i class="fas fa-shopping-cart text-orange-500 mr-2"></i>
+<h3 class="font-semibold text-gray-700">&#34;Fly to cart&#34; 애니메이션</h3>
+</div>
+<p class="text-sm text-gray-600">장바구니에 상품이 추가될 때 상품 이미지가 장바구니 아이콘으로 날아가는 듯한 효과</p>
+</div>
+<div class="bg-white p-3 rounded border border-gray-200">
+<div class="flex items-center mb-2">
+<i class="fas fa-sign-in-alt text-teal-500 mr-2"></i>
+<h3 class="font-semibold text-gray-700">fadeIn() 효과</h3>
+</div>
+<p class="text-sm text-gray-600">특정 섹션이 로드될 때 자연스럽게 나타나도록 하는 부드러운 페이드 인 효과</p>
+</div>
+</div>
+</div>
+<!-- Benefits Summary -->
+<div class="bg-orange-50 p-4 rounded-lg">
+<div class="flex items-center">
+<i class="fas fa-lightbulb text-2xl text-orange-500 mr-3"></i>
+<p class="text-gray-700"><span class="font-bold">jQuery의 주요 이점:</span> 코드의 가독성과 유지보수성을 향상시키며, 개발 속도를 증가시키고, 사용자 경험을 향상시킵니다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 left-0 right-0 bg-gray-100 py-2 px-10 flex justify-between items-center">
+<div>
+<p class="text-sm text-gray-500">인터넷 쇼핑몰 웹사이트 포트폴리오</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">2025-10-21</p>
+</div>
+</div>
+</div>
+
+</body></html>

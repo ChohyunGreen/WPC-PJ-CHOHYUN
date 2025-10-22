@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="ko"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>03 설계 단계</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="common.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+            .grid-pattern {
+                background-image: 
+                    linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+                background-size: 20px 20px;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                opacity: 0.3;
+            }
+            .analysis-card {
+                border-left: 4px solid;
+                transition: transform 0.3s ease;
+            }
+            .analysis-card:hover {
+                transform: translateX(5px);
+            }
+            .journey-step {
+                position: relative;
+                padding-bottom: 10px;
+            }
+            .journey-step:not(:last-child):after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 18px;
+                height: 10px;
+                width: 2px;
+                background-color: #e5e7eb;
+            }
+        
+    html {
+        overflow: hidden;
+    }</style>
+    </head>
+    
+    
+    
+    <body>
+        <div class="slide bg-white">
+        <!-- Decorative pattern -->
+        <div class="grid-pattern"></div>
+        <!-- Header -->
+        <div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+        <h1 class="font-bold text-gray-800">3. 설계 단계</h1>
+        </div>
+        
+        
+        
+        <!-- Main content -->
+        <div class="absolute inset-0 pt-20 pb-10 px-10">
+        <div class="grid grid-cols-1 gap-8">
+        
+    
+            
+    
+        <div class="flex flex-col">
+    
+    
+        <div class="mb-6">
+        <div class="flex items-center mb-3">
+            <i class="fas fa-sitemap text-2xl mr-3"></i>
+            <h2 class="text-xl font-bold text-gray-700">기술 및 컨셉정의</h2>
+        </div>
+    
+       <!-- start : 기술 및 컨셉정의 -->
+        <div class="history_box">
+
+            <dl>
+            <dt>리뉴얼 컨셉</dt>
+            <dd>
+                <ul>
+                <li><span>안정감있고 임펙트있는 디자인, 감성적인 브랜드, 믿을수 있는 정보</span></li>
+                </ul>
+            </dd>
+            </dl>
+
+            <dl>
+            <dt>차별화 전략</dt>
+            <dd>
+                <ul>
+                <li><span>보다 더 심미성있는 배너와 안정감있는 레이아웃 구현으로 사용자 친화적인 사이트로 재탄생</span></li>
+                </ul>
+            </dd>
+            </dl>
+
+            <dl>
+            <dt>적용기술</dt>
+            <dd>
+                <ul>
+                <li><span>반응형 웹, 웹표준스타일, CSS3, HTML5</span></li>
+                </ul>
+            </dd>
+            </dl>
+
+        </div>
+        <!-- end : 기술 및 컨셉정의 -->
+    
+
+
+
+
+        <!-- start : 웹사이트 구조 (사이트맵) -->
+        <div class="flex items-center mb-3" style="margin-top: 50px;">
+            <i class="fas fa-route text-2xl mr-3"></i>
+            <h2 class="text-xl font-bold text-gray-700">웹사이트 구조 (사이트맵)</h2>
+        </div>
+
+       <div class="history_box">
+               <dl>
+                <dt>카테고리(상단)</dt>
+                <dd>
+                    <ul>
+                    <li><span>브랜드스토리,제품안내,육아정보,매거진,이벤트,공지사항</span></li>
+                    </ul>
+                </dd>
+                </dl>
+
+                <dl>
+                <dt>메인페이지 구성요소</dt>
+                <dd>
+                    <ul>
+                       <li><span>메인배너,신상품,이벤트배너,추천상품,매거진,인스타그램,하단정보(푸터)</span></li>
+                    </ul>
+                </dd>
+                </dl>
+
+                <dl>
+                <dt>서브페이지 목록</dt>
+                <dd>
+                    <ul>
+                    <li><span>상품분류,상품상세,로그인,회원가입,장바구니,마이페이지,관심상품,주문서작성,주문조회,브랜드소개,회사소개,이용약관,개인정보취급방침</span></li>
+                    </ul>
+                </dd>
+                </dl>
+                <p>카테고리(상단),하단정보(푸터)는 메인페이지와 서브페이지 모두 공통적용되는 부분</p>
+
+            </div>
+        <!-- end : 웹사이트 구조 (사이트맵) -->
+
+
+
+
+
+
+
+
+
+
+
+        <!-- start : 디자인 및 UI/UX 방향 -->
+        <div class="flex items-center mb-3" style="margin-top: 50px;">
+            <i class="fas fa-route text-2xl mr-3"></i>
+            <h2 class="text-xl font-bold text-gray-700">디자인 및 UI/UX 방향</h2>
+        </div>
+
+       <div class="history_box">
+        <dl>
+            <dt>레이아웃</dt>
+            <dd>
+              <ul>
+                <li><span>세로카테고리가 없는 전형적인 가로100% 사이즈의 구조</span></li>
+              </ul>
+            </dd>
+          </dl>
+
+          <dl>
+            <dt>폰트</dt>
+            <dd>
+              <ul>
+                <li><span>기본폰트 : Noto Sans KR</span></li>
+                <li><span>보조폰트 : Pretendard,roboto</span></li>
+              </ul>
+            </dd>
+          </dl>
+
+          <dl>
+            <dt>색상</dt>
+            <dd>
+              <ul>
+                <li><span>기본색상 : #d96967 </span></li>
+                <li><span>포인트색상 : #404040</span></li>
+                <li><span>보조색상 : #fae0df</span></li>
+              </ul>
+            </dd>
+          </dl>
+
+        </div>
+        <!-- end : 디자인 및 UI/UX 방향 -->
+
+        
+
+        </div>
+        
+        
+
+    </div>
+    
+    
+    
+    
+    
+        
+    
+    
+    
+        </div>
+        </div>
+        
+        
+        <!-- Footer -->
+    <div class="absolute bottom-0 bg-gray-100 py-2 px-10 flex justify-between items-center text-center">
+    
+        <!-- Slide number -->
+        <div class="slide-number">
+            <span class="arrow_area"><a href="page_3.html#hshowview_thumbBox_2">Prev</a></span>
+            <span>5/15</span>
+            <span class="arrow_area"><a href="page_5.html#hshowview_thumbBox_4">Next</a></span>
+        </div>
+        
+        
+        </div>
+        </div>
+        
+        
+    </body></html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>12 향후 계획 &amp; 후기</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="common.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.3;
+        }
+        .l-item {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 8px;
+        }
+        .l-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .liked-item:before { background-color: #4CAF50; }
+        .learned-item:before { background-color: #2196F3; }
+        .lacked-item:before { background-color: #FFC107; }
+        .longed-item:before { background-color: #9C27B0; }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide bg-white" style=" overflow: hidden;">
+<!-- Decorative pattern -->
+<div class="grid-pattern"></div>
+<!-- Header -->
+<div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+<h1 class="text-2xl font-bold text-gray-800">12 관리계획</h1>
+</div>
+<!-- Slide number -->
+<div class="slide-number">13/13</div>
+<!-- Main content -->
+<div class="absolute inset-0 pt-20 pb-10 px-10">
+<div class="grid grid-cols-2 gap-6 h-full">
+<!-- Left column: Project Reflection -->
+<div>
+<div class="flex items-center mb-4">
+<i class="fas fa-lightbulb text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">프로젝트 회고 (4Ls Framework)</h2>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="mb-3">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center mr-2">
+<i class="fas fa-thumbs-up text-white text-xs"></i>
+</div>
+<h3 class="font-semibold text-gray-700">Liked (좋았던 점)</h3>
+</div>
+<div class="pl-4 mt-1">
+<p class="text-sm text-gray-600 l-item liked-item">사용자 중심의 디자인 프로세스로 높은 만족도의 UI/UX 구현</p>
+<p class="text-sm text-gray-600 l-item liked-item">팀원 간의 긴밀한 협업으로 문제 해결 능력 향상</p>
+<p class="text-sm text-gray-600 l-item liked-item">반응형 웹 구현으로 다양한 디바이스에서 일관된 사용자 경험 제공</p>
+</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center mr-2">
+<i class="fas fa-graduation-cap text-white text-xs"></i>
+</div>
+<h3 class="font-semibold text-gray-700">Learned (배운 점)</h3>
+</div>
+<div class="pl-4 mt-1">
+<p class="text-sm text-gray-600 l-item learned-item">JavaScript와 jQuery의 효율적인 활용 방안 학습</p>
+<p class="text-sm text-gray-600 l-item learned-item">피그마 프로토타입을 통한 초기 사용자 테스트의 중요성</p>
+<p class="text-sm text-gray-600 l-item learned-item">시맨틱 HTML 마크업과 웹 접근성 준수의 긍정적 영향</p>
+</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center mr-2">
+<i class="fas fa-exclamation text-white text-xs"></i>
+</div>
+<h3 class="font-semibold text-gray-700">Lacked (부족했던 점)</h3>
+</div>
+<div class="pl-4 mt-1">
+<p class="text-sm text-gray-600 l-item lacked-item">초기 단계에서 데이터 기반의 심층 시장 분석 부족</p>
+<p class="text-sm text-gray-600 l-item lacked-item">프로젝트 일정 관리에서 예상치 못한 변수에 대한 유연한 대응 미흡</p>
+<p class="text-sm text-gray-600 l-item lacked-item">백엔드 연동 및 데이터베이스 설계에 대한 경험 부족</p>
+</div>
+</div>
+<div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center mr-2">
+<i class="fas fa-star text-white text-xs"></i>
+</div>
+<h3 class="font-semibold text-gray-700">Longed for (바랐던 점)</h3>
+</div>
+<div class="pl-4 mt-1">
+<p class="text-sm text-gray-600 l-item longed-item">A/B 테스트를 통해 UI/UX 개선 효과 정량적 검증</p>
+<p class="text-sm text-gray-600 l-item longed-item">클라우드 기반 배포 및 CI/CD 환경 구축</p>
+<p class="text-sm text-gray-600 l-item longed-item">개인화 추천 시스템 도입</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right column: Future Plans -->
+<div>
+<div class="flex items-center mb-4">
+<i class="fas fa-road text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">향후 개선 계획</h2>
+</div>
+<div class="space-y-6">
+<!-- Personalized Recommendation -->
+<div class="bg-orange-50 p-5 rounded-lg">
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center mr-4 flex-shrink-0">
+<i class="fas fa-user-check text-white text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-700 mb-2">개인화 추천 기능 도입</h3>
+<p class="text-sm text-gray-600 mb-3">사용자 구매 이력, 관심 상품, 검색 기록 등을 분석하여 맞춤형 상품을 추천하는 기능을 구현할 예정입니다.</p>
+<div class="flex space-x-3">
+<div class="bg-white p-2 rounded-md shadow-sm">
+<i class="fas fa-chart-line text-orange-500 mr-1 text-xs"></i>
+<span class="text-xs text-gray-600">전환율 증가</span>
+</div>
+<div class="bg-white p-2 rounded-md shadow-sm">
+<i class="fas fa-heart text-orange-500 mr-1 text-xs"></i>
+<span class="text-xs text-gray-600">사용자 만족도 향상</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Review System Enhancement -->
+<div class="bg-teal-50 p-5 rounded-lg">
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-teal-500 flex items-center justify-center mr-4 flex-shrink-0">
+<i class="fas fa-comments text-white text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-700 mb-2">리뷰 시스템 고도화</h3>
+<p class="text-sm text-gray-600 mb-3">텍스트 리뷰 외에 사진 및 동영상 리뷰 기능을 추가하고, 평점 시스템을 세분화하여 사용자들에게 더욱 풍부한 정보를 제공할 계획입니다.</p>
+<div class="flex space-x-3">
+<div class="bg-white p-2 rounded-md shadow-sm">
+<i class="fas fa-camera text-teal-500 mr-1 text-xs"></i>
+<span class="text-xs text-gray-600">사진/동영상 리뷰</span>
+</div>
+<div class="bg-white p-2 rounded-md shadow-sm">
+<i class="fas fa-star-half-alt text-teal-500 mr-1 text-xs"></i>
+<span class="text-xs text-gray-600">세분화된 평점</span>
+</div>
+<div class="bg-white p-2 rounded-md shadow-sm">
+<i class="fas fa-award text-teal-500 mr-1 text-xs"></i>
+<span class="text-xs text-gray-600">베스트 리뷰 선정</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Continuous Improvement -->
+<div class="bg-blue-50 p-5 rounded-lg">
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mr-4 flex-shrink-0">
+<i class="fas fa-sync-alt text-white text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-700 mb-2">지속적인 개선 방안</h3>
+<p class="text-sm text-gray-600">프로젝트 회고를 통해 도출된 인사이트를 바탕으로, 사용자 피드백과 시장 동향을 반영하여 지속적인 개선 계획을 수립했습니다. 이러한 계획은 프로젝트의 지속적인 발전과 사용자 경험 향상을 목표로 합니다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 left-0 right-0 bg-gray-100 py-2 px-10 flex justify-between items-center">
+<div>
+<p class="text-sm text-gray-500">인터넷 쇼핑몰 웹사이트 포트폴리오</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">2025-10-21</p>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>08 CSS 스타일링</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="common.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.3;
+        }
+        .code-block {
+            font-family: 'Courier New', monospace;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            padding: 10px;
+            overflow: auto;
+            line-height: 1.4;
+        }
+        .code-comment {
+            color: #6a9955;
+        }
+        .code-keyword {
+            color: #569cd6;
+        }
+        .code-string {
+            color: #b4ce4b;
+        }
+        .code-variable {
+            color: #90cdf4;
+        }
+        .code-function {
+            color: #d4d4d4;
+        }
+        .code-mixin {
+            color: #ff79c6;
+        }
+        .layout-example {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .flex-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+        .grid-item {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide bg-white" style=" overflow: hidden;">
+<!-- Decorative pattern -->
+<div class="grid-pattern"></div>
+<!-- Header -->
+<div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+<h1 class="text-2xl font-bold text-gray-800">08 CSS 스타일링</h1>
+</div>
+<!-- Slide number -->
+<div class="slide-number">9/13</div>
+<!-- Main content -->
+<div class="absolute inset-0 pt-20 pb-10 px-10">
+<div class="grid grid-cols-2 gap-8 h-full">
+<!-- Left column: BEM and SASS -->
+<div class="flex flex-col">
+<div class="mb-4">
+<div class="flex items-center mb-2">
+<i class="fas fa-code text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">BEM 방법론 &amp; SASS 전처리기</h2>
+</div>
+<div class="pl-8">
+<p class="text-gray-600 mb-3">본 프로젝트에서는 CSS 코드의 유지보수성과 재사용성을 높이기 위해 BEM(Block, Element, Modifier) 방법론을 적용하고, SASS(SCSS) 전처리기를 활용하여 스타일을 구조화했습니다.</p>
+<div class="flex flex-wrap gap-2 mb-3">
+<div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs flex items-center">
+<i class="fas fa-check-circle mr-1"></i>
+<span>클래스 이름의 충돌 방지</span>
+</div>
+<div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs flex items-center">
+<i class="fas fa-check-circle mr-1"></i>
+<span>코드 가독성 향상</span>
+</div>
+<div class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs flex items-center">
+<i class="fas fa-check-circle mr-1"></i>
+<span>변수, 믹스인 활용</span>
+</div>
+<div class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs flex items-center">
+<i class="fas fa-check-circle mr-1"></i>
+<span>중첩 규칙 지원</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center mb-2">
+<i class="fas fa-palette text-2xl text-teal-500 mr-3"></i>
+<h3 class="text-lg font-semibold text-gray-700">SASS(SCSS) 변수 및 믹스인 활용 예시</h3>
+</div>
+<div class="code-block h-64 overflow-y-auto">
+<pre><span class="code-comment">// _variables.scss</span>
+<span class="code-variable">$primary-color:</span> <span class="code-string">#007bff</span><span class="code-comment">;</span>
+<span class="code-variable">$secondary-color:</span> <span class="code-string">#6c757d</span><span class="code-comment">;</span>
+<span class="code-variable">$font-stack:</span> <span class="code-string">&#39;Noto Sans KR&#39;, sans-serif</span><span class="code-comment">;</span>
+
+<span class="code-comment">// _mixins.scss</span>
+<span class="code-keyword">@mixin</span> <span class="code-mixin">flex-center</span> {
+  <span class="code-keyword">display:</span> flex<span class="code-comment">;</span>
+  <span class="code-keyword">justify-content:</span> center<span class="code-comment">;</span>
+  <span class="code-keyword">align-items:</span> center<span class="code-comment">;</span>
+}
+
+<span class="code-comment">// button.scss</span>
+<span class="code-class">.button</span> {
+  <span class="code-keyword">background-color:</span> <span class="code-variable">$primary-color</span><span class="code-comment">;</span>
+  <span class="code-keyword">color:</span> <span class="code-string">#fff</span><span class="code-comment">;</span>
+  <span class="code-keyword">padding:</span> 10px 20px<span class="code-comment">;</span>
+  <span class="code-keyword">border-radius:</span> 5px<span class="code-comment">;</span>
+  <span class="code-keyword">font-family:</span> <span class="code-variable">$font-stack</span><span class="code-comment">;</span>
+  <span class="code-keyword">@include</span> <span class="code-mixin">flex-center</span><span class="code-comment">;</span>
+
+  <span class="code-comment">&amp;--secondary {</span>
+    <span class="code-keyword">background-color:</span> <span class="code-variable">$secondary-color</span><span class="code-comment">;</span>
+  <span class="code-comment">}</span>
+}</pre>
+</div>
+</div>
+</div>
+<!-- Right column: Flexbox and Grid -->
+<div class="flex flex-col">
+<div class="mb-4">
+<div class="flex items-center mb-2">
+<i class="fas fa-th-large text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">Flexbox &amp; Grid 레이아웃</h2>
+</div>
+<div class="pl-8">
+<p class="text-gray-600 mb-3">다양한 화면 크기에 유연하게 대응하는 레이아웃 설계를 위해 Flexbox와 CSS Grid를 적극적으로 활용했습니다. Flexbox는 주로 1차원적인 레이아웃에 사용되었으며, CSS Grid는 2차원적인 레이아웃 구성에 활용되었습니다.</p>
+<div class="grid grid-cols-2 gap-2 mb-3">
+<div class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs flex items-center">
+<i class="fas fa-arrows-alt-h mr-1"></i>
+<span>Flexbox: 1차원 레이아웃</span>
+</div>
+<div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs flex items-center">
+<i class="fas fa-th mr-1"></i>
+<span>Grid: 2차원 레이아웃</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center mb-2">
+<i class="fas fa-boxes text-2xl text-teal-500 mr-3"></i>
+<h3 class="text-lg font-semibold text-gray-700">레이아웃 예시</h3>
+</div>
+<div class="grid grid-cols-2 gap-4 h-64">
+<!-- Flexbox Example -->
+<div class="bg-gray-50 p-3 rounded-lg">
+<h4 class="text-sm font-semibold text-gray-700 mb-2 flex items-center">
+<i class="fas fa-arrows-alt-h text-teal-500 mr-1"></i>
+                                Flexbox 레이아웃
+                            </h4>
+<div class="layout-example h-48">
+<div class="flex-item bg-blue-200 flex-grow">
+<i class="fas fa-image mr-2 text-blue-600"></i>
+<span>이미지</span>
+</div>
+<div class="flex-item bg-teal-200 flex-grow">
+<i class="fas fa-heading mr-2 text-teal-600"></i>
+<span>타이틀</span>
+</div>
+<div class="flex-item bg-orange-200 flex-grow">
+<i class="fas fa-tag mr-2 text-orange-600"></i>
+<span>가격</span>
+</div>
+</div>
+<p class="text-xs text-gray-500 mt-2">.product-card { display: flex; flex-direction: column; justify-content: space-between; align-items: center; }</p>
+</div>
+<!-- Grid Example -->
+<div class="bg-gray-50 p-3 rounded-lg">
+<h4 class="text-sm font-semibold text-gray-700 mb-2 flex items-center">
+<i class="fas fa-th text-blue-500 mr-1"></i>
+                                Grid 레이아웃
+                            </h4>
+<div class="grid-container h-48">
+<div class="grid-item bg-purple-200">
+<i class="fas fa-search mr-2 text-purple-600"></i>
+<span>검색</span>
+</div>
+<div class="grid-item bg-pink-200">
+<i class="fas fa-filter mr-2 text-pink-600"></i>
+<span>필터</span>
+</div>
+<div class="grid-item bg-indigo-200">
+<i class="fas fa-border-all mr-2 text-indigo-600"></i>
+<span>상품 1</span>
+</div>
+<div class="grid-item bg-green-200">
+<i class="fas fa-border-all mr-2 text-green-600"></i>
+<span>상품 2</span>
+</div>
+</div>
+<p class="text-xs text-gray-500 mt-2">.grid-container { display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px; }</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 left-0 right-0 bg-gray-100 py-2 px-10 flex justify-between items-center">
+<div>
+<p class="text-sm text-gray-500">인터넷 쇼핑몰 웹사이트 포트폴리오</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">2025-10-21</p>
+</div>
+</div>
+</div>
+
+</body></html>

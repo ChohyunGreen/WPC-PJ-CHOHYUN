@@ -1,0 +1,100 @@
+body {
+    font-family: 'Pretendard','Noto Sans KR', sans-serif;
+    }
+.slide {
+    width: 1280px;
+    height: 1200px;
+    margin: 5% auto 0;
+    position: relative;
+    background-color: #fff;
+    
+}
+.slide-number {
+    width: 1280px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.slide-number .arrow_area {
+    margin: 0 2%;
+}
+
+
+
+
+/* 기타 공통설정 */
+.text-center {
+    text-align: center;
+}
+.color-black {
+    color: #000;
+}
+
+
+
+.bg-point {
+    background-color: #fbe6e5;
+}
+
+.toplogo img {
+    max-width: 55%;
+    margin:0 auto;
+}
+
+h1.text-4xl {
+    margin: 60px auto 50px;
+    color:#ea5550;
+    font-size: 70px;
+}
+
+h2.text-2xl {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    margin: 13px 0;
+    color: #222;
+}
+.bg-orange-500 {
+    margin:20px 0 0;
+    background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
+}
+
+
+h1.tit {
+    text-align: center;
+    background-color: #fbe6e5;
+    color: #ea5550;
+    padding: 25px 0;
+    display: block;
+}
+
+.con-list {
+    margin: 10rem 0;
+    clear: both;
+    position: relative;
+    display: block;
+}
+
+h1.text-gray-800,
+.con-list li {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+    color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+    font-weight: bold;
+}
+.mb-3 {
+    margin-top: 20px;
+}
+
+
+
+
+.history_box dl {box-sizing: border-box; border-top: 1px solid #eee; padding: 20px 0 10px 0; }
+/* .history_box dl:first-child {border-top: 2px solid #111;} */
+.history_box dl:last-child {border-bottom: 1px solid #eee;}
+.history_box dl dt {display: inline-block; width:24%; font-size: 18px; font-weight: 500; color: #333; font-family: 'Noto Sans KR', 'Noto Sans' !important; vertical-align: top;}
+.history_box dl dd {display: inline-block; vertical-align: top;}
+.history_box dl dd ul li {margin-bottom: 18px; font-size: 16px; color: #333; font-family: 'Noto Sans KR', 'Noto Sans' !important; word-break: keep-all;}
+.history_box dl dd ul li span {display: inline-block; width: auto; font-size: 16px; font-family: 'Noto Sans KR', 'Noto Sans' !important;}
+.history_box dl dd ul li a { font-size: 16px; font-family: 'Noto Sans KR', 'Noto Sans' !important; font-weight: bold;}

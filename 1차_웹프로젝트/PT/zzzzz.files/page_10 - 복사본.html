@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>09 반응형 웹 구현</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="common.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(245, 245, 245, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245, 245, 245, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.3;
+        }
+        .breakpoint-item {
+            position: relative;
+            padding-left: 25px;
+        }
+        .breakpoint-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: #FF6600;
+            border-radius: 50%;
+        }
+        .device-icon {
+            transition: transform 0.3s ease;
+        }
+        .device-icon:hover {
+            transform: scale(1.1);
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide bg-white" style=" overflow: hidden;">
+<!-- Decorative pattern -->
+<div class="grid-pattern"></div>
+<!-- Header -->
+<div class="absolute top-0 left-0 right-0 bg-gray-100 py-4 px-10">
+<h1 class="text-2xl font-bold text-gray-800">09 반응형 웹 구현</h1>
+</div>
+<!-- Slide number -->
+<div class="slide-number">10/13</div>
+<!-- Main content -->
+<div class="absolute inset-0 pt-20 pb-10 px-10">
+<div class="grid grid-cols-5 gap-6 h-full">
+<!-- Left column: Theory and explanation -->
+<div class="col-span-2 flex flex-col">
+<!-- Mobile first approach -->
+<div class="mb-6">
+<div class="flex items-center mb-3">
+<i class="fas fa-mobile-alt text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">모바일 우선 접근법</h2>
+</div>
+<div class="pl-8">
+<p class="text-gray-600 mb-3">이 프로젝트에서는 &#39;모바일 우선(Mobile-First)&#39; 접근법을 채택하여 디자인 및 개발을 진행했습니다.</p>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+<span>작은 화면의 모바일 기기에서부터 시작하여 점진적으로 더 큰 화면에 맞춰 디자인을 확장</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+<span>모바일 사용자가 전체 웹사이트 트래픽의 절반 이상을 차지하는 현대 웹 환경에서 사용자 경험을 최적화</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+<span>핵심 콘텐츠와 기능을 우선적으로 고려하여 불필요한 요소를 줄이고, 로딩 속도를 개선</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Media queries -->
+<div>
+<div class="flex items-center mb-3">
+<i class="fas fa-tablet-alt text-2xl text-teal-500 mr-3"></i>
+<h2 class="text-xl font-bold text-gray-700">미디어 쿼리 적용</h2>
+</div>
+<div class="pl-8">
+<p class="text-gray-600 mb-3">다양한 디바이스 환경에서 최적의 사용자 경험을 제공하기 위해 CSS 미디어 쿼리(Media Query)를 적극적으로 활용했습니다.</p>
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="breakpoint-item mb-3">
+<h3 class="font-semibold text-gray-700">기본 스타일 (모바일 우선)</h3>
+<p class="text-gray-600 text-sm">width: 100%, padding: 15px, flex-direction: column</p>
+</div>
+<div class="breakpoint-item mb-3">
+<h3 class="font-semibold text-gray-700">태블릿 (min-width: 768px)</h3>
+<p class="text-gray-600 text-sm">flex-direction: row, justify-content: space-between, 2열 배치</p>
+</div>
+<div class="breakpoint-item">
+<h3 class="font-semibold text-gray-700">데스크톱 (min-width: 1024px)</h3>
+<p class="text-gray-600 text-sm">max-width: 1200px, margin: 0 auto, 4열 배치</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right column: Visual example -->
+<div class="col-span-3 flex flex-col">
+<!-- Image of responsive design -->
+<div class="mb-5 flex justify-center">
+<img alt="Responsive website design across different devices" class="rounded-lg shadow-md" src="https://picture-search.skywork.ai/aippt/image/sheet/00874ddb98cd2dbbee43e6cecd000463.jpg" style="max-height: 350px; object-fit: contain;" data-sk-source-container="img" data-sk-source-url="https://www.samsungsds.com/global/ko/support/insights/Responsive_web_1.html" data-sk-source-id="1980461277859074050"/>
+</div>
+<!-- Device icons with explanations -->
+<div class="flex justify-around mt-4">
+<div class="flex flex-col items-center device-icon">
+<div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-2">
+<i class="fas fa-mobile-alt text-2xl text-orange-500"></i>
+</div>
+<p class="text-center text-sm text-gray-600">모바일<br/>(1열 배치)</p>
+</div>
+<div class="flex flex-col items-center device-icon">
+<div class="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center mb-2">
+<i class="fas fa-tablet-alt text-2xl text-teal-500"></i>
+</div>
+<p class="text-center text-sm text-gray-600">태블릿<br/>(2열 배치)</p>
+</div>
+<div class="flex flex-col items-center device-icon">
+<div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-2">
+<i class="fas fa-desktop text-2xl text-blue-500"></i>
+</div>
+<p class="text-center text-sm text-gray-600">데스크톱<br/>(4열 배치)</p>
+</div>
+</div>
+<!-- Benefits -->
+<div class="mt-6 bg-gray-50 p-4 rounded-lg">
+<h3 class="font-semibold text-gray-700 mb-2 flex items-center">
+<i class="fas fa-star text-yellow-500 mr-2"></i>반응형 웹의 장점
+                        </h3>
+<div class="grid grid-cols-3 gap-3">
+<div class="flex items-start">
+<i class="fas fa-user-friends text-teal-500 mt-1 mr-2"></i>
+<span class="text-sm text-gray-600">다양한 디바이스에서 일관된 사용자 경험 제공</span>
+</div>
+<div class="flex items-start">
+<i class="fas fa-tachometer-alt text-teal-500 mt-1 mr-2"></i>
+<span class="text-sm text-gray-600">조건부 로딩으로 불필요한 코드 제거</span>
+</div>
+<div class="flex items-start">
+<i class="fas fa-search text-teal-500 mt-1 mr-2"></i>
+<span class="text-sm text-gray-600">각 디바이스에 최적화된 검색 엔진 최적화(SEO)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-0 left-0 right-0 bg-gray-100 py-2 px-10 flex justify-between items-center">
+<div>
+<p class="text-sm text-gray-500">인터넷 쇼핑몰 웹사이트 포트폴리오</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">2025-10-21</p>
+</div>
+</div>
+</div>
+
+</body></html>
