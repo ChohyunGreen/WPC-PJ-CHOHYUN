@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Double Heart</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/common.css">
+
+    <!-- 웹폰트 : Noto Sans KR -->
+<!--     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+ -->
+    <!-- 웹폰트 : Pretendard -->
+    <!-- <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css" /> -->
+
+    <!-- 메인슬라이드 Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- 메인슬라이드 Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>       
+
+
+    <!-- bxslider 관련 cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+<script>
+    window.addEventListener('resize', () => { 
+        if(window.innerWidth <= 1024) {
+            location.href = '../Project_Mobile/index.html';
+        }
+
+    });
+</script>
+</head>
+
+
+
+
+
+
+<body>
+
+<!-- start : 팝업(메인화면) -->    
+<div class="today-wrap">
+	<div class="today-popup" data-name="popup1" style="display: block;">	  
+	  <span class="close"></span>
+	  <a href=""><img src="./imgs/popup_main_750_531.jpg" alt="메인팝업-1"></a>
+	  <div class="popup-footer">
+		<label><input type="checkbox" class="doNotShowToday"> 오늘 하루 열지 않기</label>
+		<span class="close">닫기</span>		
+	  </div>
+	</div>
+
+<!-- 	<div class="today-popup" data-name="popup2" style="display: block;">	  
+	  <span class="close"></span>
+	  <a href=""><img src="./imgs/popup_main_750_531_2.jpg" alt="메인팝업-2"></a>
+	  <div class="popup-footer">
+		<label><input type="checkbox" class="doNotShowToday"> 오늘 하루 열지 않기</label>
+		<span class="close">닫기</span>		
+	  </div>
+	</div>
+ -->
+<!-- 	<div class="today-popup" data-name="popup2" style="display: block;">	  
+	  <span class="close"></span>
+	  <a href=""><img src="./imgs/popup_main_400_500_2.png" alt="메인팝업-1"></a>
+	  <div class="popup-footer">
+		<label><input type="checkbox" class="doNotShowToday"> 오늘 하루 열지 않기</label>
+		<span class="close">닫기</span>		
+	  </div>
+	</div> -->
+</div>
+<!-- end : 팝업(메인화면) -->
+
+
+
+
+
+
+
+
+<!-- start : 멀티팝업(메인화면) -->
+<div id="multi_popup" style="visibility: visible;">
+<div class="container">
+	<div id="main_bn">
+		<li><a href=""><img src="./imgs/pop_bnr_01.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_02.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_03.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_04.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_05.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_06.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_07.jpg"></a></li>
+		<li><a href=""><img src="./imgs/pop_bnr_08.jpg"></a></li>
+	</div>
+    
+    
+
+	<div class="thumb_box">
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_01.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_02.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_03.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_04.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_05.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_06.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_07.jpg');"></a>
+		<a href="#1" style="background-image:url('./imgs/pop_thumb_08.jpg');"></a>
+	</div>
+</div>
+
+<div class="close">
+	<form name="pop_form">
+		<div id="check"><input type="checkbox" name="chkbox" value="checkbox" style="margin-right:5px;">오늘 하루동안 보지 않기</div>
+		<div id="close" style="margin:auto;"><a href="javascript:closePop();">닫기</a></div>
+	</form>
+</div>
+</div>
+<!-- end : 멀티팝업(메인화면) -->
+
+
+
+
+
+
+
+
+<!-- start : wrap -->    
+<div id="wrap">
+   
+<!-- start : header -->    
+<div class="bg_pink"></div>    
+
+<header class="header">
+    <h1 class="logo">
+        <a href="index.html"><img src="./imgs/dbh_logo01.png" alt="logo"></a>
+    </h1>
+
+    <ul class="cate">
+        <li>
+            <a href="brand.html" class="mouse_hover">브랜드스토리</a>
+            <ul class="sub_dep_1">
+                <li>
+                    <a href="brand.html" class="mouse_hover">브랜드스토리</a>
+                    <ul class="sub_dep_2">
+                        <li><a href="brand.html" class="mouse_hover">브랜드스토리1-1</a></li>
+                        <li><a href="brand.html" class="mouse_hover">브랜드스토리1-2</a></li>
+                        <li><a href="brand.html" class="mouse_hover">브랜드스토리1-3</a></li>
+                        <li><a href="brand.html" class="mouse_hover">브랜드스토리1-4</a></li>
+                        <li><a href="brand.html" class="mouse_hover">브랜드스토리1-5</a></li>  
+                    </ul>
+                </li>
+                <li><a href="brand.html" class="mouse_hover">회사소개</li>
+                <li><a href="brand.html" class="mouse_hover">연혁</li>
+                <li><a href="brand.html" class="mouse_hover">비전.목표</li>
+                <li><a href="brand.html" class="mouse_hover">찾아오시는 길</li>
+            </ul>        
+        </li>
+
+
+        <li>
+            <a href="product.html" class="mouse_hover">제품안내</a>
+            <ul class="sub_dep_1">
+                <li>
+                    <a href="product.html" class="mouse_hover">젖병.분유병</a>
+                    <ul class="sub_dep_2">
+                        <li><a href="product.html" class="mouse_hover">젖병</a></li>
+                        <li><a href="product.html" class="mouse_hover">젖꼭지</a></li>
+                        <li><a href="product.html" class="mouse_hover">분유병</a></li>
+                        <li><a href="product.html" class="mouse_hover">젖병소독기</a></li>
+                        <li><a href="product.html" class="mouse_hover">젖병세정제</a></li>  
+                    </ul>
+                </li>
+                <li>
+                    <a href="product.html" class="mouse_hover">수유용품</a>
+                    <ul class="sub_dep_2">
+                        <li><a href="product.html" class="mouse_hover">수유용품1</a></li>
+                        <li><a href="product.html" class="mouse_hover">수유용품2</a></li>
+                        <li><a href="product.html" class="mouse_hover">수유용품3</a></li>
+                        <li><a href="product.html" class="mouse_hover">수유용품4</a></li>
+                        <li><a href="product.html" class="mouse_hover">수유용품5</a></li>  
+                    </ul>
+                </li>
+                <li><a href="product.html" class="mouse_hover">쪽쪽이.구강케어</a></li>
+                <li><a href="product.html" class="mouse_hover">이유식용품</a></li>
+                <li><a href="product.html" class="mouse_hover">목욕.위생용품</a></li>
+                <li><a href="product.html" class="mouse_hover">스킨케어</a></li>
+            </ul>
+        </li>
+
+
+
+        <li>
+            <a href="babyinfo.html" class="mouse_hover">육아정보</a>
+            <ul class="sub_dep_1">
+                <li>
+                    <a href="babyinfo.html" class="mouse_hover">육아정보</a>
+                    <ul class="sub_dep_2">
+                        <li><a href="babyinfo.html" class="mouse_hover">육아정보-1</a></li>
+                        <li><a href="babyinfo.html" class="mouse_hover">육아정보-2</a></li>
+                        <li><a href="babyinfo.html" class="mouse_hover">육아정보-3</a></li>
+                        <li><a href="babyinfo.html" class="mouse_hover">육아정보-4</a></li>
+                    </ul>
+                </li>
+                <li><a href="babyinfo.html" class="mouse_hover">초보엄빠탈출</li>
+                <li><a href="babyinfo.html" class="mouse_hover">재능놀이탐구</li>
+                <li><a href="babyinfo.html" class="mouse_hover">연령대별 맞춤케어</li>
+                <li><a href="babyinfo.html" class="mouse_hover">베이비페어</li>
+            </ul>        
+        </li>
+
+
+
+        <li>
+            <a href="magazine.html" class="mouse_hover">매거진</a>
+            <ul class="sub_dep_1">
+                <li>
+                    <a href="magazine.html" class="mouse_hover">매거진</a>
+                    <ul class="sub_dep_2">
+                        <li><a href="magazine.html" class="mouse_hover">매거진-1</a></li>
+                        <li><a href="magazine.html" class="mouse_hover">매거진-2</a></li>
+                        <li><a href="magazine.html" class="mouse_hover">매거진-3</a></li>
+                        <li><a href="magazine.html" class="mouse_hover">매거진-4</a></li>
+                        <li><a href="magazine.html" class="mouse_hover">매거진-5</a></li>  
+                    </ul>
+                </li>
+                <li><a href="magazine.html" class="mouse_hover">놀이탐구</li>
+                <li><a href="magazine.html" class="mouse_hover">교육정보</li>
+                <li><a href="magazine.html" class="mouse_hover">알뜰육아정보</li>
+                </ul>        
+            </li>
+            
+            
+            
+            <li>
+                <a href="event.html" class="mouse_hover">이벤트</a>
+                <ul class="sub_dep_1">
+                    <li>
+                        <a href="event.html" class="mouse_hover">이달의이벤트</a>
+                        <ul class="sub_dep_2">
+                            <li><a href="event.html" class="mouse_hover">이달의이벤트-1</a></li>
+                            <li><a href="event.html" class="mouse_hover">이달의이벤트-2</a></li>
+                            <li><a href="event.html" class="mouse_hover">이달의이벤트-3</a></li>
+                            <li><a href="event.html" class="mouse_hover">이달의이벤트-4</a></li>
+                            <li><a href="event.html" class="mouse_hover">이달의이벤트-5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="event.html" class="mouse_hover">지난이벤트</li>
+                    <li><a href="event.html" class="mouse_hover">당첨자 발표</li>
+                </ul>        
+             </li>
+            
+            
+            
+            <li>
+                <a href="notice.html" class="mouse_hover">공지사항</a>
+                <ul class="sub_dep_1">
+                    <li>
+                        <a href="notice.html" class="mouse_hover">공지사항</a>
+                        <ul class="sub_dep_2">
+                            <li><a href="notice.html" class="mouse_hover">공지사항-1</a></li>
+                            <li><a href="notice.html" class="mouse_hover">공지사항-2</a></li>
+                            <li><a href="notice.html" class="mouse_hover">공지사항-3</a></li>
+                            <li><a href="notice.html" class="mouse_hover">공지사항-4</a></li>
+                            <li><a href="notice.html" class="mouse_hover">공지사항-5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="notice.html" class="mouse_hover">1:1문의</li>
+                    <li><a href="notice.html" class="mouse_hover">제휴문의</li>
+                    <li><a href="notice.html" class="mouse_hover">상품후기</li>
+                </ul>        
+             </li>
+    </ul>
+
+
+    <ul class="topright">
+        <li><a href="login.html" class="mouse_hover"><img src="./imgs/log-in.svg" alt="로그인" title="로그인"></a></li>
+        <li><a href="join.html" class="mouse_hover"><img src="./imgs/user.svg" alt="회원가입" title="회원가입"></a></li>
+        <li><a href="cart.html" class="mouse_hover"><img src="./imgs/shopping-cart.svg" alt="장바구니" title="장바구니"></a></li>
+
+
+
+        <!-- 검색창(모달팝업) -->
+        <li class="modal_btn mouse_hover">
+            <button type="button"><img src="./imgs/search.svg" alt="검색" title="검색"></button>
+        </li>
+        <div class="modal">
+            <div class="modal_popup">
+                <button type="button" class="close_btn"><img src="./imgs/x.svg" alt=""></button>
+                    <form action="/search">
+                        <input type="search" name="query" placeholder="검색어를 입력하세요">
+                        <button type="submit" class="search_btn"><img src="./imgs/search.svg" alt=""></button>
+                    </form>                
+            </div>
+        </div>
+
+
+
+        <!-- 전체메뉴보기 -->
+        <li class="dropdown mouse_hover">
+            <button class="dropdown-button"><img src="./imgs/menu.svg" alt="전체메뉴" title="전체메뉴"></button>
+            <!-- 전체메뉴 내용 -->
+            <div class="dropdown-menu">
+                <button class="close-button"><img src="./imgs/x_white.svg" alt=""></button>
+
+                <div class="allcate">
+                    <div class="inside">
+                        <span class="first"><a href="brand.html">브랜드스토리</a></span>
+                        <span><a href="brand.html">회사소개</a></span>
+                        <span><a href="brand.html">연혁</a></span>
+                        <span><a href="brand.html">비전.목표</a></span>
+                        <span><a href="brand.html">찾아오시는 길</a></span>
+                    </div>
+
+                    <div class="inside">
+                        <span class="first"><a href="product.html">제품안내</a></span>
+                        <span><a href="product.html">젖병.분유병</a></span>
+                        <span><a href="product.html">수유용품</a></span>
+                        <span><a href="product.html">이유식용품</a></span>
+                        <span><a href="product.html">목욕.위생용품</a></span>
+                        <span><a href="product.html">스킨케어</a></span>
+                    </div>
+
+                    <div class="inside">
+                        <span class="first"><a href="babyinfo.html">육아정보</a></span>
+                        <span><a href="babyinfo.html">초보엄빠탈출</a></span>
+                        <span><a href="babyinfo.html">재능놀이탐구</a></span>
+                        <span><a href="babyinfo.html">연령대별 맞춤케어</a></span>
+                        <span><a href="babyinfo.html">베이비페어</a></span>
+                    </div>
+
+                    <div class="inside">
+                        <span class="first"><a href="magazine.html">매거진</a></span>
+                        <span><a href="magazine.html">놀이탐구</a></span>
+                        <span><a href="magazine.html">교육정보</a></span>
+                        <span><a href="magazine.html">알뜰육아정보</a></span>
+                    </div>
+
+                    <div class="inside">
+                        <span class="first"><a href="event.html">이벤트</a></span>
+                        <span><a href="event.html">이달의 이벤트</a></span>
+                        <span><a href="event.html">지난이벤트</a></span>
+                        <span><a href="event.html">당첨자발표</a></span>
+                    </div>
+
+                    <div class="inside">
+                        <span class="first"><a href="notice.html">공지사항</a></span>
+                        <span><a href="notice.html">1:1문의</a></span>
+                        <span><a href="notice.html">제휴문의</a></span>
+                        <span><a href="notice.html">상품후기</a></span>
+                    </div>
+
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    
+</header>  
+<!-- end : header -->
+
+
+
+
+
+
+
+<!-- start : main -->
+<main class="main">
+
+
+<!-- start : 메인슬라이드 -->    
+<div class="bg_mainimg01"></div>    
+<div class="swiper glaubeSwifer">
+
+    <div class="swiper-wrapper">
+        
+        <!-- ● 슬라이드 01 -->
+        <div class="swiper-slide">
+<!--        <span class="text_area_1">고컬리티 디자인 전문회사 1<br> 성공적인 창업의 시작</span>
+            <span class="text_area_2">그라우베와 함께하는 성공쇼핑몰</span>
+            <span class="box_square">
+                <a href="">구매하기</a> 
+            </span>  -->
+            <img src="./imgs/mainimg_01.png" alt="슬라이드">
+        </div>
+        
+        <!-- ● 슬라이드 02 -->
+        <div class="swiper-slide">
+<!--        <span class="text_area_1">고컬리티 디자인 전문회사 2<br> 성공적인 창업의 시작</span>
+            <span class="text_area_2">그라우베와 함께하는 성공쇼핑몰</span>
+            <span class="box_square">
+                <a href="">구매하기</a>
+            </span>
+ -->            <img src="./imgs/mainimg_02.png" alt="슬라이드">
+        </div>
+        
+        <!-- ● 슬라이드 03 -->
+        <div class="swiper-slide">
+<!--        <span class="text_area_1">고컬리티 디자인 전문회사 1<br> 성공적인 창업의 시작</span>
+            <span class="text_area_2">그라우베와 함께하는 성공쇼핑몰</span>
+            <span class="box_square">
+                <a href="">구매하기</a> 
+            </span>  -->
+            <img src="./imgs/mainimg_01.png" alt="슬라이드">
+        </div>
+        
+        <!-- ● 슬라이드 04 -->
+        <div class="swiper-slide">
+<!--        <span class="text_area_1">고컬리티 디자인 전문회사 2<br> 성공적인 창업의 시작</span>
+            <span class="text_area_2">그라우베와 함께하는 성공쇼핑몰</span>
+            <span class="box_square">
+                <a href="">구매하기</a>
+            </span>
+ -->            <img src="./imgs/mainimg_02.png" alt="슬라이드">
+        </div>
+        
+        
+    </div>
+    
+    
+    <span> <img src="./imgs/feather/chevron-right.svg"  class="swiper-button-next" /></span>
+    <span> <img src="./imgs/feather/chevron-left.svg"  class="swiper-button-prev"/></span> 
+
+    
+    <div class="pagi_wrap">
+        <div class="swiper-pagination"></div>
+        <div class="progress-line" style="display:none;">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="play-pause-btn" style="display:none;">
+	<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pause"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>            </svg>
+
+        </div>
+    </div>
+</div>
+<!-- end : 메인슬라이드 -->
+
+
+
+
+
+
+
+<!-- start : 막강한 회원전용혜택 -->
+ <section class="superprice">
+    <h2 class="tit">
+        <span>막강한 회원전용혜택</span>
+    </h2>
+    <div class="iconarea">
+        <ul>
+            <li class="icon1">
+                <a href=""><img src="./imgs/icon_superprice_01.svg" alt="신규가입혜택"></a>
+                <span class="exp">신규가입혜택</span>
+            </li>
+            <li class="icon2">
+                <a href=""><img src="./imgs/icon_superprice_02.svg" alt="포인트 적립"></a>
+                <span class="exp">포인트 적립</span>
+            </li>
+            <li class="icon3">
+                <a href=""><img src="./imgs/icon_superprice_03.svg" alt="이달의 이벤트"></a>
+                <span class="exp">이달의 이벤트</span>
+            </li>
+            <li class="icon4">
+                <a href=""><img src="./imgs/icon_superprice_04.svg" alt="마감 특가전"></a>
+                <span class="exp">마감 특가전</span>
+            </li>
+            <li class="icon5">
+                <a href=""><img src="./imgs/icon_superprice_05.svg" alt="리뷰 이벤트"></a>
+                <span class="exp">리뷰 이벤트</span>
+            </li>
+            <li class="icon6">
+                <a href=""><img src="./imgs/icon_superprice_06.svg" alt="기획전 상품"></a>
+                <span class="exp">기획전 상품</span>
+            </li>
+        </ul>
+    </div>
+
+ </section>
+<!-- end : 막강한 회원전용혜택 -->
+
+
+
+
+
+
+
+<!-- start : 이달의 베스트상품 -->
+ <section class="thismonth">
+    <h2 class="tit">
+        <span>이달의 베스트상품</span>
+    </h2>
+    <div class="itemarea">
+        <ul>
+            <li class="">
+                <a href=""><img src="./imgs/img_thismonth_01.jpg" alt="이달의베스트1"></a>
+                <ul class="info">
+                    <li class="name"><a href="">세타필 베이비 젠틀 워시 데일리세트</a></li>
+                    <li class="exp"><a href="">민감한 내 아이를 위한 최고의 맞춤데일리케어 솔루션</a></li>
+                    <li class="cs_price"><a href="">35,000원</a></li>
+                    <li class="dis_price"><a href="">29,000원</a></li>
+                    <li class="rate"><a href="">35%</a></li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href=""><img src="./imgs/img_thismonth_02.jpg" alt="이달의베스트2"></a>
+                <ul class="info">
+                    <li class="name"><a href="">유기농 섬유소재로 만든 우리아기 쪽쪽이</a></li>
+                    <li class="exp"><a href="">민감한 내 아이를 위한 최고의 맞춤데일리케어 솔루션</a></li>
+                    <li class="cs_price"><a href="">22,000원</a></li>
+                    <li class="dis_price"><a href="">18,000원</a></li>
+                    <li class="rate"><a href="">27%</a></li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href=""><img src="./imgs/img_thismonth_03.jpg" alt="이달의베스트3"></a>
+                <ul class="info">
+                    <li class="name"><a href="">엄마와 아이가 함께쓰는 인견 타월세트</a></li>
+                    <li class="exp"><a href="">민감한 내 아이를 위한 최고의 맞춤데일리케어 솔루션</a></li>
+                    <li class="cs_price"><a href="">17,000원</a></li>
+                    <li class="dis_price"><a href="">12,500원</a></li>
+                    <li class="rate"><a href="">42%</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+ </section>
+<!-- end : 이달의 베스트상품 -->
+
+
+</main>
+<!-- end : main -->
+</div>    
+<!-- end : wrap -->
+
+
+
+
+
+
+
+<!-- start : 유튜브 -->
+<section class="main_youtube">
+
+<div class="inside">    
+
+    <div class="video">
+        <!-- <iframe src="https://www.youtube.com/embed/RfnV9A7yAeA?autoplay=1&mute=1&loop=1" width="640" height="380" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" class="playzone"></iframe> -->
+        <iframe src="https://www.youtube.com/embed/RfnV9A7yAeA" width="640" height="380" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" class="playzone"></iframe>
+    </div>
+
+    <div class="textarea">
+        <h2 class="effect">베이비 데일리 선크림</h2>
+        <p>부모와 아이가 모두 사용하는 저자극 선크림</p>
+        <button><a href="">바로구매하기</a></button>
+    </div>
+</div>
+
+</section>
+<!-- end : 유튜브 -->
+
+
+
+
+
+
+
+<!-- start : 새로운상품 -->
+ <section class="newitem">
+    <h2 class="tit">
+        <span>새로운상품</span>
+    </h2>
+    <div class="itemarea">
+        <ul>
+            <li class="">
+                <a href=""><img src="./imgs/img_newitem_01.jpg" alt="새로운상품1"></a>
+                <ul class="info">
+                    <li class="name"><a href="">세타필 베이비 젠틀 워시 데일리세트</a></li>
+                    <li class="exp"><a href="">민감한 내 아이를 위한 최고의 맞춤데일리케어 솔루션</a></li>
+                    <li class="cs_price"><a href="">35,000원</a></li>
+                    <li class="dis_price"><a href="">29,000원</a></li>
+                    <li class="rate"><a href="">35%</a></li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href=""><img src="./imgs/img_newitem_02.jpg" alt="새로운상품2"></a>
+                <ul class="info">
+                    <li class="name"><a href="">유기농 섬유소재로 만든 우리아기 쪽쪽이</a></li>
+                    <li class="exp"><a href="">민감한 내 아이를 위한 최고의 맞춤데일리케어 솔루션</a></li>
+                    <li class="cs_price"><a href="">22,000원</a></li>
+                    <li class="dis_price"><a href="">18,000원</a></li>
+                    <li class="rate"><a href="">27%</a></li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href=""><img src="./imgs/img_newitem_03.jpg" alt="새로운상품3"></a>
+                <ul class="info">
+                    <li class="name"><a href="">엄마와 아이가 함께쓰는 인견 타월세트</a></li>
+                    <li class="exp"><a href="">민감한 내 아이를 위한 최고의 맞춤데일리케어 솔루션</a></li>
+                    <li class="cs_price"><a href="">17,000원</a></li>
+                    <li class="dis_price"><a href="">12,500원</a></li>
+                    <li class="rate"><a href="">42%</a></li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href=""><img src="./imgs/img_newitem_04.jpg" alt="새로운상품4"></a>
+                <ul class="info">
+                    <li class="name"><a href="">엄마와 아이가 함께쓰는 인견 타월세트</a></li>
+                    <li class="exp"><a href="">민감한 내 아이를 위한 최고의 맞춤데일리케어 솔루션</a></li>
+                    <li class="cs_price"><a href="">17,000원</a></li>
+                    <li class="dis_price"><a href="">12,500원</a></li>
+                    <li class="rate"><a href="">42%</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+ </section>
+<!-- end : 이달의 베스트상품 -->
+
+
+
+
+
+
+<!-- start : 슬라이드(이벤트) -->
+<section class="slider-akb-wrapper" id="sliderWrapper">
+    <h2 class="tit">
+        <span>이벤트</span>
+    </h2>
+
+    <div class="slider-akb-container" id="sliderContainer">
+        <div class="slides" id="slidesContainer">
+            
+            <!-- Slide 1 -->
+            <div class="slide">
+                <a href=""><img src="./imgs/slide_center_01.jpg" alt="슬라이드(이벤트)1"></a>
+            </div>
+            
+            
+            <!-- Slide 2 -->
+            <div class="slide" style="flex-direction: column;">
+                <a href=""><img src="./imgs/slide_center_02.jpg" alt="슬라이드(이벤트)2"></a>
+            </div>
+            
+            
+            <!-- Slide 3 -->
+            <div class="slide" style="">
+                <a href=""><img src="./imgs/slide_center_03.jpg" alt="슬라이드(이벤트)3"></a>
+			</div>
+            
+            
+            <!-- Slide 4 -->
+            <div class="slide">
+                <a href=""><img src="./imgs/slide_center_04.jpg" alt="슬라이드(이벤트)4"></a>
+            </div>
+            
+           
+            <!-- Slide 5 -->
+            <div class="slide">
+                <a href=""><img src="./imgs/slide_center_05.jpg" alt="슬라이드(이벤트)5"></a>
+            </div>
+            
+            <!-- Cloned slides will be added here by JS -->
+        </div>
+        <div class="arrow prev" onclick="moveSlideManual(-1)">❮</div>
+        <div class="arrow next" onclick="moveSlideManual(1)">❯</div>
+    </div>
+</section>
+
+
+<div class="slider-akb-controls">
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <button class="pause-play-btn" id="pausePlayBtn">❚❚</button>
+    <div class="pagination" id="pagination">1 / 5</div>
+</div>
+<!-- end : 슬라이드(이벤트) -->
+
+
+
+
+
+
+
+<!-- start : 초보엄빠 -->
+<section class="careinfo">
+    <h2 class="tit">
+        <span>초보 엄빠들을 위한 육아정보</span>
+    </h2>
+
+
+    <div class="careinfo-in">
+    <div class="slider-container">
+        <div class="left-tabs">
+
+            <div class="tab-akb-item active" data-tab="1">
+                <div class="tab-akb-content-inactive">
+                    <!-- <h3>탭 1</h3> -->
+                    <img src="./imgs/slide_careinfo_btn_left_01_out.png" alt="탭 1 비활성화">
+                </div>
+                <div class="tab-akb-content-active">
+                    <!-- <h3>활성화된 탭 1</h3>
+                    <p>여기에 탭 1 활성화시 이미지, 텍스트, 동영상 등</p>
+                     -->
+                    <img src="./imgs/slide_careinfo_btn_left_01.png" alt="탭 1 활성화">
+                </div>
+            </div>
+
+            <div class="tab-akb-item" data-tab="2">
+                <div class="tab-akb-content-inactive">
+                    <!-- <h3>탭 2</h3> -->
+                    <img src="./imgs/slide_careinfo_btn_left_02_out.png" alt="탭 2 비활성화">
+                </div>
+                <div class="tab-akb-content-active">
+                    <!-- <h3>활성화된 탭 2</h3> -->
+                    <!-- <p>여기에 탭 2 활성화시 이미지, 텍스트, 동영상 등</p> -->
+                    <!-- <video controls width="100%" height="auto">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        브라우저가 동영상을 지원하지 않습니다.
+                    </video> -->
+                    <img src="./imgs/slide_careinfo_btn_left_02.png" alt="탭 2 활성화">
+                </div>
+            </div>
+
+            <div class="tab-akb-item" data-tab="3">
+                <div class="tab-akb-content-inactive">
+                    <!-- <h3>탭 3</h3> -->
+                    <!-- <p>비활성화된 탭 3 설명</p> -->
+                     <img src="./imgs/slide_careinfo_btn_left_03_out.png" alt="탭 3 비활성화">
+                </div>
+                <div class="tab-akb-content-active">
+                    <!-- <h3>활성화된 탭 3</h3> -->
+                    <!-- <p>여기에 탭 3 활성화시 이미지, 텍스트, 동영상 등</p> -->
+                    <!--  <p>추가 텍스트입니다.</p> -->
+                    <img src="./imgs/slide_careinfo_btn_left_03.png" alt="탭 3 활성화">
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right-content">
+
+            <div class="content-item active" data-content="1">
+                <!-- <h2>콘텐츠 1 제목</h2> -->
+                <!-- <p>탭 1에 해당하는 상세 내용입니다. 여기에 다양한 정보를 넣어주세요.</p> -->
+                <img src="./imgs/slide_careinfo_contents_01.png" alt="콘텐츠 1 이미지">
+            </div>
+
+            <div class="content-item" data-content="2">
+                <!-- <h2>콘텐츠 2 제목</h2> -->
+                <!-- <p>탭 2에 해당하는 상세 내용입니다. 동영상이나 다른 미디어를 포함할 수 있습니다.</p> -->
+                <!-- <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                 <img src="./imgs/slide_careinfo_contents_02.png" alt="콘텐츠 2 이미지">
+            </div>
+
+            <div class="content-item" data-content="3">
+                <!-- <h2>콘텐츠 3 제목</h2> -->
+                <!-- <p>탭 3에 해당하는 상세 내용입니다. 복잡한 레이아웃도 가능합니다.</p> -->
+                <!-- <ul>
+                    <li>항목 1</li>
+                    <li>항목 2</li>
+                    <li>항목 3</li>
+                </ul> -->
+                <img src="./imgs/slide_careinfo_contents_03.png" alt="콘텐츠 3 이미지">
+            </div>
+
+        </div>
+    </div>
+ </div>
+
+
+</section>
+<!-- end : 초보엄빠 -->
+
+
+
+
+
+
+
+
+<!-- start : 제품리뷰 -->
+ <section class="review">
+    <h2 class="tit">
+        <span>제품리뷰</span>
+    </h2>
+    
+    <div class="slider-container-zzz">
+        <div class="slider-wrapper">
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_01.jpg" alt="제품리뷰1" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">정말 좋은제품 입니다. 사길 잘했어요.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_02.jpg" alt="제품리뷰2" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">제품이 너무 좋습니다. 만족합니다.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                       <!--  <img src="./imgs/star-icon.svg" alt="5점"> -->
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_03.jpg" alt="제품리뷰3" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">정말 좋은제품 입니다. 사길 잘했어요.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                    </li>
+                </ul>
+            </div>
+            </div>  
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_04.jpg" alt="제품리뷰4" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">제품이 너무 좋습니다. 만족합니다.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                       <!--  <img src="./imgs/star-icon.svg" alt="5점"> -->
+                        <!-- <img src="./imgs/star-icon.svg" alt="5점"> -->
+                    </li>
+                </ul>
+            </div>
+            </div>  
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_05.jpg" alt="제품리뷰5" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">정말 좋은제품 입니다. 사길 잘했어요.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                    </li>
+                </ul>
+            </div>
+            </div>  
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_06.jpg" alt="제품리뷰6" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">정말 좋은제품 입니다. 사길 잘했어요.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                    </li>
+                </ul>
+            </div>
+            </div>  
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_01.jpg" alt="제품리뷰7" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">제품이 너무 좋습니다. 만족합니다.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <!-- <img src="./imgs/star-icon.svg" alt="5점"> -->
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                    </li>
+                </ul>
+            </div>
+            </div>  
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_02.jpg" alt="제품리뷰8" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">정말 좋은제품 입니다. 사길 잘했어요.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <!-- <img src="./imgs/star-icon.svg" alt="5점"> -->
+                        <!-- <img src="./imgs/star-icon.svg" alt="5점"> -->
+                    </li>
+                </ul>
+            </div>
+            </div>  
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_03.jpg" alt="제품리뷰9" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">제품이 너무 좋습니다. 만족합니다.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                    </li>
+                </ul>
+            </div>
+            </div>  
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_04.jpg" alt="제품리뷰10" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">정말 좋은제품 입니다. 사길 잘했어요.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <!-- <img src="./imgs/star-icon.svg" alt="5점"> -->
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                    </li>
+                </ul>
+            </div>
+            </div>  
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_05.jpg" alt="제품리뷰11" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">제품이 너무 좋습니다. 만족합니다.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                    </li>
+                </ul>
+            </div>
+            </div>  
+
+            <div class="slider-item">
+            <div class="detail-area">
+                <a href=""><img src="./imgs/img_review_06.jpg" alt="제품리뷰12" class="thumb"></a>
+                <ul class="info">
+                    <li class="name"><a href="">정말 좋은제품 입니다. 사길 잘했어요.</a></li>
+                    <li class="exp"><a href="">앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. 앞으로 계속 이 제품만 사게 될거같네요. 제품이 정말 너무 좋습니다. 사길 잘했어요. </a></li>
+                    <li class="point">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                        <!-- <img src="./imgs/star-icon.svg" alt="5점"> -->
+                        <img src="./imgs/star-icon.svg" alt="5점">
+                    </li>
+                </ul>
+            </div>
+            </div>  
+
+        </div>
+
+        <button class="slider-nav-button left" aria-label="Previous slide">&lt;</button>
+        <button class="slider-nav-button right" aria-label="Next slide">&gt;</button>
+
+        <div class="progress-bar-container-zzz">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+ </section>
+<!-- end : 제품리뷰 -->
+
+
+
+
+
+
+
+<!-- start : 인스타그램 -->
+ <section class="insta">
+    <h2 class="tit">
+        <span>instagram</span>
+    </h2>
+    <div class="thumb">
+        <ul>
+            <li class="icon1">
+                <a href=""><img src="./imgs/img_insta_01.jpg" alt="인스타-1"></a>
+            </li>
+            <li class="icon2">
+                <a href=""><img src="./imgs/img_insta_02.jpg" alt="인스타-2"></a>
+            </li>
+            <li class="icon3">
+                <a href=""><img src="./imgs/img_insta_03.jpg" alt="인스타-3"></a>
+            </li>
+            <li class="icon4">
+                <a href=""><img src="./imgs/img_insta_04.jpg" alt="인스타-4"></a>
+            </li>
+            <li class="icon5">
+                <a href=""><img src="./imgs/img_insta_05.jpg" alt="인스타-5"></a>
+            </li>
+            <li class="icon6">
+                <a href=""><img src="./imgs/img_insta_06.jpg" alt="인스타-6"></a>
+            </li>
+            <li class="icon7">
+                <a href=""><img src="./imgs/img_insta_07.jpg" alt="인스타-7"></a>
+            </li>
+            <li class="icon8">
+                <a href=""><img src="./imgs/img_insta_08.jpg" alt="인스타-8"></a>
+            </li>
+        </ul>
+    </div>
+
+ </section>
+<!-- end : 인스타그램 -->
+
+
+
+
+
+
+
+
+<!-- start : 하단(푸터) -->
+<footer id="footer" class="footer">
+<div class="footer__top">
+	<div class="footer__top-inner">
+
+
+        <!-- 고객센터 -->
+        <div class="footer__cs">
+            <h3 class="footer__title">고객센터</h3>
+            <a class="footer__cs-tel" href="tel:1500-0000">1500-0000</a>
+            <span class="footer__cs-time">
+                평일 오전 10:00 ~ 오후 6:00<br>
+                점심 오후 12:00 ~ 오후 1:00
+            </span>
+        </div>
+
+
+
+        <!-- 계좌안내 -->
+        <div class="footer__acc">
+            <h3 class="footer__title">계좌안내</h3>
+            <a class="footer__acc-tel" href="tel:1500-0000">123-45678-90123</a>
+            <span class="footer__cs-time">
+                행복은행<br>
+                (주)더블하트
+            </span>
+
+            <div class="sns">
+                <a href="" target="_blank">
+                    <img src="./imgs/instagram.svg" alt="인스타그램" loading="lazy">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./imgs/x.svg" alt="엑스" loading="lazy">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./imgs/youtube.svg" alt="유튜브" loading="lazy">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./imgs/facebook.svg" alt="페이스북" loading="lazy">
+                </a>
+            </div>
+        </div>
+
+
+        
+        <!-- 회사정보 -->
+        <div class="footer__company">
+            
+            <div class="footer__logo">
+                <a href="/"><img src="./imgs/dbh_logo01.png" alt="로고"></a>
+            </div>
+            
+            <!-- 사업자정보 -->
+            <div class="footer__info-wrap">
+                <div class="footer__info">
+                    <span>상호: 더블하트</span>
+                    <span>대표: 김더블</span>
+                    <span class="footer__info-tel">대표전화: 1500-0000</span>
+                    <span class="footer__info-fax ">팩스: 02-1500-0001</span>
+                </div>
+
+                <div class="footer__info">
+                    <span class="footer__info-adress">주소: 072235 서울특별시 서초구 서초1가 22-2 1F (주)더블하트</span>
+                </div>
+
+                <div class="footer__info">
+                    <span class="footer__info-adress">매장 주소: 서울특별시 강남구 대치1동 1F 더블하트</span>
+                </div>
+
+                <div class="footer__info">
+                    <span class="license_num">사업자등록번호: 1233-45-67889 
+                        <a href="#none" onclick="window.open('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=12334567889', 'bizCommPop', 'width=750, height=950;');return false;">[사업자정보확인]</a></span>
+                    <span>통신판매업 신고번호: 서울 강남 제 000 호</span>
+                </div>
+
+                <div class="footer__info">
+                    <span>개인정보 보호책임자: <a href="mailto:cpo@dh.co.kr">김하트</a></span>
+                    <span>E-mail: <a href="mailto:dh@naver.com">dh@naver.com</a></span>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+	</div>
+</footer> 
+<!-- end : 하단(푸터) -->
+
+
+
+
+
+
+
+<!-- start : 퀵메뉴(하단) -->
+<div class="quick up">
+    <div class="quick__btn"><a href=""><img src="./imgs/floating_kakao.png" alt="카카오"></a></div>
+	<div class="quick__btn"><a href=""><img src="./imgs/floating_naver.png" alt="네이버"></a></div>
+	<div class="quick__btn top"><img src="./imgs/floating_up.png" alt="위로"></div>
+    <div class="quick__btn bottom"><img src="./imgs/floating_down.png" alt="아래로"></div>
+</div>
+<!-- end : 퀵메뉴 -->
+
+
+<!-- 스크립트(공통) -->
+<script src="js/common_dbh.js"></script>
+
+<!-- 스크립트 (메인페이지) -->
+<script src="js/main_dbh.js"></script>
+
+<!-- 제이쿼리(멀티팝업-메인화면) -->
+<script type="text/javascript" src="./js/jquery.ulslide.js"></script>
+
+</body>
+</html>
