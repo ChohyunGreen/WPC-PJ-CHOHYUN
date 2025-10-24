@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>06.프로그래밍언어응용_평가_조현</title>
+        <style>
+
+
+/* css : 텍스트3 */
+:root {
+    --black: #191428;
+    --mid-gray: #73737d;
+    --lavender: #697fc0;
+    --light-gray: #b9b9c3;
+    --lemon: #eef7ba;
+    --black-86: black;
+    --dark-gray: #2d283c;
+    --white: white;
+    --transparent: #fff0;
+    --teal: #80d8e4;
+    --purple: #3f317d;
+    --magenta: #bf91e4;
+    --lightest-gray: #f4f4fb;
+    --_v2---color-violet: #bf91e4;
+    --error: #c02b0a;
+    --_v2---color-teal-light: #93c7b6;
+    --_v2---color-text-dark: #69627c;
+    --_v2---color-teal: #62b8c4;
+    --_v2---color-purple: #40317d;
+    --_v2---color-cool-white: #f4f5fc;
+    --_v2---color-text-teal: #80c4d3;
+    --_v2---color-darkest: #120d26;
+    --_v2---color-nav-unselected: #a0a0e6;
+    --_v2---size-section-container: 1220px;
+    --_v2---font-main: Roboto,Arial,sans-serif;
+    --_v2---font-headers: "PP Neue Montreal",Arial,sans-serif;
+    --radiant-ui-components-library-marketplace--color--white: white;
+    --radiant-ui-components-library-marketplace--color--body-font-dark: #6d6d6d;
+    --radiant-ui-components-library-marketplace--color--theme-color: #116df8;
+    --radiant-ui-components-library-marketplace--color--heading-dark: #150438;
+    --_v2---color-light-grey: #e9e7f0;
+    --_v2---size-header-container: 900px
+}
+
+.v2_home_solution_accordion_trigger {
+    font-family: var(--_v2---font-headers);
+    color: var(--white);
+    background-color: #0000;
+    border-top: 2px solid #bf91e457;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 110%;
+    text-decoration: none;
+    display: flex;
+}
+
+.v2_home_solution_accordion_trigger_text {
+    background-image: linear-gradient(90deg,var(--_v2---color-violet),var(--_v2---color-teal)56%,var(--_v2---color-teal-light));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text
+}
+
+
+
+
+
+
+
+
+/* css : 텍스트2-1 */
+.sample {
+    font-weight: 900;
+    margin: 0;
+    background: linear-gradient(88.89deg, #2bf2ff 0.48%, #2f76ff 42.46%, #2bf2ff 84.45%);
+    background-size: auto;
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: block;
+    letter-spacing: -0.02em;
+    font-size: 120px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+
+
+
+
+
+/* css : 텍스트2-2 */
+.sample_2 {
+    font-weight: 900;
+    margin: 0;
+    background: linear-gradient(88.89deg, #099aa7 0.48%, #1f2f31 42.46%, #23ce9b 70.22%);
+    background-size: auto;
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: textclip_2 2s linear infinite;
+    display: block;
+    letter-spacing: -0.02em;
+    font-size: 120px;
+}
+
+@keyframes textclip_2 {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+
+
+
+
+
+/* css : 텍스트1 */
+.typing-container {
+  font-size: 95px;
+  font-weight:700;
+  font-family:'Pretendard';
+  margin: 50px;
+  color: darkseagreen;
+  /* width:450px; */
+  word-break:keep-all;
+  
+}
+
+#cursor {
+  border-left: 2px solid salmon; /* 커서 스타일 */
+  animation: blink 0.7s infinite;
+  display: inline-block;
+  margin-left: 2px;
+  height: 35px; /* 폰트 크기와 동일하게 설정 */
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+     </style>
+ </head>
+
+
+
+
+
+
+
+
+ <body>
+
+    <!-- 텍스트1 -->
+    <div class="typing-container sample">
+    <span id="text"></span><span id="cursor"></span>
+    </div>
+
+
+    <!-- 텍스트2-1, 텍스트2-2 -->
+    <!-- <p class="sample">자바스크립트는 여러워...</p> -->
+    <!-- <p class="sample_2">텍스트연습 입니다.</p> -->
+
+
+    <!-- 텍스트3 -->
+<!--     <div class="v2_home_solution_accordion_trigger">
+      <div class="v2_home_solution_accordion_trigger_text">
+        AI&nbsp;Search
+      </div>
+    </div>
+ -->
+ </body>
+
+
+
+
+
+<script src="textsample.js"></script>
+
+
+
+</html>
+
