@@ -62,6 +62,7 @@
 
 
 
+
 /****************** 막강한 회원전용혜택 ******************/
 .superprice {
     margin: 20px auto 0;
@@ -103,16 +104,18 @@
     margin-top: 10px;
     color: #343434;
 }
- 
 
 
 
-/* 콘텐츠 섹션 스타일 */
+
+
+
+
+
+/****************** 이달의 베스트상품 ******************/
 .main_in {
     padding: 20px 15px;
 }
-
-
 
 
 /* 상품 공통 */
@@ -344,6 +347,289 @@ to {
 
 
 /* 슬라이드(이벤트) */
+.event {
+    margin-top: 20px;
+}
 .event img {
     max-width: 100%;
 }
+
+
+
+
+
+
+
+
+/* 초보엄빠 */
+.careinfo {
+    margin-top: 20px;
+}
+.careinfo img {
+    max-width: 100%;
+}
+
+/* 초보엄빠 탭 */
+.tab-container {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.tabs {
+    display: flex;
+    cursor: pointer;
+}
+
+.tab {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    background-color: transparent;
+    border: 0 solid #ccc;
+    transition: background-color 0.3s;
+}
+.age {
+    font-size: 13px;
+    display: block;
+}
+.tab.active {
+    background-color: var(--color-point);
+    color: white;
+    border-radius: 50px;
+}
+
+.tab-content {
+    border: 0 solid #ccc;
+    padding: 0;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /****************** 제품리뷰 ******************/
+    :root {
+        --slide-width: 300px; /* 각 li 요소의 너비 */
+        --slide-gap: 35px;    /* li 요소 사이의 간격 */
+        --slide-animation-duration: 0.6s; /* 슬라이드 애니메이션 속도. JS config.slideDuration과 일치해야 자연스러움 */
+    }
+
+    .review {
+        margin: 100px 0 0;
+    }
+
+    .review .info {
+        text-align: left;
+    }
+
+    .review .detail-area img.thumb {
+        margin-bottom: 15px;
+    }
+
+    /* 후기제목 */
+    .review .info .name a{
+        font-size: 18px;
+        color: #343434;
+        font-weight: 600;
+        line-height: 1.7;
+        font-family: var(--font-pretendard);
+        }
+
+    /* 후기내용 */        
+    .review .info .exp a{
+        font-size: 14px;
+        color: #757575;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: -1px;
+        font-family: var(--font-pretendard);
+    }
+
+    /* 평점 */
+    .review .point {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #343434;
+        font-weight: 400;
+        line-height: 1.7;
+        font-family: var(--font-pretendard);
+    }
+    .review .point img { 
+        width:15px;
+        height: 15px;
+        float:left;
+    }
+    
+    .slider-container-zzz {
+        /* 한 화면에 3개의 아이템이 보이도록 설정. 필요에 따라 변경 */
+        /* 예: (var(--slide-width) * 1 + var(--slide-gap) * 0) => 1개 아이템
+                (var(--slide-width) * 2 + var(--slide-gap) * 1) => 2개 아이템 */
+        /* width: calc(var(--slide-width) * 3 + var(--slide-gap) * 2);  */
+        width: 1650px;
+        max-width: 100vw; /* 화면 너비를 너무 초과하지 않도록 */
+        position: relative;
+        overflow: hidden; /* 슬라이더 컨테이너 밖으로 나가는 내용은 숨김 */
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        padding: 0; /* 내부 여백 */
+        user-select: none; /* 드래그 시 텍스트 선택 방지 */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* IE/Edge */
+    }
+
+    .slider-wrapper {
+        display: flex;
+        /* JS에서 설정된 slideDuration과 CSS transition duration 일치 */
+        transition: transform var(--slide-animation-duration) ease-in-out;
+        touch-action: pan-y; /* 세로 스크롤은 OS에 맡기고, 가로 스크롤은 슬라이더가 처리 */
+        will-change: transform; /* 애니메이션 성능 최적화 힌트 */
+    }
+
+    .slider-item {
+        padding: 0 0 25px;
+        flex: 0 0 var(--slide-width); /* 각 li는 고정된 너비를 가짐 */
+        margin-right: var(--slide-gap); /* li 사이 간격 */
+        height: 100%; /* li의 높이 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        color: #333;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        /* 마우스오버 효과 (선택 사항) */
+        /* transform: scale(1);
+        transition: transform 0.3s ease; */
+    }
+    /* .slider-item:hover {
+        transform: scale(1.03);
+    } */
+
+
+    .slider-item h3 {
+        margin-bottom: 10px;
+        color: #007bff;
+    }
+    .slider-item p {
+        font-size: 0.9em;
+        color: #555;
+        padding: 0 15px;
+    }
+    .slider-item img {
+        object-fit: contain;
+        width: 300px;
+        height: 300px;
+    }
+
+    /* ----- 네비게이션 버튼 ----- */
+    .slider-nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 1.0);
+        color: var(--color-black);
+        border: none;
+        padding: 10px 15px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* 기본적으로 숨김 */
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .slider-nav-button:hover {
+        background-color: rgba(255, 255, 255, 1.0);
+    }
+
+    .slider-nav-button.left {
+        left: 10px;
+    }
+
+    .slider-nav-button.right {
+        right: 10px;
+    }
+
+    /* 슬라이더 컨테이너에 마우스 오버 시 버튼 표시 */
+    .slider-container-zzz:hover .slider-nav-button {
+        opacity: 1;
+    }
+
+    /* ----- 프로그레스 바 ----- */
+    .progress-bar-container-zzz {
+        display: none;
+        width: 80%; /* 프로그레스 바의 너비 (컨테이너 대비) */
+        height: 6px;
+        background-color: #e0e0e0;
+        border-radius: 3px;
+        margin: 20px auto 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 0%; /* 초기 너비 */
+        background-color: var(--color-black-2);
+        border-radius: 3px;
+        transition: width var(--slide-animation-duration) ease-in-out;
+    }
+
+    /* 미디어 쿼리 (모바일 반응형) */
+    @media (max-width: 768px) {
+        :root {
+            --slide-width: 250px;
+            --slide-gap: 15px;
+        }
+        .slider-container-zzz {
+            /* 모바일에서는 1개 아이템만 보이도록 설정 */
+            width: calc(var(--slide-width) * 1 + var(--slide-gap) * 0);
+            padding: 15px 0;
+        }
+        .slider-nav-button {
+            padding: 8px 12px;
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            opacity: 1; /* 모바일에서는 항상 버튼 표시 */
+        }
+        .slider-container-zzz:hover .slider-nav-button {
+            opacity: 1; /* 마우스 오버 없이도 항상 보이도록 */
+        }
+        /* 드래그 커서 변경은 모바일에서는 적용 안 함 */
+        .slider-wrapper.grabbing {
+            cursor: grab; /* PC에서 드래그 중인 커서 */
+        }
+    }
+
+
+
