@@ -449,6 +449,7 @@ h2.tit {
     width: 156px;
     text-align: center;
     border: 1px solid #d8d8d8;
+    z-index: 99999;
 
 }.header ul.cate .sub_dep_1 li{
     margin-left: 25px;
@@ -457,7 +458,7 @@ h2.tit {
     padding: 1px 0;
     float:none;
     background: var(--color-white);
-    /* z-index: 300; */
+    
 }
 .header ul.cate .sub_dep_1 li a {
     color: #343434;
